@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>一个普通の网页</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap'); /* Import 思源宋体 font */
+            body {
+                font-family: 'Noto Serif SC', serif;
+                margin: 0;
+                padding: 0;
+                color: blue;
+                background-color: #EFF5FB;
+            }
+            h1 {
+                background-color: #2286D8;
+                color: #EFF5FB;
+                padding: 20px;
+            }
+            .large-font {
+                font-size: 20px;
+color:#126EBA;
+font-weight: bold;
+            }
+            .min {
+                font-size: 20px;
+                text-align: center;
+font-weight: bold;
+color:#126EBA;
+            }
+            .more {
+                text-align: center;
+font-weight: bold;
+color:#126EBA;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 20px;
+            }
+            p {
+                color: #2286D8;
+                margin: 20px;
+            }
+            li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            li a {
+                display: inline-block;
+                color: #2286D8;
+                text-align: center;
+                padding: 18px 20px;
+                text-decoration: none;
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out; 
+            }
+            li a:hover {
+                background-color: #2286D8;
+                color: #EFF5FB;
+            }
+            #cen {
+                color: #2286D8;
+                margin: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>网站汇集 :)</h1>
+        <div id="cen"></div>
+
+        <script type="text/javascript">
+            async function getData() {
+                const response = await fetch("https://v1.hitokoto.cn/?c=i&encode=text");
+                const data = await response.text();
+                document.getElementById("cen").innerHTML = data;
+            }
+
+            getData();
+        </script>
+
+        <p class="large-font">搜索引擎：</p>
+        <ul>
+            <li><a href="https://www.bing.com" target="_blank">必应</a></li>
+            <li><a href="https://www.baidu.com" target="_blank">百度</a></li>
+            <li><a href="https://www.sogou.com" target="_blank">搜狗</a></li>
+            <li><a href="https://www.so.com" target="_blank">360</a></li>
+            <li><a href="https://fsoufsou.com" target="_blank">F搜</a></li>
+        </ul>
+
+        <p class="large-font">AI大语言模型：</p>
+        <ul>
+            <li><a href="https://xbinggo.zeabur.app/web/#/" target="_blank">New Bing</a></li>
+            <li><a href="https://chat-shared2.zhile.io/shared.html?v=2" target="_blank">ChatGPT</a></li>
+        </ul>
+
+        <p class="large-font">开源字体：</p>
+        <ul>
+            <li><a href="https://github.com/lxgw/LxgwWenKai" target="_blank">霞鹜文楷</a></li>
+            <li><a href="https://github.com/lxgw/LxgwMarkerGothic/" target="_blank">霞鹜漫黑</a></li>
+            <li><a href="https://github.com/lxgw/LxgwNeoXiHei" target="_blank">霞鹜新晰黑</a></li>
+            <li><a href="https://github.com/adobe-fonts/source-han-sans/releases" target="_blank">思源黑体</a></li>
+            <li><a class="more" href="https://www.zfont.cn/" target="_blank">更多开源字体</a></li>
+        </ul>
+
+        <p class="large-font">其他：</p>
+        <ul>
+            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+<li><a href="https://www.linshi-email.com/" target="_blank">临时邮箱</a></li>
+<ul>
+<p style="text-align: center;">测试中......<p>
+        <p class="min">更多功能，敬请期待！<p>
+    </body>
+</html>
