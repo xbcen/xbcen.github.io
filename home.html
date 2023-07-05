@@ -1,109 +1,111 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
         <title>一个普通の网页</title>
-        <style>/*样式*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
-body {
-    font-family: 'Noto Serif SC', serif;
-    margin: 0;
-    padding: 0;
-    color: blue;
-    background-color: #EFF5FB;
-}
-h1 {
-    background-color: #2286D8;
-    color: #EFF5FB;
-    padding: 20px;
-}
-.large-font, .min, .more {
-    font-size: 20px;
-    color:#126EBA;
-    font-weight: bold;
-}
-.more {
-font-size:16px;
-}
-.min, .more {
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
-}
-p {
-    color: #2286D8;
-    margin: 20px;
-}
-li {
-    display: inline-block;
-    margin-right: 20px;
-}
-li a {
-    display: inline-block;
-    color: #2286D8;
-    text-align: center;
-    padding: 18px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out; 
-}
-li a:hover {
-    background-color: #2286D8;
-    color: #EFF5FB;
-}
-#cen {
-    color: #2286D8;
-    margin: 20px;
-}
- @media screen and (max-width: 600px) {
-h1 {
-    background-color: #2286D8;
-    color: #EFF5FB;
-    padding: 15px;
-}
-.large-font, .min, .more {
-    font-size: 15px;
-    color:#126EBA;
-    font-weight: bold;
-}
-.more {
-font-size:15px;
-}
-.min, .more {
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 12px;
-}
-p {
-    color: #2286D8;
-    margin: 15px;
-}
-li {
-    display: inline-block;
-    margin-right: 15px;
-}
-li a {
-    display: inline-block;
-    color: #2286D8;
-    text-align: center;
-    padding: 12px 13.5px;
-    text-decoration: none;
-    border-radius: 17.5px;
-    transition: all 0.3s ease-in-out; 
-}
-li a:hover {
-    background-color: #2286D8;
-    color: #EFF5FB;
-}
-#cen {
-    color: #2286D8;
-    margin: 15px;
-}
+        <style> /* 样式 */
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+            body {
+                font-family: 'Noto Serif SC', serif;
+                margin: 0;
+                padding: 0;
+                color: blue;
+                background-color: #EFF5FB;
+            }
+            h1 {
+                background-color: #2286D8;
+                color: #EFF5FB;
+                padding: 20px;
+            }
+            .large-font, .min, .more {
+                font-size: 20px;
+                color:#126EBA;
+                font-weight: bold;
+            }
+            .more {
+                font-size:16px;
+            }
+            .min, .more {
+                text-align: center;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 20px;
+            }
+            p {
+                color: #2286D8;
+                margin: 20px;
+            }
+            li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            li a {
+                display: inline-block;
+                color: #2286D8;
+                text-align: center;
+                padding: 18px 20px;
+                text-decoration: none;
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out; 
+            }
+            li a:hover {
+                background-color: #2286D8;
+                color: #EFF5FB;
+            }
+            #cen {
+                color: #2286D8;
+                margin: 20px;
+            }
+             @media screen and (max-width: 600px) /* 小屏幕的样式 */
+             {
+                 h1 {
+                     background-color: #2286D8;
+                     color: #EFF5FB;
+                     padding: 15px;
+                 }
+                 .large-font, .min, .more {
+                     font-size: 15px;
+                     color:#126EBA;
+                     font-weight: bold;
+                 }
+                 .more {
+                     font-size:15px;
+                 }
+                 .min, .more {
+                     text-align:center; 
+                 }
+                 ul {
+                     list-style-type:none; 
+                     margin:0; 
+                     padding:12px; 
+                 }
+                 p { 
+                     color:#2286D8; 
+                     margin:15px; 
+                 }
+                 li { 
+                     display:inline-block; 
+                     margin-right:15px; 
+                 }
+                 li a { 
+                     display:inline-block; 
+                     color:#2286D8; 
+                     text-align:center; 
+                     padding:12px 13.5px; 
+                     text-decoration:none; 
+                     border-radius:17.5px; 
+                     transition:all 0.3s ease-in-out;  
+                 }
+                 li a:hover { 
+                     background-color:#2286D8; 
+                     color:#EFF5FB; 
+                 }
+                 #cen { 
+                     color:#2286D8; 
+                     margin:15px; 
+                 }
 
         </style>
     </head>
@@ -149,9 +151,10 @@ li a:hover {
         <p class="large-font">其他：</p>
         <ul>
             <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
-<li><a href="https://www.linshi-email.com/" target="_blank">临时邮箱</a></li>
-<ul>
-<p style="text-align: center;">测试中......<p>
+            <li><a href="https://www.linshi-email.com/" target="_blank">临时邮箱</a></li>
+        </ul>
+
+        <p style="text-align: center;">测试中......<p>
         <p class="min">更多功能，敬请期待！<p>
     </body>
 </html>
