@@ -5,6 +5,7 @@
 欢迎来van
 
 # 部署使用New Bing
-xbz11451.github.io/zl/new-bing.html
+[立刻部署/体验New Bing](xbz11451.github.io/zl/new-bing.html)
 
-#网站更新中……
+# 网站更新中……
+更多功能，敬请期待……
