@@ -5,13 +5,14 @@ function myFunction() {
   ul = document.getElementById("myMenu");
   li = ul.getElementsByTagName("li");
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
+  a = li[i].getElementsByTagName("a")[0];
+  if (a) {
     if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
+        li[i].style.display = "";
     } else {
-      li[i].style.display = "none";
+        li[i].style.display = "none";
     }
-  }
+} 
 
   var uls = ul.getElementsByTagName("ul");
   for (i = 0; i < uls.length; i++) {
