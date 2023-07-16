@@ -72,6 +72,7 @@ input[type="text"]#mySearch {
     padding:20px 30px; 
     transition:all 0.3s ease-in-out;  
     font-size:20px; 
+    font-family: 'Noto Serif SC', serif;
 }
 input[type="text"]#mySearch:focus {
     background-color:#2286D8; 
@@ -136,8 +137,8 @@ flex-wrap:wrap;
          text-decoration:none; 
          border-radius:7.5px; 
          transition:all 0.3s ease-in-out;  
-        font-size:15px;
-
+         font-size:15px;
+         
      }
      li a:hover { 
          background-color:#2286D8; 
@@ -155,6 +156,8 @@ input[type="text"]#mySearch {
     padding:15px 22.5px; 
     transition:all 0.3s ease-in-out;  
     font-size:20px; 
+    font-family: 'Noto Serif SC', serif;
+
 }
 
 }
