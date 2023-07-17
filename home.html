@@ -2,142 +2,17 @@
 <html>
     <head>
         <title>一个普通の网站</title>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-        <link rel="shortcut icon" href="https://pan.ly93.cc/f/1mwu8/%E5%9C%B0%E7%90%83%E4%BB%AA_earth.ico" type="image/x-icon">
-        <style> /* 样式 */
-            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
-            body {
-                font-family: 'Noto Serif SC', serif;
-                margin: 0;
-                padding: 0;
-                color: blue;
-                background-color: #EFF5FB;
-            }
-            h1 {
-                background-color: #2286D8;
-                color: #EFF5FB;
-                padding: 20px;
-            }
-            h2, .min, .more {
-                color:#2286D8;
-                font-weight: bold;
-		}
-	h2 {
-	padding-left: 20px;
-          font-size: 20px;
-            }
-            .more {
-            font-size:15px;
-            }
-            .min {
-            fonts-size:18px;
-            }
-            .min, .more {
-                text-align: center;
-            }
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 20px;
-            }
-            p {
-                color: #2286D8;
-                margin: 20px;
-            }
-            li {
-                display: inline-block;
-                margin-right: 20px;
-		margin-top: 8px;
-            }
-            li a {
-                display: inline-block;
-                color: #2286D8;
-                text-align: center;
-                padding: 18px 20px;
-                text-decoration: none;
-                border-radius: 10px;
-                transition: all 0.3s ease-in-out; 
-            }
-            li a:hover {
-                background-color: #2286D8;
-                color: #EFF5FB;
-            }
-            #cen {
-                color: #2286D8;
-                margin: 20px;
-            }
-             @media screen and (max-width: 600px) /* 小屏幕的样式 */
-             {
-                 h1 {
-                     background-color: #2286D8;
-                     color: #EFF5FB;
-                     padding: 15px;
-                 }
-                 h2, .min, .more {
-                     color:#126EBA;
-                     font-weight: bold;
-		}
-		h2 {
-		padding: 15px;
-		font-size: 15px;
-                 }
-            .min {
-            fonts-size:13.5px;
-            }
-                 .more {
-                     font-size:15px;
-                 }
-                 .min, .more {
-                     text-align:center; 
-                 }
-                 ul {
-                     list-style-type:none; 
-                     margin:0; 
-                     padding:12px; 
-                 }
-                 p { 
-                     color:#2286D8; 
-                     margin:15px; 
-                 }
-                 li { 
-                     display:inline-block; 
-                     margin-right:15px; 
-		     margin-top: 6px;
-                 }
-                 li a { 
-                     display:inline-block; 
-                     color:#2286D8; 
-                     text-align:center; 
-                     padding:12px 13.5px; 
-                     text-decoration:none; 
-                     border-radius:7.5px; 
-                     transition:all 0.3s ease-in-out;  
-                 }
-                 li a:hover { 
-                     background-color:#2286D8; 
-                     color:#EFF5FB; 
-                 }
-                 #cen { 
-                     color:#2286D8; 
-                     margin:15px; 
-                 }
-
-        </style>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+<meta name="description" content="网站汇总">
+<link rel="shortcut icon" href="https://pan.ly93.cc/f/1mwu8/%E5%9C%B0%E7%90%83%E4%BB%AA_earth.ico" type="image/x-icon">
+<link rel="stylesheet" href="HTML/html/css/home.css">
     </head>
 
     <body>
         <h1>网站汇集 :)</h1>
         <div id="cen"></div>
 
-        <script type="text/javascript">
-            async function getData() {
-                const response = await fetch("https://v1.hitokoto.cn/?c=i&encode=text");
-                const data = await response.text();
-                document.getElementById("cen").innerHTML = data;
-            }
-
-            getData();
-        </script>
+    <script src="html/js/home.js"></script>
 
         <h2>搜索引擎：</h2>
         <ul>
@@ -150,7 +25,7 @@
 
         <h2>AI大语言模型：</h2>
         <ul>
-            <li><a href="/zl/New-Bing.html" target="_blank">New Bing</a></li>
+            <li><a href="New Bing.html" target="_blank">New Bing</a></li>
             <li><a href="https://chat-shared2.zhile.io/shared.html?v=2" target="_blank">ChatGPT</a></li>
         </ul>
 
@@ -161,24 +36,49 @@
             <li><a href="https://github.com/lxgw/LxgwWenKai" target="_blank">霞鹜文楷</a></li>
             <li><a href="https://github.com/lxgw/LxgwMarkerGothic/" target="_blank">霞鹜漫黑</a></li>
             <li><a href="https://github.com/lxgw/LxgwNeoXiHei" target="_blank">霞鹜新晰黑</a></li>
-            <li><a class="more" href="https://www.zfont.cn/" target="_blank">更多开源/可商用字体</a></li>
+            <li><a class="more" href="https://www.zfont.cn/" target="_blank">更多开源字体</a></li>
             <li><a class="more" href="fontn.html" target="_blank">更多开源/可商用字体（收录中）</a></li>
         </ul>
-	<h2>应用官网：</h2>
-	<ul>
+
+        <h2>应用官网：</h2>
+        <ul>
 	<li><a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a></li>
 	<li><a href="https://store.steampowered.com" target="_blank">Steam</a></li>
 	<li><a href="https://steampp.net" target="_blank">Watt Toolkit（Steam++）</a></li>
 	<li><a href="https://sparanoid.com/lab/7z/" target="_blank">7-Zip</a></li>
 	<li><a href="https://www.videolan.org/vlc" target="_blank">VLC</a></li>
-	</ul>
+        </ul>
+
+        <h2>Windows系统：</h2>
+        <ul>
+            <li><a href="https://www.microsoft.com/zh-cn/software-download/windows11" target="_blank">Windows 11</a></li>
+            <li><a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank">Windows 10</a></li>
+            <li><a href="https://www.microsoft.com/zh-cn/software-download/windows8" target="_blank">Windows 8</a></li>
+            <li><a href="https://hellowindows.cn/" target="_blank">HelloWindows</a></li>
+            <li><a href="https://msdn.itellyou.cn/" target="_blank">MSDN</a></li>
+        </ul>
+
+        <h2>office：</h2>
+        <ul>
+            <li><a href="https://www.office.com/" target="_blank">office</a></li>
+            <li><a href="wps.cn" target="_blank">WPS</a></li>
+            <li><a href="https://www.onlyoffice.com/zh/" target="_blank">onlyoffice</a></li>
+        </ul>
+
+        <h2>工具：</h2>
+        <ul>
+            <li><a href="https://www.bing.com/translator" target="_blank">翻译</a></li>
+            <li><a href="https://www.linshi-email.com/" target="_blank">临时邮箱</a></li>
+            <li><a href="https://convertio.co/zh/" target="_blank">文件转换器</a></li>
+            <li><a href="https://www.desmos.com/calculator?lang=zh-CN" target="_blank">图形计算器</a></li>
+            <li><a href="https://www.canva.cn/" target="_blank">canva可画</a></li>
+        </ul>
 
         <h2>其他：</h2>
         <ul>
+            <li><a href="http://info.cern.ch" target="_blank">最早的网站</a></li>
             <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linshi-email.com/" target="_blank">临时邮箱</a></li>
-            <li><a href="https://convertio.co/zh/" target="_blank">文件转换器</a></li>
-            <li><a href="https://tools.liumingye.cn/music/#/" target="_blank">听音乐</a></li>
+            <li><a href="https://tools.liumingye.cn/music/#/" target="_blank">音乐</a></li>
         </ul>
 
         <p style="text-align: center;">测试中......<p>
