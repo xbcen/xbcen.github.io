@@ -5,6 +5,6 @@ async function getData() {
     document.getElementById("cen").innerHTML = data;
 }
 document.getElementById("cen").addEventListener('click', function() {
-    window.open('https://www.baidu.com/s?ie=UTF-8&wd=' + data);
+    window.open('https://www.baidu.com/s?ie=UTF-8&wd=' + data +'&API=hitokoto.cn');
 });
 getData();
