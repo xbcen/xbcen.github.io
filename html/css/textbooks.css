@@ -19,9 +19,11 @@ h2,a#newUrlLink {
     font-weight: bold;
     font-size: 20px;
 }
+
 h2 {
-    padding-left: 20px;
-   }
+   padding-left: 20px;
+}
+
 input[type="text"]#userUrl {
     width: 500px; 
     border: 2px solid #2286D8; 
