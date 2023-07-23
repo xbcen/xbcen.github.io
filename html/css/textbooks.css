@@ -53,11 +53,12 @@ button {
     background-color: #EFF5FB;
     color: #2286D8;
     text-align: center;
+    padding: 20px 30px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-family: 'Noto Serif SC', serif;
     border: none;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -80,9 +81,12 @@ h1 {
 h2,a#newUrlLink {
     color: #2286D8;
     font-weight: bold;
-    padding-left: 15px;
-    font-size: 15px;
+    font-size: 20px;
 }
+    
+h2 {
+    padding-left: 20px;
+   }
     
 input[type="text"]#userUrl {
     width: 200px; 
