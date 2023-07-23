@@ -1,3 +1,10 @@
+function handleKeyDown(event) {
+  // 如果按键是回车
+  if (event.key === 'Enter') {
+    generateNewUrl();
+  }
+}
+
 function generateNewUrl() {
   var user_url = document.getElementById('userUrl').value;
   var parsed_url = new URL(user_url);
