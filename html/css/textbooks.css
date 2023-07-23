@@ -52,7 +52,6 @@ button {
     background-color: #EFF5FB;
     color: #2286D8;
     text-align: center;
-    padding: 20px 30px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-family: 'Noto Serif SC', serif;
@@ -83,17 +82,12 @@ h2,a#newUrlLink {
     padding-left: 15px;
     font-size: 15px;
 }
-
-h2 {
-   padding-left: 15px;
-}
-
+    
 input[type="text"]#userUrl {
     width: 200px; 
     border: 2px solid #2286D8; 
     background-color: #EFF5FB; 
     border-radius: 7.5px; 
-    padding: 15px 22.5px; 
     transition: all 0.3s ease-in-out;  
     margin: 15px;
     font-size: 20px;  
