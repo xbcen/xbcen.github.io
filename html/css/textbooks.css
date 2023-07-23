@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+/* 样式 */
+body {
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
+    padding: 0;
+    color: blue;
+    background-color: #EFF5FB;
+}
+
+h1 {
+    background-color: #2286D8;
+    color: #EFF5FB;
+    padding: 20px;
+}
+
+h2,a#newUrlLink {
+    color: #2286D8;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h2 {
+   padding-left: 20px;
+}
+
+input[type="text"]#userUrl {
+    width: 500px; 
+    border: 2px solid #2286D8; 
+    background-color: #EFF5FB; 
+    border-radius: 10px; 
+    padding: 20px 30px; 
+    transition: all 0.3s ease-in-out;  
+    margin: 20px;
+    font-size: 20px;  
+    color: #2286D8;  
+    font-family: 'Noto Serif SC', serif;
+}
+
+input[type="text"]#userUrl:focus {
+    background-color: #2286D8; 
+    outline: none; 
+    color: #EFF5FB;  
+}
+
+input[type="text"]#userUrl:focus::placeholder {
+    color: #EFF5FB;
+}
+
+input[type="text"]#userUrl::placeholder {
+    color: #2286D8;
+}
+
+button {
+    background-color: #EFF5FB;
+    color: #2286D8;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Noto Serif SC', serif;
+    border: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    color: #EFF5FB;
+    background-color: #2286D8;
+}
+
+.centered {
+    display: flex; 
+    justify-content: center; 
+}
+
+@media screen and (max-width: 600px) {  /* 小屏幕的样式 */
+h1 {
+    background-color: #2286D8;
+    color: #EFF5FB;
+    padding: 15px;
+}
+
+h2,a#newUrlLink {
+    color: #2286D8;
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+h2 {
+   padding-left: 15px;
+}
+
+input[type="text"]#userUrl {
+    width: 200px; 
+    border: 2px solid #2286D8; 
+    background-color: #EFF5FB; 
+    border-radius: 7.5px; 
+    padding: 15px 22.5px; 
+    transition: all 0.3s ease-in-out;  
+    margin: 15px;
+    font-size: 20px;  
+    color: #2286D8;  
+    font-family: 'Noto Serif SC', serif;
+}
+
+input[type="text"]#userUrl:focus {
+    background-color: #2286D8; 
+    outline: none; 
+    color: #EFF5FB;  
+}
+
+input[type="text"]#userUrl:focus::placeholder {
+    color: #EFF5FB;
+}
+
+input[type="text"]#userUrl::placeholder {
+    color: #2286D8;
+}
+
+button {
+    background-color: #EFF5FB;
+    color: #2286D8;
+    text-align: center;
+    padding: 15px 22.5px;
+    border-radius: 7.5px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Noto Serif SC', serif;
+    border: none;
+    margin-top: 15px;
+}
+
+button:hover {
+    color: #EFF5FB;
+    background-color: #2286D8;
+}
+
+.centered {
+    display: flex; 
+    justify-content: center; 
+}
