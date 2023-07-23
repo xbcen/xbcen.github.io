@@ -60,7 +60,7 @@ button {
     transition: all 0.3s ease-in-out;
     font-family: 'Noto Serif SC', serif;
     border: none;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 button:hover {
@@ -127,7 +127,7 @@ button {
     transition: all 0.3s ease-in-out;
     font-family: 'Noto Serif SC', serif;
     border: none;
-    margin-top: 15px;
+    margin: 15px;
 }
 
 button:hover {
