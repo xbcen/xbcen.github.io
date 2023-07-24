@@ -14,41 +14,47 @@ h1 {
     padding: 20px;
 }
 
-h2,a#newUrlLink {
+h2,a {
     color: #2286D8;
     font-weight: bold;
     font-size: 20px;
 }
 
-h2 {
+h2,ul {
    padding-left: 20px;
 }
 
-input[type="text"]#userUrl {
-    width: 500px; 
+ul {
+   list-style-type: none;
+}
+
+textarea#userUrls {
     border: 2px solid #2286D8; 
     background-color: #EFF5FB; 
     border-radius: 10px; 
     padding: 20px 30px; 
-    transition: all 0.3s ease-in-out;  
     margin: 20px;
     font-size: 20px;  
     color: #2286D8;  
     font-family: 'Noto Serif SC', serif;
+    transition: all 0.2s ease-in-out;
+    width: 95%;
+    height: 40%;
 }
 
-input[type="text"]#userUrl:focus {
-    background-color: #2286D8; 
-    outline: none; 
-    color: #EFF5FB;  
-}
-
-input[type="text"]#userUrl:focus::placeholder {
-    color: #EFF5FB;
-}
-
-input[type="text"]#userUrl::placeholder {
+textarea#userUrls::placeholder {
     color: #2286D8;
+}
+
+textarea#userUrls:focus {
+    background-color: #2286D8; 
+    outline: none;
+    color: #EFF5FB;  
+    border: 2px solid #2286D8; 
+}
+
+textarea#userUrls:focus::placeholder {
+    color: #EFF5FB;
 }
 
 button {
@@ -59,8 +65,9 @@ button {
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-family: 'Noto Serif SC', serif;
+    font-size: 16px; 
     border: none;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 button:hover {
@@ -80,40 +87,47 @@ h1 {
     padding: 15px;
 }
 
-h2,a#newUrlLink {
+h2,a {
     color: #2286D8;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 }
-    
-h2 {
-    padding-left: 20px;
-   }
-    
-input[type="text"]#userUrl {
-    width: 200px; 
+
+h2,ul {
+   padding-left: 15px;
+}
+
+ul {
+   list-style: none;
+}
+
+textarea#userUrls {
     border: 2px solid #2286D8; 
     background-color: #EFF5FB; 
     border-radius: 7.5px; 
-    transition: all 0.3s ease-in-out;  
+    padding: 15px 22.5px; 
     margin: 15px;
     font-size: 20px;  
     color: #2286D8;  
     font-family: 'Noto Serif SC', serif;
+    transition: all 0.2s ease-in-ut;
+    width: 90%;
+    height: 30%;
 }
 
-input[type="text"]#userUrl:focus {
-    background-color: #2286D8; 
-    outline: none; 
-    color: #EFF5FB;  
-}
-
-input[type="text"]#userUrl:focus::placeholder {
-    color: #EFF5FB;
-}
-
-input[type="text"]#userUrl::placeholder {
+textarea#userUrls::placeholder {
     color: #2286D8;
+}
+
+textarea#userUrls:focus {
+    background-color: #2286D8; 
+    outline: none;
+    color: #EFF5FB;  
+    border: 2px solid #2286D8; 
+}
+
+textarea#userUrls:focus::placeholder {
+    color: #EFF5FB;
 }
 
 button {
@@ -122,8 +136,9 @@ button {
     text-align: center;
     padding: 15px 22.5px;
     border-radius: 7.5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-family: 'Noto Serif SC', serif;
+    font-size: 12px;
     border: none;
     margin: 15px;
 }
