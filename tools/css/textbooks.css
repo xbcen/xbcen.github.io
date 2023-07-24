@@ -39,7 +39,7 @@ textarea#userUrls {
     font-family: 'Noto Serif SC', serif;
     transition: all 0.2s ease-in-out;
     width: 90%;
-    height: 60%;
+    height: 300px;
 }
 
 textarea#userUrls::placeholder {
@@ -112,7 +112,7 @@ textarea#userUrls {
     font-family: 'Noto Serif SC', serif;
     transition: all 0.2s ease-in-ut;
     width: 67.5%;
-    height: 45%;
+    height: 300px;
 }
 
 textarea#userUrls::placeholder {
