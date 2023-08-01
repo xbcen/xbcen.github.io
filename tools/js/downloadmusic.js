@@ -25,7 +25,7 @@ function generateNewUrls() {
         var hash = parsed_url.hash;
         var id = hash.substring(hash.indexOf('=') + 1) || 'abc';
 
-        var old_url = "https://music.163.com/song/media/outer/url?id=abc.mp3";
+        var old_url = "https://music.163.com/song/media/outer/url?id=abc";
         var new_url = old_url.replace('abc', id) + ".mp3"; 
 
         var listItem1 = document.createElement("li");
