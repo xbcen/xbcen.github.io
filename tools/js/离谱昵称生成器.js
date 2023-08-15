@@ -1,6 +1,6 @@
 var adjectives = [], verbs = [], nouns = [];
 
-$.getJSON('tools/other/words.json', function(data) {
+$.getJSON('https://pan.ly93.cc/f/OwyIP/words.json', function(data) {
   adjectives = data.adjectives;
   verbs = data.verbs;
   nouns = data.nouns;
