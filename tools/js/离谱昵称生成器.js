@@ -1,6 +1,6 @@
 var adjectives = [], verbs = [], nouns = [];
 
-$.getJSON('https://xbcen.github.io/tools/other/words.json', function(data) {
+$.getJSON('other/words.json', function(data) {
   adjectives = data.adjectives;
   verbs = data.verbs;
   nouns = data.nouns;
