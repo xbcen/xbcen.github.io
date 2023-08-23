@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE >
+<>
 <head>
     <meta charset="UTF-8">
     <title>测试网站</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
     <link rel="shortcut icon" href="https://pan.ly93.cc/f/zkBTA/%E5%B7%A5%E5%85%B7_tool.ico" type="image/x-icon">
     <style>
         @import url('https://pan.ly93.cc/f/aPeIm/Noto-Sans-Mono.css');
@@ -22,7 +22,7 @@
         }
 
         h1 {
-            font-family: 'Noto Sans Mono', serif;
+            font-family: 'Noto Sans Mono', sans-serif;
             color: #333;
         }
 
@@ -34,12 +34,13 @@
             margin-bottom: 2em;
         }
 
-        h2 {
-            font-family: 'Noto Sans Mono', serif;
+        h2,h3 {
+            font-family: 'Noto Sans Mono', sans-serif;
             color: #333;
             border-bottom: 1px dotted #333;
+            padding-bottom: 4px;
         }
-        
+
         nav {
             background-color: #333;
         }
@@ -96,33 +97,69 @@
     <header>
         <h1>一个网页</h1>
     </header>
-    <section class="website-links">
-        <h2>精选网站：</h2>
+    <section class="nav">
+        <h2 id="导航">导航：</h2>
         <ul>
-            <li><a href="home">正式版主页</a></li>
-            <li><a href="测试版">暂无网站汇总，请前往正式版主页 :-|</a></li>
+            <li><a href="#导航">导航</a></li>
+            <li><a href="#精选网站">精选网站</a></li>
+            <li><a href="#自制工具">自制工具</a></li>
+            <li><a href="#最新文章">最新文章</a></li>
+            <!-- 添加更多导航链接 -->
+        </ul>
+    </section>
+
+    <section class="website-links">
+        <h2 id="精选网站">精选网站：</h2>
+        <ul>
+            <h3>主页：</h3>
+            <li><a href="home.">正式版主页</a></li>
+            <li><a href="测试版.">暂无网站汇总，请前往正式版主页 :-|</a></li>
+            <h3>搜索引擎：</h3>
+            <li><a href="https://www.google.com" target="_blank">谷歌</a></li>
+            <li><a href="https://www.bing.com" target="_blank">必应</a></li>
+            <li><a href="https://www.baidu.com" target="_blank">百度</a></li>
+            <h3>字体:</h3>
+            <li><a href="https://github.com/adobe-fonts/source-han-sans" target="_blank">思源黑体</a></li>
+            <li><a href="https://github.com/adobe-fonts/source-han-serif" target="_blank">思源宋体</a></li>
+            <li><a href="https://github.com/lxgw/LxgwWenKai" target="_blank">霞鹜文楷</a></li>
+            <li><a href="https://github.com/lxgw/LxgwMarkerGothic/" target="_blank">霞鹜漫黑</a></li>
+            <li><a href="https://github.com/lxgw/LxgwNeoXiHei" target="_blank">霞鹜新晰黑</a></li>
+            <li><a href="fontn.">更多开源字体</a></li>
+            <h3>工具：</h3>
+            <li><a class="more" href="https://www.zfont.cn/" target="_blank">找字体</a></li>
+            <li><a href="https://www.bing.com/translator" target="_blank">翻译</a></li>
+            <li><a href="https://tools.liumingye.cn/music/#/" target="_blank">音乐</a></li>
+            <li><a href="https://www.linshi-email.com/" target="_blank">临时邮箱</a></li>
+            <li><a href="https://convertio.co/zh/" target="_blank">文件转换器</a></li>
+            <h3>其他：</h3>
+            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+            <li><a href="https://www.gitlab.com/" target="_blank">Gitlab</a></li>
+            <li><a href="https://www.gitee.com/" target="_blank">Gitee</a></li>
+	        <li><a href="https://singlelogin.re/" target="_blank">Z-Library</a></li>
+            <li><a href="http://info.cern.ch" target="_blank">最早的网站</a></li>
             <!-- 添加更多的汇总网站链接 -->
         </ul>
     </section>
     <section class="tools">
-        <h2>自制工具：</h2>
+        <h2 id="自制工具">自制工具：</h2>
         <ul>
-            <li><a href="tools/镜像网站">镜像网站</a></li>
-            <li><a href="tools/离谱昵称生成器">离谱昵称生成器</a></li>
-            <li><a href="tools/music">网易云音乐下载</a></li>
-            <li><a href="tools/textbooks">教材下载</a></li>
-            <!-- 添加更多的汇总网站链接 -->
+            <li><a href="镜像网站." target="_blank">镜像网站</a></li>
+            <li><a href="离谱昵称生成器." target="_blank">离谱昵称生成器</a></li>
+            <li><a href="music." target="_blank">网易云音乐下载</a></li>
+            <li><a href="textbooks." target="_blank">教材下载</a></li>
+            <!-- 添加更多的工具链接 -->
         </ul>
     </section>
     <section class="articles">
-        <h2>最新文章：</h2>
+        <h2 id="最新文章">最新文章：</h2>
         <ul>
-            <li><a href="zl/chimeragpt">ChimeraGPT</a></li>
-            <li><a href="zl/pandora">Pandora</a></li>
-            <li><a href="zl/office">Office</a></li>
-            <li><a href="zl/new-bing">New Bing部署</a></li>
+            <li><a href="chimeragpt." target="_blank">ChimeraGPT</a></li>
+            <li><a href="pandora." target="_blank">Pandora</a></li>
+            <li><a href="Office." target="_blank">Office</a></li>
+            <li><a href="New-Bing." target="_blank">New Bing部署</a></li>
             <!-- 添加更多的文章标题和链接 -->
         </ul>
     </section>
+    <p>本站测试中......</p>
 </body>
-</html>
+</>
