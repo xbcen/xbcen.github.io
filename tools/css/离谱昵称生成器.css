@@ -1,26 +1,26 @@
 /* 样式 */
-            @import url('https://pan.ly93.cc/f/XP4sL/Noto-Serif-SC.css');
-            body {
-                font-family: 'Noto Serif SC', serif;
-                margin: 0;
-                padding: 0;
-                color: blue;
-                background-color: #EFF5FB;
-            }
-            h1 {
-                background-color: #2286D8;
-                color: #EFF5FB;
-                padding: 20px;
-            }
-            p {
-                color: #2286D8;
-                margin: 20px;
-            }
+@import url('https://pan.ly93.cc/f/XP4sL/Noto-Serif-SC.css');
+body {
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
+    padding: 0;
+    color: blue;
+    background-color: #EFF5FB;
+}
+h1 {
+    background-color: #2286D8;
+    color: #EFF5FB;
+    padding: 20px;
+}
+p {
+    color: #2286D8;
+    margin: 20px;
+}
 button {
     background-color: #EFF5FB;
     color: #2286D8;
     text-align: center;
-    padding: 20px 30px;
+    padding: 12px 25px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-family: 'Noto Serif SC', serif;
@@ -34,31 +34,14 @@ button:hover {
     background-color: #2286D8;
 }
 
-             @media screen and (max-width: 600px) /* 小屏幕的样式 */
-             {
-                 h1 {
-                     background-color: #2286D8;
-                     color: #EFF5FB;
-                     padding: 15px;
-                 }
-                 p { 
-                     color:#2286D8; 
-                     margin:15px; 
-                 }
-button {
-    background-color: #EFF5FB;
-    color: #2286D8;
-    text-align: center;
-    padding: 15px 22.5px;
-    border-radius: 7.5px;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 12px;
-    border: none;
-    margin: 15px;
-}
-
-button:hover {
-    color: #EFF5FB;
+@media screen and (max-width: 600px) /* 小屏幕的样式 */
+{
+h1 {
     background-color: #2286D8;
-}
+    color: #EFF5FB;
+    padding: 15px;
+    }
+p { 
+    color:#2286D8; 
+    margin:15px; 
+    }
