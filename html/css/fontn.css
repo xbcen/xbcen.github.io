@@ -63,7 +63,8 @@ nav {
 }
 
 nav select, .navs {
-    padding: 16px 30px;
+    height: auto;
+    width: 33.33%;
     font-size: 16px;
     background-color: #2286D8; 
     color: #EFF5FB; 
