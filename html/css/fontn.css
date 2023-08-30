@@ -110,15 +110,15 @@ input[type="text"]#mySearch:focus {
 }
  @media screen and (max-width:600px) /* 小屏幕的样式 */
  {
-     h1 {
-         background-color: #2286D8;
-         color: #EFF5FB;
-         padding: 15px;
+h1 {
+    background-color: #2286D8;
+    color: #EFF5FB;
+    padding: 15px;
      }
-h2  {
-color:#2286D8;
-font-size:18px;
-padding:11.25px 15px 11.25px 15px;
+h2 {
+    color:#2286D8;
+    font-size:18px;
+    padding:11.25px 15px 11.25px 15px;
 }
 h3, more {
     font-size: 20px;
@@ -128,45 +128,64 @@ h3, more {
 h3 {
     padding-left: 15px;
 }
-     .more {
-         text-align:center; 
+.more {
+    text-align:center; 
     font-size: 10px;
-     }
-     ul {
-         list-style-type:none; 
-         margin:0; 
-         padding:12px; 
-display:flex; 
-flex-wrap:wrap; 
-     }
-     p { 
-         color:#2286D8; 
-         margin:15px; 
-     }
-     li { 
+}
+ul {
+    list-style-type:none; 
+    margin:0; 
+    padding:12px; 
+    display:flex; 
+    flex-wrap:wrap; 
+}
+p { 
+    color:#2286D8; 
+    margin:15px; 
+}
+li { 
     margin-top:4px; 
-      width:33.33%; 
-      font-size:10px; 
-     }
-     li a { 
-         display:inline-block; 
-         color:#2286D8; 
-         text-align:center; 
-         padding:15px 22.5px; 
-         text-decoration:none; 
-         border-radius:7.5px; 
-         transition:all 0.3s ease-in-out;  
-        font-size:15px;
+    width:33.33%; 
+    font-size:10px; 
+}
+a { 
+    display:inline-block; 
+    color:#2286D8; 
+    text-align:center; 
+    padding:15px 22.5px; 
+    text-decoration:none; 
+    border-radius:7.5px; 
+    transition:all 0.3s ease-in-out;  
+    font-size:15px;
+}
+a:hover { 
+    background-color:#2286D8; 
+    color:#EFF5FB; 
+}
+nav {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+}
 
-     }
-     li a:hover { 
-         background-color:#2286D8; 
-         color:#EFF5FB; 
-     }
-     #cen { 
-         color:#2286D8; 
-         margin:15px; 
-     }
+nav select, .navs {
+    padding: 8px 10px;
+    font-size: 12px;
+    background-color: #2286D8; 
+    color: #EFF5FB; 
+    cursor: pointer;
+    border: none; 
+    margin: 5px;
+    appearance: none; 
+    text-align: center;
+    font-family: 'Noto Serif SC', serif;
+    transition: all 0.3s ease-in-out; 
+    border-radius: 7.5px; 
+}
+#cen { 
+    color:#2286D8; 
+    margin:15px; 
+}
 input[type="text"]#mySearch {
     width:200px; 
     border:2px solid #2286D8; 
@@ -177,4 +196,5 @@ input[type="text"]#mySearch {
     font-size:20px; 
     font-family: 'Noto Serif SC', serif;
 }
+
 }
