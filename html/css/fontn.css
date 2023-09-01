@@ -67,14 +67,13 @@ a:hover {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
 .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
     background-color: #2286D8;
     color: #EFF5FB;
+    width: 100%;
     height: 40px;
 }
 
@@ -82,11 +81,11 @@ a:hover {
     width: 20%;
     text-align: center;
     line-height: 40px;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
     cursor: pointer;
 }
 
-.url-top:hover {
+.url-top:hover{
     background-color: #1f55b5;
 }
 
@@ -98,29 +97,30 @@ a:hover {
 .url-top a {
     text-decoration: none;
     color: #2286d8;
-    background-color: #dfebf7;
-    transition: color 0.3s ease-in-out;
-    display: block;
-    height: 100%;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    height: 40px;
     width: 100%;
+    box-sizing: border-box; 
 }
 
 .url-top ul li {
     height: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-40px);
     color: #2286D8;
+    background-color: #dfebf7;
 }
 
 .url-top:hover li {
     height: 40px;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
 }
 
-ul,li {
-    list-style-type: none;
+ul, li{
+    list-style-type:none;
 }
 
 .centered {
@@ -155,6 +155,11 @@ input[type="text"]#mySearch:focus {
     color:#2286D8; 
     margin:20px; 
 }
+
+.small-nav {
+    display: none;
+}
+
  @media screen and (max-width:600px) /* 小屏幕的样式 */
  {
 h1 {
@@ -211,27 +216,6 @@ a:hover {
     background-color:#2286D8; 
     color:#EFF5FB; 
 }
-nav {
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-}
-
-nav select, .navs {
-    width: 33.33%; 
-    height: auto;
-    font-size: 12px;
-    background-color: #2286D8; 
-    color: #EFF5FB; 
-    cursor: pointer;
-    border: none; 
-    margin: 5px;
-    appearance: none; 
-    text-align: center;
-    font-family: 'Noto Serif SC', serif;
-    transition: all 0.3s ease-in-out; 
-    border-radius: 7.5px; 
-}
 
 #cen { 
     color:#2286D8; 
@@ -248,39 +232,28 @@ input[type="text"]#mySearch {
     margin: 15px;
     font-family: 'Noto Serif SC', serif;
 }
-.navs {
-    background-color: #2286D8;
-    height: 36px;
-}
-
-.nav-more {
-    float: left;
-    text-align: center;
-    height: 36px;
-    width: 120px;
-    float: right;
-}
-
-.navs a {
-    color: #EFF5FB;
-    padding: 9px;
-    transition: all 0.3s ease-in-out; 
-    display: block;
-}
-
-.navs a:hover {
-    background-color: #1f55b5;
-}
-
-.nav-more:hover .url{
-    display: block;
-}
-.url{
-    background-color: #2286D8;
-    color: #EFF5FB;
+.nav {
     display: none;
-    float: right;
-    height: 36px;
-    width: 120px;
+}
+
+.small-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.small-nav select {
+    background-color: #2286D8; 
+    color: #EFF5FB; 
+    cursor: pointer;
+    border: none; 
+    appearance: none;
+    text-align: center;
+    height: 40px;
+    width: 33.33%;
+    margin: 0 7.5px;
+    border-radius:7.5px; 
+    font-family: 'Noto Serif SC', serif;
 }
 }
