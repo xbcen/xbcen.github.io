@@ -28,7 +28,7 @@ document.getElementById('userUrls').addEventListener('input', function (event) {
                 var parsed_url = new URL(userUrl);
                 var content_id = parsed_url.searchParams.get('contentId') || 'abc';
 
-                var old_url = "https://r2-ndr.ykt.cbern.com.cn/edu_product/esp/assets/abc.pkg/pdf.pdf";
+                var old_url = "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/abc.pkg/pdf.pdf";
                 var new_url = old_url.replace('abc', content_id);
 
                 var listItem = document.createElement("li");
