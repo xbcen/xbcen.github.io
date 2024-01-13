@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MV</title>
+  <style>
+    #locationInput {
+      resize: none; /* 阻止输入框调整大小 */
+    }
+  </style>
+</head>
+<body>
+
+<label for="locationInput">请输入位置名称：</label>
+<textarea id="locationInput" rows="1" cols="20"></textarea>
+<button onclick="getMVData()">获取天气数据</button>
+
+<div id="MVInfo">
+  <!-- 这里将显示天气信息 -->
+</div>
+
+<a id="MVLink" target="_blank"></a>
+
+<script>
+  // 获取输入框和按钮
+  var input = document.getElementById('locationInput');
+  var MVInfoDiv = document.getElementById('MVInfo');
+  var MVLink = document.getElementById('MVLink');
+
+  // 按下回车键或Shift+回车键执行查询天气函数
+  input.addEventListener('keydown', function(event) {
+    if (event.shiftKey && event.key === 'Enter') {
+      this.value += '\n';
+      event.preventDefault();
+    }
+  });
+
+  input.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      getMVData();
+      event.preventDefault();
+    }
+  });
+
+  function getMVData() {
+    var userInput = document.getElementById('locationInput').value;
+    var lookupUrl = 'http://music.163.com/api/mv/detail?id=' + encodeURIComponent(userInput) + '&type=mp4';
+
+    // 使用 fetch 发起位置查找的网络请求
+    fetch(lookupUrl)
+      .then(response => response.json())
+      .then(data => {
+        // 提取数据字段
+        var name = data.name;
+        var artistName = data.artistName;
+        var MV = data.MV;
+        var share = data.shareCount;
+        var like = data.likeCount;
+        var sub = data.subCount;
+
+        // 创建包含天气信息的HTML字符串
+        var MVHTML = '<h2>' + name + '的天气信息：</h2>';
+        MVHTML += '<p>名字：' + name + '</p>';
+        MVHTML += '<p>作者：' + artistName + '</p>';
+        MVHTML += '<p>分享：' + share + '</p>';
+        MVHTML += '<p>点赞：' + like + '</p>';
+        MVHTML += '<p>MV：' + MV + '</p>';
+        // 将天气信息添加到DOM中
+        MVInfoDiv.innerHTML = MVHTML;
+
+        // 添加链接到a标签
+        MVLink.href = MV;
+        MVLink.textContent = 'MV下载';
+
+        // 清空输入框内容
+        input.value = '';
+      })
+      .catch(error => {
+        console.error('位置查找时出错。 :(', error);
+      });
+  }
+</script>
+</body>
+</html>
