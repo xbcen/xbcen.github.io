@@ -67,12 +67,6 @@ img{
 	margin: auto;
 	border-radius: 7.5px;
 }
-.l img{
-	width:50%;
-}
-.s img{
-	width:30%;
-}
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
  {
 h1 {
@@ -114,13 +108,7 @@ code,.long {
 img{
 	margin: auto;
 	border-radius: 5px;
-}
-.l img{
-	width:50%;
-}
-.s img{
-	width:30%;
-}	 
+} 
 li { 
 	display: inline-block; 
 	margin-right: 15px; 
