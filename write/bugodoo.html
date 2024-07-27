@@ -29,23 +29,23 @@
         <p>按F10，输入以下代码：<code>scene.my.spots关卡号=scene.my.spots关卡号+1</code>回车</p>
         <p>（例：<code>scene.my.spots2=scene.my.spots2+1</code>）</p>
         <p>2. 选中过关区，右键，脚本选单，在oncollide中输入以下代码：</p>
-<code>(e)=>{
-    e.other._M ? {
-        e.other.pos = scene.my.s关卡号m;
-        e.other.collideset = 16;
-        scene.my.spots关卡号 = scene.my.spots关卡号 - 1
+<code>(e)=>{<br>
+    e.other._M ? {<br>
+        e.other.pos = scene.my.s关卡号m;<br>
+        e.other.collideset = 16;<br>
+        scene.my.spots关卡号 = scene.my.spots关卡号 - 1<br>
     } : {};
-    scene.my.spots关卡号 == 1 ? {
-        colorhsva = [180, 1, 1, 1];
-        oncollide = (e)=>{
-            e.other.pos = scene.my.no(52-关卡号);
-            e.other.collideset = 768;
-            scene.my.spots关卡号 = scene.my.spots关卡号 - 1;
-            scene.my.spots关卡号 < 1 ? {
-                timetolive = 0
-            } : {}
-        }
-    } : {}
+    scene.my.spots关卡号 == 1 ? {<br>
+        colorhsva = [180, 1, 1, 1];<br>
+        oncollide = (e)=>{<br>
+            e.other.pos = scene.my.no(52-关卡号);<br>
+            e.other.collideset = 768;<br>
+            scene.my.spots关卡号 = scene.my.spots关卡号 - 1;<br>
+            scene.my.spots关卡号 < 1 ? {<br>
+                timetolive = 0<br>
+            } : {}<br>
+        }<br>
+    } : {}<br>
 }</code>
         <h3>2.开队（存在于跑毒，建议在19关开始时按下空格，方便回溯）。</h3>
         <p>1.ctrl+z。</p>
