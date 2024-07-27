@@ -68,12 +68,10 @@ img{
 	margin: auto;
 	border-radius: 7.5px;
 }
-l.img{
-	text-align: center;
+.l img{
 	width:50%;
 }
-s.img{
-	text-align: center;
+.s img{
 	width:30%;
 }
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
@@ -119,15 +117,12 @@ img{
 	margin: auto;
 	border-radius: 5px;
 }
-.l{
-	text-align: center;
-	width: 50%;
+.l img{
+	width:50%;
 }
-.s{
-	text-align: center;
-	width: 30%;
-}
-	 
+.s img{
+	width:30%;
+}	 
 li { 
 	display: inline-block; 
 	margin-right: 15px; 
