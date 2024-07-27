@@ -41,6 +41,9 @@ code {
 p,.long {
 	margin: 22.5px;
 }
+.long{
+	word-break: break-all;
+}
 li {
 	display: inline-block;
 	margin-right: 20px;
