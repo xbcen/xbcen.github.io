@@ -40,10 +40,10 @@ code,.long {
 }
 .long {
 	margin: 22.5px;
+	font-size: 17.5px;
 }
-p {
+p,code {
 	margin: 22.5px;
-	font-size: 15px;
 }
 li {
 	display: inline-block;
@@ -92,7 +92,7 @@ ul {
 	margin: 0; 
 	padding: 12px; 
 }
-p { 
+p,code { 
 	margin: 12.5px;
 	font-size: 10px;
 }
