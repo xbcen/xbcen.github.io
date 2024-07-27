@@ -43,6 +43,9 @@ code,.long {
 .long,p {
 	margin: 22.5px;
 }
+.long code{
+	padding: 0;
+}
 li {
 	display: inline-block;
 	margin-right: 20px;
@@ -95,6 +98,9 @@ ul {
 }
 .long,p { 
 	margin: 12.5px;
+}
+.long code{
+	padding: 0;
 }
 code,.long {
 	font-family: 'Noto Sans Mono', sans-serif;
