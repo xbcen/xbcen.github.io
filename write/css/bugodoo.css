@@ -38,7 +38,7 @@ code {
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
-p{
+p,#long{
 	margin: 22.5px;
 }
 li {
@@ -58,10 +58,6 @@ li a {
 li a: hover {
 	background-color: #2286D8;
 	color: #EFF5FB;
-}
-#cen {
-	color: #2286D8;
-	margin: 20px;
 }
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
  {
@@ -88,7 +84,7 @@ ul {
 	margin: 0; 
 	padding: 12px; 
 }
-p { 
+p,#long { 
 	margin: 15px; 
 }
 code {
