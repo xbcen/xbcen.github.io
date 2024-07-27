@@ -69,9 +69,11 @@ img{
 	border-radius: 7.5px;
 }
 l.img{
-	width:75%;
+	text-align: center;
+	width:50%;
 }
 s.img{
+	text-align: center;
 	width:30%;
 }
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
@@ -117,10 +119,12 @@ img{
 	margin: auto;
 	border-radius: 5px;
 }
-l.img{
-	width: 75%;
+.l{
+	text-align: center;
+	width: 50%;
 }
-s.img{
+.s{
+	text-align: center;
 	width: 30%;
 }
 	 
