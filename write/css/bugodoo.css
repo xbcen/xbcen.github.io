@@ -32,16 +32,21 @@ ul {
 	margin: 0;
 	padding: 20px;
 }
-code，#long {
+code {
 	font-family: 'Noto Sans Mono', sans-serif;
 	background-color: #e1e1e1;
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
+#long {
+	background-color: #e1e1e1;
+}
 p,#long {
 	margin: 22.5px;
 }
-#long 
+#long g {
+	margin: 22.5px;
+}
 li {
 	display: inline-block;
 	margin-right: 20px;
