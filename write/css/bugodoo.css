@@ -64,10 +64,20 @@ li a: hover {
 	background-color: #2286D8;
 	color: #EFF5FB;
 }
-img{
+img {
 	margin: auto;
 	border-radius: 7.5px;
 }
+footer {
+	position: absolute;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	width: 100%;
+	font-weight: bold;
+	font-family: 'Noto Sans Mono', sans-serif;
+}
+
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
  {
 h1 {
