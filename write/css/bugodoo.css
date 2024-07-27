@@ -87,9 +87,13 @@ ul {
 	margin: 0; 
 	padding: 12px; 
 }
-p { 
+p,code { 
 	color: #2286D8; 
 	margin: 15px; 
+}
+code {
+	font-family: 'Noto Sans Mono', sans-serif;
+	background-color: #f1f1f1;
 }
 li { 
 	display: inline-block; 
