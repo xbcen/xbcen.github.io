@@ -38,10 +38,14 @@ code {
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
-#long {
+.long {
 	background-color: #e1e1e1;
+	margin: 22.5px;
 }
-p,#long {
+.long code{
+	background-color:
+}
+p {
 	margin: 22.5px;
 }
 #long g {
