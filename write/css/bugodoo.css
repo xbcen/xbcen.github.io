@@ -38,7 +38,7 @@ code {
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
-p,#long {
+p,.long {
 	margin: 22.5px;
 }
 li {
@@ -84,7 +84,7 @@ ul {
 	margin: 0; 
 	padding: 12px; 
 }
-p,#long { 
+p,.long { 
 	margin: 15px; 
 }
 code {
