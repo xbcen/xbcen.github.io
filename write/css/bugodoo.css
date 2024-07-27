@@ -34,8 +34,9 @@ ul {
 }
 code {
 	font-family: 'Noto Sans Mono', sans-serif;
-	background-color: #1a1a1a;
+	background-color: #bfbfbf;
 	padding: 0 3px;
+	border-radius: 2.5px;
 }
 p{
 	margin: 22.5px;
@@ -92,8 +93,9 @@ p {
 }
 code {
 	font-family: 'Noto Sans Mono', sans-serif;
-	background-color: #1a1a1a;
+	background-color: #bfbfbf;
 	padding: 0 3px;
+	border-radius: 2.5px;
 }
 li { 
 	display: inline-block; 
