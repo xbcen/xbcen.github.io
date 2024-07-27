@@ -64,7 +64,6 @@ li a: hover {
 	color: #EFF5FB;
 }
 img{
-	text-align: center;
 	margin: auto;
 	border-radius: 7.5px;
 }
@@ -113,7 +112,6 @@ code,.long {
 	border-radius: 3px;
 }
 img{
-	text-align: center;
 	margin: auto;
 	border-radius: 5px;
 }
