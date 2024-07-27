@@ -38,8 +38,10 @@ code,.long {
 	border-radius: 2.5px;
 }
 .long,p,code {
-	margin: 22.5px;
 	font-size: 15px;
+}
+.long,p {
+	margin: 22.5px;
 }
 li {
 	display: inline-block;
@@ -89,8 +91,10 @@ ul {
 	padding: 12px; 
 }
 .long,p,code { 
-	margin: 12.5px;
 	font-size: 10px;
+}
+.long,p { 
+	margin: 12.5px;
 }
 code,.long {
 	font-family: 'Noto Sans Mono', sans-serif;
