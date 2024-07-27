@@ -1,6 +1,7 @@
 /* 样式 */
 /* 原https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap */
 @import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
+@import url('https://sstars.us.kg/html/fonts/Noto-Sans-Mono.css');
 body {
 	font-family: 'Noto Serif SC', serif;
 	margin: 0;
@@ -31,9 +32,13 @@ ul {
 	margin: 0;
 	padding: 20px;
 }
-p {
+p,code {
 	color: #2286D8;
 	margin: 20px;
+}
+code {
+	font-family: 'Noto Sans Mono', sans-serif;
+	background-color: #f1f1f1;
 }
 li {
 	display: inline-block;
