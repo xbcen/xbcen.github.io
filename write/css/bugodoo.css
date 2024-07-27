@@ -1,5 +1,4 @@
 /* 样式 */
-/* 原https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap */
 @import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
 @import url('https://sstars.us.kg/html/fonts/Noto-Sans-Mono.css');
 body {
@@ -38,12 +37,9 @@ code,.long {
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
-.long {
+.long,p,code {
 	margin: 22.5px;
-	font-size: 17.5px;
-}
-p,code {
-	margin: 22.5px;
+	font-size: 15px;
 }
 li {
 	display: inline-block;
@@ -92,12 +88,9 @@ ul {
 	margin: 0; 
 	padding: 12px; 
 }
-p,code { 
+.long,p,code { 
 	margin: 12.5px;
 	font-size: 10px;
-}
-.long {
-	margin: 12.5px;
 }
 code,.long {
 	font-family: 'Noto Sans Mono', sans-serif;
