@@ -63,15 +63,16 @@ li a: hover {
 	background-color: #2286D8;
 	color: #EFF5FB;
 }
-l.img{
+img{
+	text-align: center;
+	margin: auto;
 	border-radius: 7.5px;
+}
+l.img{
 	width:75%;
-	text-align:center;
 }
 s.img{
-	border-radius: 7.5px;
 	width:30%;
-	text-align:center;
 }
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
  {
