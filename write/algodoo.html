@@ -6,9 +6,29 @@
         <meta name="description" content="Algodoo之Bug">
         <meta name="keywords" content="Algodoo">
         <link rel="shortcut icon" href="https://sstars.us.kg/html/icon/%E7%94%B5%E8%84%91_computer.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/bugodoo.css">
+        <link rel="stylesheet" href="css/algodoo.css">
     </head>
     <body>
         <h1>收录Algodoo代码ing……</h1>
-        <p>暂无内容 :|</p>
+        <p>调整ui透明度：<code>gui.skin.opacity = 0.925</code></p>
+        <p>随机概率过关（需要先设置<code>_rand变量</code></p>
+        <div class="long">
+            <code>
+                (e)=>{
+                    e.other._M ? {<br>
+                        _rand = rand.uniform01;<br>
+                        _rand <= 0.5 ? {<br>
+                            e.other.pos = scene.my.s关卡号m;<br>
+                            e.other.collideset = 16;<br>
+                            scene.my.spots关卡号 = scene.my.spots关卡号 - 1<br>
+                        } : {<br>
+                            e.other.pos = scene.my.s关卡号<br>
+                        };<br>
+                        scene.my.spots关卡号 < 1 ? {<br>
+                            scene.removeentity(e.this)<br>
+                        } : {}<br>
+                    } : {}<br>
+                }
+            </code>
+        </div>
     </body>
