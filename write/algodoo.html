@@ -31,4 +31,22 @@
                 }
             </code>
         </div>
+        <p>回家区免疫下层</p>
+        <div class="long">
+            (e)=>{<br>
+                e.pos(1) >= e.this.pos(1) ? {<br>
+                    e.other.pos = scene.my.s5<br>
+                } : {}<br>
+            }
+        </div>
+        <p>反重力</p>
+        <div class="long">
+            (e)=>{<br>
+                e.other._M ? {<br>
+                    e.other.postStep = (e)=>{<br>
+                        vel = vel + [ - math.sin(sim.gravityAngleOffset), math.cos(sim.gravityAngleOffset)] * Sim.gravityStrength * 2 / Sim.frequency<br>
+                    }<br>
+                } : {}<br>
+            }
+        </div>
     </body>
