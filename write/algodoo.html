@@ -11,7 +11,7 @@
     <body>
         <h1>收录Algodoo代码ing……</h1>
         <p>调整ui透明度：<code>gui.skin.opacity = 0.925</code></p>
-        <p>随机概率过关（需要先定义<code>_rand</code>变量</p>
+        <p>随机概率过关（需要先定义<code>_rand</code>变量）（写oncollide）：</p>
         <div class="long">
             <code>
                 (e)=>{<br>
@@ -31,7 +31,7 @@
                 }
             </code>
         </div>
-        <p>回家区免疫下层</p>
+        <p>回家区免疫下层（写oncollide）：</p>
         <div class="long">
             (e)=>{<br>
                 e.pos(1) >= e.this.pos(1) ? {<br>
@@ -39,7 +39,7 @@
                 } : {}<br>
             }
         </div>
-        <p>反重力</p>
+        <p>反重力（写oncollide）：</p>
         <div class="long">
             (e)=>{<br>
                 e.other._M ? {<br>
