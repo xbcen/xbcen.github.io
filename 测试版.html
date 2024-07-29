@@ -5,110 +5,18 @@
     <title>测试网站</title>
     <name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
     <link rel="shortcut icon" href="html/icon/%E5%B7%A5%E5%85%B7_tool.ico" type="image/x-icon">
-    <style>
-        @import url('html/fonts/Noto-Sans-Mono.css');
-        
-        body {
-            font-family: Noto Sans Mono, sans-serif;
-            padding: 2em;
-            background-color: #F3F3F3;
-            color: #333;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding: 1em 0;
-        }
-
-        h1 {
-            font-family: 'Noto Sans Mono', sans-serif;
-            color: #333;
-        }
-
-        p {
-            margin: 1em;
-        }
-
-        section {
-            padding: 2em;
-            border-radius: 3px;
-            background-color: #fff;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 2em;
-        }
-
-        h2,h3 {
-            font-family: 'Noto Sans Mono', sans-serif;
-            color: #333;
-            border-bottom: 1px dotted #333;
-            padding-bottom: 4px;
-        }
-
-        nav {
-            background-color: #333;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        nav li {
-            float: left;
-        }
-
-        nav li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav li a:hover {
-            background-color: #111;
-        }
-        
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        ul ul {
-            margin: 1.5em 2em;
-        }
-
-        li {
-            margin-bottom: 1em;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        a {
-            color: #2286D8;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        a:hover {
-            color: #1f55b5;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="html/css/test.css">
 </head>
 <body>
     <header>
-        <h1>一个网页</h1>
-        <p style="text-align:center; color: #2286D8;">这是一个普通的博客。</p>
+        <h1>一个博客</h1>
+        <div id="cen"></div>
+        <script src="html/js/home.js"></script>
     </header>
     <section class="nav">
         <h2 id="导航">导航：</h2>
         <ul>
+            <li><a href="#最新文章">最新文章</a></li>
             <li><a href="#导航">导航</a></li>
             <li><a href="#精选网站">精选网站</a></li>
             <li><a href="#主页">主页</a></li>
@@ -119,17 +27,23 @@
                 <li><a href="#其他">其他</a></li>
             </ul>
             <li><a href="#自制工具">自制工具</a></li>
-            <li><a href="#最新文章">最新文章</a></li>
-            <!-- 添加更多导航链接 -->
         </ul>
     </section>
     <main>
+        <section class="articles">
+            <h2 id="最新文章">最新文章：</h2>
+            <ul>
+                <li><a href="write/algodoo.html">Algodoo之代码</a></li>
+                <li><a href="write/bugodoo.html">Algodoo之Bug</a></li>
+                <li><a href="https://bing.sstars.us.kg/web/#/" target="_blank">New Bing</a></li>
+                <li><a href="home.html">文章更新中……</a></li>
+            </ul>
+        </section>
         <section class="website-links">
             <h2 id="精选网站">精选网站：</h2>
             <ul>
                 <h3 id="主页">主页：</h3>
               <li><a href="home.html">正式版主页</a></li>
-                <li><a href="测试版.html">暂无网站汇总，请前往正式版主页 :-|</a></li>
                 <h3 id="搜索">搜索引擎：</h3>
                 <li><a href="https://www.google.com" target="_blank">谷歌</a></li>
                 <li><a href="https://www.bing.com" target="_blank">必应</a></li>
@@ -153,7 +67,6 @@
                 <li><a href="https://www.gitee.com/" target="_blank">Gitee</a></li>
 	            <li><a href="https://singlelogin.re/" target="_blank">Z-Library</a></li>
                 <li><a href="http://info.cern.ch" target="_blank">最早的网站</a></li>
-                <!-- 添加更多的汇总网站链接 -->
                 </ul>
         </section>
         <section class="tools">
@@ -163,18 +76,7 @@
                 <li><a href="离谱昵称生成器.html" target="_blank">离谱昵称生成器</a></li>
                 <li><a href="music.html" target="_blank">网易云音乐下载</a></li>
                 <li><a href="textbooks.html" target="_blank">教材下载</a></li>
-                <!-- 添加更多的工具链接 -->
         </ul>
-        </section>
-        <section class="articles">
-            <h2 id="最新文章">最新文章：</h2>
-            <ul>
-                <li><a href="chimeragpt.html" target="_blank">ChimeraGPT</a></li>
-                <li><a href="pandora.html" target="_blank">Pandora</a></li>
-                <li><a href="Office.html" target="_blank">Office</a></li>
-                <li><a href="New-Bing.html" target="_blank">New Bing部署</a></li>
-                <!-- 添加更多的文章标题和链接 -->
-            </ul>
         </section>
     </main>
     <footer>
