@@ -8,6 +8,10 @@ body {
     color: blue;
     background-color: #EFF5FB;
 }
+* {
+    margin: 0;
+    padding: 0;
+}
 h1 {
     background-color: #2286D8;
     color: #EFF5FB;
@@ -64,10 +68,6 @@ a:hover {
     background-color: #2286D8;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
 .nav {
     display: flex;
     justify-content: right;

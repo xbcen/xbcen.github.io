@@ -72,7 +72,7 @@ li a {
 	transition: all 0.3s ease-in-out;
 }
 
-li a: hover {
+li a:hover {
 	background-color: #2286D8;
 	color: #EFF5FB;
 }
@@ -169,7 +169,7 @@ footer p {
 		transition: all 0.3s ease-in-out;
 	}
 
-	li a: hover {
+	li a:hover {
 		background-color: #2286D8;
 		color: #EFF5FB;
 	}
