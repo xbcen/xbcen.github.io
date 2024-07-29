@@ -1,5 +1,6 @@
 @import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
 @import url('https://sstars.us.kg/html/fonts/Noto-Sans-Mono.css');
+
 body {
 	font-family: 'Noto Serif SC', serif;
 	margin: 0;
@@ -7,49 +8,60 @@ body {
 	color: blue;
 	background-color: #EFF5FB;
 }
+
 h1 {
 	background-color: #2286D8;
 	color: #EFF5FB;
 	padding: 20px;
 }
+
 h2,h3,p,code {
 	color: #2286D8;
 }
-h2{
+
+h2 {
 	font-size: 20px;
 	font-weight: bold;
 	padding-left: 20px;
 }
-h3{
+
+h3 {
 	font-size: 17.5px;
 	font-style: italic;
 	padding-left: 22.5px;
 }
+
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 20px;
 }
+
 code,.long {
 	font-family: 'Noto Sans Mono', sans-serif;
 	background-color: #e1e1e1;
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
+
 .long,p,code {
 	font-size: 15px;
 }
+
 .long,p {
 	margin: 22.5px;
 }
-.long code{
+
+.long code {
 	padding: 0;
 }
+
 li {
 	display: inline-block;
 	margin-right: 20px;
 	margin-top: 8px;
 }
+
 li a {
 	display: inline-block;
 	color: #2286D8;
@@ -57,90 +69,108 @@ li a {
 	padding: 18px 20px;
 	text-decoration: none;
 	border-radius: 10px;
-	transition: all 0.3s ease-in-out; 
+	transition: all 0.3s ease-in-out;
 }
+
 li a: hover {
 	background-color: #2286D8;
 	color: #EFF5FB;
 }
+
 img {
 	margin: auto;
 	border-radius: 7.5px;
 }
-footer p{
+
+footer p {
 	text-align: center;
 	font-family: 'Noto Sans Mono', sans-serif;
 	font-weight: bold;
 }
-.l,.s{
+
+.l,.s {
 	text-align: center;
 }
+
 .l img {
 	width: 75%;
 }
+
 .s img {
 	width: 30%;
 }
- @media screen and (max-width: 600px) /* 小屏幕的样式 */
- {
-h1 {
-	background-color: #2286D8;
-	color: #EFF5FB;
-	padding: 15px;
-}
-h2,h3,p,code {
-	color: #2286D8;
-}
-h2{
-	font-size: 15px;
-	font-weight: bold;
-	padding-left: 15px;
-}
-h3{
-	font-size: 12.5px;
-	font-style: italic;
-	padding-left: 17.5px;
-}
-ul {
-	list-style-type: none; 
-	margin: 0; 
-	padding: 12px; 
-}
-.long,p,code { 
-	font-size: 10px;
-}
-.long,p { 
-	margin: 12.5px;
-}
-.long code{
-	padding: 0;
-}
-code,.long {
-	font-family: 'Noto Sans Mono', sans-serif;
-	background-color: #e1e1e1;
-	padding: 0 3px;
-	border-radius: 3px;
-}
-img{
-	margin: auto;
-	border-radius: 5px;
-} 
-li { 
-	display: inline-block; 
-	margin-right: 15px; 
-	margin-top: 6px;
-}
-li a { 
-	display: inline-block; 
-	color: #2286D8; 
-	text-align: center; 
-	padding: 12px 13.5px; 
-	text-decoration: none; 
-	border-radius: 7.5px; 
-	transition: all 0.3s ease-in-out;  
-}
-li a: hover { 
-	background-color: #2286D8; 
-	color: #EFF5FB; 
-}
+
+@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+	h1 {
+		background-color: #2286D8;
+		color: #EFF5FB;
+		padding: 15px;
+	}
+
+	h2,h3,p,code {
+		color: #2286D8;
+	}
+
+	h2 {
+		font-size: 15px;
+		font-weight: bold;
+		padding-left: 15px;
+	}
+
+	h3 {
+		font-size: 12.5px;
+		font-style: italic;
+		padding-left: 17.5px;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 12px;
+	}
+
+	.long,p,code {
+		font-size: 10px;
+	}
+
+	.long,p {
+		margin: 12.5px;
+	}
+
+	.long code {
+		padding: 0;
+	}
+
+	code,.long {
+		font-family: 'Noto Sans Mono', sans-serif;
+		background-color: #e1e1e1;
+		padding: 0 3px;
+		border-radius: 3px;
+	}
+
+	img {
+		margin: auto;
+		border-radius: 5px;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 15px;
+		margin-top: 6px;
+	}
+
+	li a {
+		display: inline-block;
+		color: #2286D8;
+		text-align: center;
+		padding: 12px 13.5px;
+		text-decoration: none;
+		border-radius: 7.5px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	li a: hover {
+		background-color: #2286D8;
+		color: #EFF5FB;
+	}
 }
