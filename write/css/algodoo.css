@@ -51,11 +51,12 @@ code,.long {
 .long,p {
 	margin: 22.5px;
 }
-
+.long{
+	width: fit-content;
+}
 .long code {
 	padding: 0;
 }
-
 li {
 	display: inline-block;
 	margin-right: 20px;
