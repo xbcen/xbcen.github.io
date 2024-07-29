@@ -68,6 +68,15 @@ img {
 	margin: auto;
 	border-radius: 7.5px;
 }
+.l,.s{
+	text-align: center;
+}
+.l img {
+	width: 75%;
+}
+.s img {
+	width: 30%;
+}
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
  {
 h1 {
