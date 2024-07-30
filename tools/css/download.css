@@ -4,7 +4,7 @@ body {
     font-family: 'Noto Serif SC', serif;
     margin: 0;
     padding: 0;
-    color: blue;
+    color: #2286D8;
     background-color: #EFF5FB;
 }
 
@@ -15,7 +15,6 @@ h1 {
 }
 
 h2,a {
-    color: #2286D8;
     font-weight: bold;
     font-size: 20px;
 }
@@ -35,8 +34,7 @@ textarea#userUrls {
     padding: 20px 30px; 
     margin: 0 auto;
     display: block;
-    font-size: 20px;  
-    color: #2286D8;  
+    font-size: 20px;   
     font-family: 'Noto Serif SC', serif;
     transition: all 0.2s ease-in-out;
     width: 90%;
@@ -61,7 +59,6 @@ textarea#userUrls:focus::placeholder {
 
 button {
     background-color: #EFF5FB;
-    color: #2286D8;
     text-align: center;
     padding: 20px 30px;
     border-radius: 10px;
@@ -90,7 +87,6 @@ h1 {
 }
 
 h2,a {
-    color: #2286D8;
     font-weight: bold;
     font-size: 15px;
 }
@@ -110,7 +106,6 @@ textarea#userUrls {
     padding: 15px 22.5px; 
     margin: 15px;
     font-size: 20px;  
-    color: #2286D8;  
     font-family: 'Noto Serif SC', serif;
     transition: all 0.2s ease-in-ut;
     width: 67.5%;
@@ -134,7 +129,6 @@ textarea#userUrls:focus::placeholder {
 
 button {
     background-color: #EFF5FB;
-    color: #2286D8;
     text-align: center;
     padding: 15px 22.5px;
     border-radius: 7.5px;
@@ -155,3 +149,26 @@ button:hover {
     justify-content: center; 
 }
 }
+@media (prefers-color-scheme: dark) {
+	body{
+		color: #A3D1FF;
+		background-color: #131E29;
+	}
+	button {
+        background-color: #131E29;
+		color:#A3D1FF;
+	}
+	button:hover {
+		background-color: #A3D1FF;
+		color: #155284;
+	}
+    textarea#userUrls {
+        border: 2px solid #2286D8; 
+        background-color:#131E29;
+        color:#A3D1FF;
+    }
+    textarea#userUrls:focus {
+        background-color:#2286D8; 
+        color:#EFF5FB; 
+    }
+  }

@@ -4,8 +4,8 @@ body {
     font-family: 'Noto Serif SC', serif;
     margin: 0;
     padding: 0;
-    color: blue;
     background-color: #EFF5FB;
+    color:#2286D8;
 }
 h1 {
     background-color: #2286D8;
@@ -13,12 +13,10 @@ h1 {
     padding: 20px;
 }
 h2 {
-    color:#2286D8;
     padding-left: 20px;
     font-size: 20px;
 }
 h3  {
-    color:#2286D8;
     font-size:18px;
     padding:15px 20px 15px 20px;
 }
@@ -53,13 +51,11 @@ li a:hover {
          padding: 15px;
      }
      h2 {
-         color:#126EBA;
          font-weight: bold;
 		 padding: 15px;
 		 font-size: 20px;
      }
      h3  {
-		 color:#2286D8;
 		 font-size:18px;
 		 padding:11.25px 15px 20px 15px;
      }
@@ -88,3 +84,16 @@ li a:hover {
          color:#EFF5FB; 
      }
     }
+@media (prefers-color-scheme: dark) {
+	body{
+		color: #A3D1FF;
+		background-color: #131E29;
+	}
+	li a {
+		color:#A3D1FF;
+	}
+	li a:hover {
+		background-color: #A3D1FF;
+		color: #155284;
+	}
+}

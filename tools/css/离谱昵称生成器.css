@@ -4,7 +4,7 @@ body {
     font-family: 'Noto Serif SC', serif;
     margin: 0;
     padding: 0;
-    color: blue;
+    color: #2286D8;
     background-color: #EFF5FB;
 }
 h1 {
@@ -13,12 +13,10 @@ h1 {
     padding: 20px;
 }
 p {
-    color: #2286D8;
     margin: 20px;
 }
 button {
     background-color: #EFF5FB;
-    color: #2286D8;
     text-align: center;
     padding: 12px 25px;
     border-radius: 10px;
@@ -45,4 +43,18 @@ p {
     color:#2286D8; 
     margin:15px; 
     }
+}
+@media (prefers-color-scheme: dark) {
+	body{
+		color: #A3D1FF;
+		background-color: #131E29;
+	}
+	button {
+        background-color: #131E29;
+		color:#A3D1FF;
+	}
+	button:hover {
+		background-color: #A3D1FF;
+		color: #155284;
+	}
 }

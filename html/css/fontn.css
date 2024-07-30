@@ -272,14 +272,10 @@ input[type="text"]#mySearch {
         border:2px solid #2286D8; 
         background-color:#131E29;
         color:#A3D1FF;
-        transition:all 0.3s ease-in-out;
     }
     input[type="text"]#mySearch:focus {
         background-color:#2286D8; 
         color:#EFF5FB;  
-    }
-    ::placeholder {
-        color:#A3D1FF;
     }
     input[type="text"]:focus::placeholder {
         color:#EFF5FB;
