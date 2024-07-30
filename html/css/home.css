@@ -114,6 +114,7 @@ li a:hover {
     margin:15px; 
 }
 }
+
 @media (prefers-color-scheme: dark) {
     body{
         color: #A3D1FF;
