@@ -4,18 +4,13 @@
 body {
     font-family: 'Noto Sans Mono', sans-serif;
     padding: 2em;
-    background-color: #F3F3F3;
+    background-color: #f3f3f3;
     color: #333;
 }
-
 header {
     text-align: center;
     border-bottom: 2px solid #333;
     padding: 1em 0;
-}
-
-h1 {
-    color: #333;
 }
 
 p {
@@ -26,12 +21,11 @@ section {
     padding: 2em;
     border-radius: 3px;
     background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px #333;
     margin-bottom: 2em;
 }
 
 h2,h3 {
-    color: #333;
     border-bottom: 1px dotted #333;
     padding-bottom: 4px;
 }
@@ -93,4 +87,14 @@ a:hover {
 .cen{
     text-align: center; 
     color: #2286D8;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #f3f3f3;
+        background-color: #333;
+    }
+    section {
+        background-color: #000;
+        box-shadow: 0px 2px 5px #bfbfbf;
+    }
 }

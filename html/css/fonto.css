@@ -1,11 +1,11 @@
 /* 样式 */
-@import url('hhttps://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
+@import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
 
 body {
 	font-family: 'Noto Serif SC', serif;
 	margin: 0;
 	padding: 0;
-	color: blue;
+	color: #2286D8;
 	background-color: #EFF5FB;
 }
 
@@ -16,14 +16,12 @@ h1 {
 }
 
 h2 {
-	color: #2286D8;
 	font-size: 18px;
 	padding: 15px 20px 15px 20px;
 }
 
 h3, more {
 	font-size: 20px;
-	color: #2286D8;
 	font-weight: bold;
 }
 
@@ -45,7 +43,6 @@ ul {
 }
 
 p {
-	color: #2286D8;
 	margin: 20px;
 }
 
@@ -57,12 +54,12 @@ li {
 
 li a {
 	display: inline-block;
-	color: #2286D8;
 	text-align: center;
 	padding: 20px 30px;
 	text-decoration: none;
 	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
+	color: #2286D8;
 	font-size: 20px;
 }
 
@@ -72,7 +69,6 @@ li a:hover {
 }
 
 #cen {
-	color: #2286D8;
 	margin: 20px;
 }
 
@@ -144,3 +140,16 @@ li a:hover {
 		margin: 15px;
 	}
     }
+@media (prefers-color-scheme: dark) {
+    body{
+        color: #A3D1FF;
+        background-color: #131E29;
+    }
+    li a {
+        color:#A3D1FF;
+    }
+    li a:hover {
+        background-color: #A3D1FF;
+        color: #155284;
+    }
+}

@@ -3,8 +3,6 @@
 
 body {
     font-family: 'Noto Serif SC', serif;
-    margin: 0;
-    padding: 0;
     color: blue;
     background-color: #EFF5FB;
 }
@@ -19,13 +17,11 @@ h1 {
     margin: 20px 0;
 }
 h2  {
-    color:#2286D8;
     font-size:18px;
     padding:15px 20px;
 }
 h3, .more {
     font-size: 20px;
-    color:#2286D8;
     font-weight: bold;
 }
 h3 {
@@ -136,8 +132,7 @@ input[type="text"]#mySearch {
     padding:20px 30px; 
     margin: 20px;
     transition:all 0.3s ease-in-out;  
-    font-size:20px;  
-    color:#2286D8;  
+    font-size:20px;    
     font-family: 'Noto Serif SC', serif;
 }
 input[type="text"]#mySearch:focus {
@@ -146,13 +141,12 @@ input[type="text"]#mySearch:focus {
     color:#EFF5FB;  
 }
 ::placeholder {
-    color:#2286D8;  
+    color:#2286D8;
 }
-    input[type="text"]:focus::placeholder {
+input[type="text"]:focus::placeholder {
     color:#EFF5FB;
 }
-#cen {
-    color:#2286D8; 
+#cen { 
     margin:20px; 
 }
 
@@ -169,13 +163,11 @@ h1 {
     margin-top: 15px;
 }
 h2 {
-    color:#2286D8;
     font-size:18px;
     padding:11.25px 15px 11.25px 15px;
 }
 h3, more {
     font-size: 20px;
-    color:#2286D8;
     font-weight: bold;
 }
 h3 {
@@ -193,8 +185,7 @@ ul {
     display:flex; 
     flex-wrap:wrap; 
 }
-p { 
-    color:#2286D8; 
+p {  
     margin-bottom:15px; 
 }
 main li { 
@@ -203,8 +194,7 @@ main li {
     font-size:10px; 
 }
 main a { 
-    display:inline-block; 
-    color:#2286D8; 
+    display:inline-block;  
     text-align:center; 
     padding:15px 22.5px; 
     text-decoration:none; 
@@ -217,8 +207,7 @@ a:hover {
     color:#EFF5FB; 
 }
 
-#cen { 
-    color:#2286D8; 
+#cen {  
     margin:15px; 
 }
 input[type="text"]#mySearch {
@@ -256,4 +245,41 @@ input[type="text"]#mySearch {
     border-radius:7.5px; 
     font-family: 'Noto Serif SC', serif;
 }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        color: #A3D1FF;
+        background-color: #131E29;
+    }
+    li a {
+        color:#A3D1FF;
+    }
+    li a:hover {
+        background-color: #A3D1FF;
+        color: #155284;
+    }
+    .url-top ul li {
+        background-color: #2286D8;
+    }
+    .url-top a{
+        color:#A3D1FF;
+    }
+    .url-top a:hover{
+        color:#2286D8;
+        background-color: #A3D1FF;
+    }
+    input[type="text"]#mySearch {
+        border:2px solid #2286D8; 
+        background-color:#155284; 
+    }
+    input[type="text"]#mySearch:focus {
+        background-color:#155284; 
+        color:#A3D1FF;  
+    }
+    ::placeholder {
+        color:#155284;
+    }
+    input[type="text"]:focus::placeholder {
+        color:#A3D1FF;
+    }
 }

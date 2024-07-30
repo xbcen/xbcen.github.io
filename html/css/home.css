@@ -5,7 +5,7 @@ body {
     font-family: 'Noto Serif SC', serif;
     margin: 0;
     padding: 0;
-    color: blue;
+    color: #2286D8;
     background-color: #EFF5FB;
 }
 h1 {
@@ -14,7 +14,6 @@ h1 {
     padding: 20px;
 }
 h2, .min, .more {
-    color:#2286D8;
     font-weight: bold;
 }
 h2 {
@@ -36,29 +35,27 @@ ul {
     padding: 20px;
 }
 p {
-    color: #2286D8;
     margin: 20px;
 }
 li {
     display: inline-block;
     margin-right: 20px;
-	 margin-top: 8px;
+	margin-top: 8px;
 }
 li a {
     display: inline-block;
-    color: #2286D8;
     text-align: center;
     padding: 18px 20px;
     text-decoration: none;
     border-radius: 10px;
     transition: all 0.3s ease-in-out; 
+    color:#2286D8;
 }
 li a:hover {
     background-color: #2286D8;
     color: #EFF5FB;
 }
 #cen {
-    color: #2286D8;
     margin: 20px;
 }
  @media screen and (max-width: 600px) /* 小屏幕的样式 */
@@ -116,4 +113,17 @@ li a:hover {
     color:#2286D8; 
     margin:15px; 
 }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        color: #A3D1FF;
+        background-color: #131E29;
+    }
+    li a {
+        color:#A3D1FF;
+    }
+    li a:hover {
+        background-color: #A3D1FF;
+        color: #155284;
+    }
 }
