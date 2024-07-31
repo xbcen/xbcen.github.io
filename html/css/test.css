@@ -84,9 +84,31 @@ a:hover {
     color: #2286D8;
     text-decoration: none;
 }
-.cen{
-    text-align: center; 
+#cen{
+    font-family:'Noto Serif SC', sans-serif;
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    height: 20px;
     color: #2286D8;
+}
+#cen::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    height: 15px;
+    width: 2px;     
+    animation: san 0.5s steps(1) infinite;
+}
+@keyframes san{
+    0%,100%{
+        background-color: #2286D8;
+    }
+    50%{
+       background-color: transparent;
+    }
+
 }
 @media (prefers-color-scheme: dark) {
     body {
