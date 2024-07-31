@@ -89,8 +89,8 @@ a:hover {
     display: inline-block;
     position: relative;
     font-size: 15px;
-    height: 20px;
     color: #2286D8;
+    height: 15px;
 }
 #cen::after{
     content: '';
@@ -100,6 +100,9 @@ a:hover {
     height: 15px;
     width: 2px;     
     animation: san 0.5s steps(1) infinite;
+}
+.head{
+    height: 20px;
 }
 @keyframes san{
     0%,100%{
