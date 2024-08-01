@@ -14,6 +14,36 @@
         <p>更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code></p>
         <p>生成圆形：<code>Scene.addCircle()</code></p>
         <p>生成方形：<code>Scene.addBox()</code></p>
+        <p>隐藏UI：</p>
+        <div class="long">
+            <code>
+                (e)=>{<br>
+                    sim.running ? {<br>
+                        Scene.addWidget({<br>
+                            Widgetid := "MenuBar";<br>
+                            visible := false<br>
+                        });<br>
+                    } : {<br>
+                        Scene.addWidget({<br>
+                            Widgetid := "MenuBar";<br>
+                            visible := true<br>
+                        });<br>
+                    }<br>
+                }<br>
+            </code>
+        </div>
+        <p>排行榜文字背景（增加可读性）(写oncollide，使用时请去掉注释):</p>
+        <div class="long">
+            <code>
+                (e)=>{<br>
+                    e.other._pp ? {<br>
+                        e.other.update = (e)=>{};<br>
+                        e.other.text = "&lt;markup&gt;&lt;span background=\"#cccccc\"//背景hex颜色&gt;&lt;span color=\"#000000\"//球hex颜色&gt;球名字&lt;/span>&lt;/span>&lt;/markup&gt;";<br>
+                        e.other.textcolor = 球rgba颜色<br>
+                    } : {}<br>
+                }<br>
+            </code>
+        </div>
         <p>随机概率过关（需要先定义<code>_rand</code>变量）（写oncollide）：</p>
         <div class="long">
             <code>
