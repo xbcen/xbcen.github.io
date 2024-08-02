@@ -1,10 +1,15 @@
-let data;
-async function getData() {
-    const response = await fetch("https://v1.hitokoto.cn/?c=i&encode=text");
-    data = await response.text();
-    document.getElementById("cen").innerHTML = data;
+function getData() {
+  fetch("https://v1.hitokoto.cn/?c=i&encode=text")
+    .then((response) => response.text())
+    .then((data) => {
+      const hitokoto = document.getElementById("cen");
+      hitokoto.innerText = data;
+
+      hitokoto.addEventListener("click", () => {
+        window.open(
+          "https://www.baidu.com/s?ie=UTF-8&wd=" + encodeURIComponent(data) + "&API=hitokoto.cn"
+        );
+      });
+    });
 }
-document.getElementById("cen").addEventListener('click', function() {
-    window.open('https://www.baidu.com/s?ie=UTF-8&wd=' + data +'&API=hitokoto.cn');
-});
 getData();
