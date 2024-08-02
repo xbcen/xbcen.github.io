@@ -1,130 +1,129 @@
 /* 样式 */
 /* 原https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap */
-@import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
+@import url("https://sstars.us.kg/html/fonts/Noto-Serif-SC.css");
 body {
-    font-family: 'Noto Serif SC', serif;
-    margin: 0;
-    padding: 0;
-    color: #2286D8;
-    background-color: #EFF5FB;
+  font-family: "Noto Serif SC", serif;
+  margin: 0;
+  padding: 0;
+  color: #2286d8;
+  background-color: #eff5fb;
 }
 h1 {
-    background-color: #2286D8;
-    color: #EFF5FB;
-    padding: 20px;
+  background-color: #2286d8;
+  color: #eff5fb;
+  padding: 20px;
 }
-h2, .min, .more {
-    font-weight: bold;
+h2,.min,.more {
+  font-weight: bold;
 }
 h2 {
-	padding-left: 20px;
-    font-size: 20px;
+  padding-left: 20px;
+  font-size: 20px;
 }
 .more {
-    font-size:15px;
+  font-size: 15px;
 }
 .min {
-    font-size:18px;
+  font-size: 18px;
 }
-.min, .more {
-    text-align: center;
+.min,.more {
+  text-align: center;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
 }
 p {
-    margin: 20px;
+  margin: 20px;
 }
 li {
-    display: inline-block;
-    margin-right: 20px;
-	margin-top: 8px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 8px;
 }
 li a {
-    display: inline-block;
-    text-align: center;
-    padding: 18px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out; 
-    color:#2286D8;
+  display: inline-block;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: #2286d8;
 }
 li a:hover {
-    background-color: #2286D8;
-    color: #EFF5FB;
+  background-color: #2286d8;
+  color: #eff5fb;
 }
 #cen {
-    margin: 20px;
+  margin: 20px;
 }
- @media screen and (max-width: 600px) /* 小屏幕的样式 */
- {
-h1 {
-    background-color: #2286D8;
-    color: #EFF5FB;
+@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+  h1 {
+    background-color: #2286d8;
+    color: #eff5fb;
     padding: 15px;
-}
-h2, .min, .more {
-    color:#126EBA;
+  }
+  h2,.min,.more {
+    color: #126eba;
     font-weight: bold;
-}
-h2 {
-	padding: 15px;
-	font-size: 15px;
-}
-.min {
-    font-size:13.5px;
-}
-.more {
-    font-size:15px;
-}
-.min, .more {
-    text-align:center; 
-}
-ul {
-    list-style-type:none; 
-    margin:0; 
-    padding:12px; 
-}
-p { 
-    color:#2286D8; 
-    margin:15px; 
-}
-li { 
-    display:inline-block; 
-    margin-right:15px; 
-	margin-top: 6px;
-}
-li a { 
-    display:inline-block; 
-    color:#2286D8; 
-    text-align:center; 
-    padding:12px 13.5px; 
-    text-decoration:none; 
-    border-radius:7.5px; 
-    transition:all 0.3s ease-in-out;  
-}
-li a:hover { 
-    background-color:#2286D8; 
-    color:#EFF5FB; 
-}
-#cen { 
-    color:#2286D8; 
-    margin:15px; 
-}
+  }
+  h2 {
+    padding: 15px;
+    font-size: 15px;
+  }
+  .min {
+    font-size: 13.5px;
+  }
+  .more {
+    font-size: 15px;
+  }
+  .min,.more {
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+  }
+  p {
+    color: #2286d8;
+    margin: 15px;
+  }
+  li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 6px;
+  }
+  li a {
+    display: inline-block;
+    color: #2286d8;
+    text-align: center;
+    padding: 12px 13.5px;
+    text-decoration: none;
+    border-radius: 7.5px;
+    transition: all 0.3s ease-in-out;
+  }
+  li a:hover {
+    background-color: #2286d8;
+    color: #eff5fb;
+  }
+  #cen {
+    color: #2286d8;
+    margin: 15px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    body{
-        color: #A3D1FF;
-        background-color: #131E29;
-    }
-    li a {
-        color:#A3D1FF;
-    }
-    li a:hover {
-        background-color: #A3D1FF;
-        color: #155284;
-    }
+  body {
+    color: #a3d1ff;
+    background-color: #131e29;
+  }
+  li a {
+    color: #a3d1ff;
+  }
+  li a:hover {
+    background-color: #a3d1ff;
+    color: #155284;
+  }
 }

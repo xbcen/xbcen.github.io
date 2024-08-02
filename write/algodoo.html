@@ -9,12 +9,7 @@
     <link rel="stylesheet" href="css/algodoo.css">
 </head>
 <body>
-    <h1>收录Algodoo代码ing……</h1>
-    <p>调整ui不透明度：<code>gui.skin.opacity = 0.925</code></p>
-    <p>更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code></p>
-    <p>生成圆形：<code>Scene.addCircle()</code></p>
-    <p>生成方形：<code>Scene.addBox()</code></p>
-    <p>隐藏UI：</p>
+
     <div class="long">
         <code>
             (e)=>{<br>
@@ -39,7 +34,7 @@
                     e.other._pp ? {<br>
                         e.other.update = (e)=>{};<br>
                         e.other.text = "&lt;markup&gt;&lt;span background=\"#cccccc\"//背景hex颜色&gt;&lt;span color=\"#000000\"//球hex颜色&gt;球名字&lt;/span>&lt;/span>&lt;/markup&gt;";<br>
-                        e.other.textcolor = 球rgba颜色<br>
+                        e.other.textcolor = [1,1,1,1]<br>
                     } : {}<br>
                 }<br>
             </code>
