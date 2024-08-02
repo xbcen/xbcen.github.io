@@ -20,20 +20,20 @@
     <p>隐藏UI：</p>
     <div class="long">
         <code>
-                (e)=>{<br>
-                    sim.running ? {<br>
-                        Scene.addWidget({<br>
-                            Widgetid := "MenuBar";<br>
-                            visible := false<br>
-                        });<br>
-                    } : {<br>
-                        Scene.addWidget({<br>
-                            Widgetid := "MenuBar";<br>
-                            visible := true<br>
-                        });<br>
-                    }<br>
+            (e)=>{<br>
+                sim.running ? {<br>
+                    Scene.addWidget({<br>
+                        Widgetid := "MenuBar";<br>
+                        visible := false<br>
+                    });<br>
+                } : {<br>
+                    Scene.addWidget({<br>
+                        Widgetid := "MenuBar";<br>
+                        visible := true<br>
+                    });<br>
                 }<br>
-            </code>
+            }<br>
+        </code>
     </div>
     <p>排行榜文字背景（增加可读性）(写oncollide，使用时请去掉注释):</p>
     <div class="long">
@@ -50,21 +50,21 @@
     <p>随机概率过关（需要先定义<code>_rand</code>变量）（写oncollide）：</p>
     <div class="long">
         <code>
-                (e)=>{<br>
-                    e.other._M ? {<br>
-                        _rand = rand.uniform01;<br>
+            (e)=>{<br>
+                e.other._M ? {<br>
+                    _rand = rand.uniform01;<br>
                         _rand <= 0.5 ? {<br>
-                            e.other.pos = scene.my.s关卡号m;<br>
-                            e.other.collideset = 16;<br>
-                            scene.my.spots关卡号 = scene.my.spots关卡号 - 1<br>
-                        } : {<br>
-                            e.other.pos = scene.my.s关卡号<br>
-                        };<br>
-                        scene.my.spots关卡号 < 1 ? {<br>
-                            scene.removeentity(e.this)<br>
-                        } : {}<br>
+                        e.other.pos = scene.my.s关卡号m;<br>
+                        e.other.collideset = 16;<br>
+                        scene.my.spots关卡号 = scene.my.spots关卡号 - 1<br>
+                    } : {<br>
+                        e.other.pos = scene.my.s关卡号<br>
+                    };<br>
+                    scene.my.spots关卡号 < 1 ? {<br>
+                        scene.removeentity(e.this)<br>
                     } : {}<br>
-                }
+                } : {}<br>
+            }
             </code>
     </div>
     <p>回家区免疫下层（写oncollide）：</p>
