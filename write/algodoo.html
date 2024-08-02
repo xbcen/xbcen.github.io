@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Algodoo之代码</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Algodoo之Bug">
-    <meta name="keywords" content="Algodoo">
-    <link rel="shortcut icon" href="https://sstars.us.kg/html/icon/%E7%94%B5%E8%84%91_computer.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/algodoo.css">
-</head>
-<body>
-
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+    <meta name="description" content="Algodoo之Bug" />
+    <meta name="keywords" content="Algodoo" />
+    <link rel="shortcut icon" href="https://sstars.us.kg/html/icon/%E7%94%B5%E8%84%91_computer.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/algodoo.css" />
+  </head>
+  <body>
+    <h1>收录Algodoo代码ing……</h1>
+    <p>调整ui不透明度：<code>gui.skin.opacity = 0.925</code></p>
+    <p>更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code></p>
+    <p>生成圆形：<code>Scene.addCircle()</code></p>
+    <p>生成方形：<code>Scene.addBox()</code></p>
+    <p>隐藏UI：</p>
     <div class="long">
-        <code>
-            (e)=>{<br>
-                sim.running ? {<br>
-                    Scene.addWidget({<br>
-                        Widgetid := "MenuBar";<br>
-                        visible := false<br>
-                    });<br>
-                } : {<br>
-                    Scene.addWidget({<br>
-                        Widgetid := "MenuBar";<br>
-                        visible := true<br>
-                    });<br>
-                }<br>
-            }<br>
-        </code>
+      <code>
+        (e)=>{<br />
+        sim.running ? {<br />
+        Scene.addWidget({<br />
+        Widgetid := "MenuBar";<br />
+        visible := false<br />
+        });<br />
+        } : {<br />
+        Scene.addWidget({<br />
+        Widgetid := "MenuBar";<br />
+        visible := true<br />
+        });<br />
+        }<br />
+        }<br />
+      </code>
     </div>
     <p>排行榜文字背景（增加可读性）(写oncollide，使用时请去掉注释):</p>
     <div class="long">
-        <code>
-                (e)=>{<br>
-                    e.other._pp ? {<br>
-                        e.other.update = (e)=>{};<br>
-                        e.other.text = "&lt;markup&gt;&lt;span background=\"#cccccc\"//背景hex颜色&gt;&lt;span color=\"#000000\"//球hex颜色&gt;球名字&lt;/span>&lt;/span>&lt;/markup&gt;";<br>
-                        e.other.textcolor = [1,1,1,1]<br>
-                    } : {}<br>
-                }<br>
-            </code>
+      <code>
+        (e)=>{<br />
+        e.other._pp ? {<br />
+        e.other.update = (e)=>{};<br />
+        e.other.text = "&lt;markup&gt;&lt;span
+        background=\"#cccccc\"//背景hex颜色&gt;&lt;span
+        color=\"#000000\"//球hex颜色&gt;球名字&lt;/span>&lt;/span>&lt;/markup&gt;";<br />
+        e.other.textcolor = [1,1,1,1]<br />
+        } : {}<br />
+        }<br />
+      </code>
     </div>
     <p>随机概率过关（需要先定义<code>_rand</code>变量）（写oncollide）：</p>
     <div class="long">
-        <code>
-            (e)=>{<br>
-                e.other._M ? {<br>
-                    _rand = rand.uniform01;<br>
-                        _rand <= 0.5 ? {<br>
-                        e.other.pos = scene.my.s关卡号m;<br>
-                        e.other.collideset = 16;<br>
-                        scene.my.spots关卡号 = scene.my.spots关卡号 - 1<br>
-                    } : {<br>
-                        e.other.pos = scene.my.s关卡号<br>
-                    };<br>
-                    scene.my.spots关卡号 < 1 ? {<br>
-                        scene.removeentity(e.this)<br>
-                    } : {}<br>
-                } : {}<br>
-            }
-            </code>
+      <code>
+        (e)=>{<br />
+        e.other._M ? {<br />
+        _rand = rand.uniform01;<br />
+        _rand <= 0.5 ? {<br />
+        e.other.pos = scene.my.s关卡号m;<br />
+        e.other.collideset = 16;<br />
+        scene.my.spots关卡号 = scene.my.spots关卡号 - 1<br />
+        } : {<br />
+        e.other.pos = scene.my.s关卡号<br />
+        };<br />
+        scene.my.spots关卡号 < 1 ? {<br />
+        scene.removeentity(e.this)<br />
+        } : {}<br />
+        } : {}<br />
+        }
+      </code>
     </div>
     <p>回家区免疫下层（写oncollide）：</p>
     <div class="long">
-        <code>
-            (e)=>{<br>
-                e.pos(1) >= e.this.pos(1) ? {<br>
-                    e.other.pos = scene.my.s关卡号<br>
-                } : {}<br>
-            }
-            </code>
+      <code>
+        (e)=>{<br />
+        e.pos(1) >= e.this.pos(1) ? {<br />
+        e.other.pos = scene.my.s关卡号<br />
+        } : {}<br />
+        }
+      </code>
     </div>
     <p>反重力（写oncollide）：</p>
     <div class="long">
-        <code>
-            (e)=>{<br>
-                e.other._M ? {<br>
-                    e.other.postStep = (e)=>{<br>
-                        vel = vel + [ - math.sin(sim.gravityAngleOffset), math.cos(sim.gravityAngleOffset)] * Sim.gravityStrength * 2 / Sim.frequency<br>
-                    }<br>
-                } : {}<br>
-            }
-            </code>
+      <code>
+        (e)=>{<br />
+        e.other._M ? {<br />
+        e.other.postStep = (e)=>{<br />
+        vel = vel + [ - math.sin(sim.gravityAngleOffset),
+        math.cos(sim.gravityAngleOffset)] * Sim.gravityStrength * 2 /
+        Sim.frequency<br />
+        }<br />
+        } : {}<br />
+        }
+      </code>
     </div>
     <footer>
-        <p>神的钴（蓝）（青金）石，持续更新中……　:|</p>
+      <p>神的钴（蓝）（青金）石，持续更新中……　:|</p>
     </footer>
-</body>
+  </body>
+</html>
