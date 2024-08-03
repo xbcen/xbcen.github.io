@@ -95,7 +95,21 @@ footer p {
 .s img {
 	width: 30%;
 }
-
+.twikoo{
+    margin:20px;
+}
+.tk-meta-input input,.el-input-group__prepend,.twikoo button,.tk-col textarea{
+    font-family:'Noto Serif SC', sans-serif;
+    font-size: 15px;
+}
+.tk-col textarea{
+    height: 160px;
+    resize: none;
+    border:2px solid #2286D8; 
+}
+.tk-footer,.tk-footer a{
+    color: #2286D8;
+}
 @media screen and (max-width: 600px) /* 小屏幕的样式 */ {
 	h1 {
 		background-color: #2286D8;
