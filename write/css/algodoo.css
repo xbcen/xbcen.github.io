@@ -78,7 +78,7 @@ img {
 	border-radius: 7.5px;
 }
 
-.footer {
+.footer p {
 	text-align: center;
 	font-family: 'Noto Sans Mono', sans-serif;
 	font-weight: bold;
@@ -107,7 +107,7 @@ img {
     resize: none;
     border:2px solid #2286D8; 
 }
-.tk-footer,.tk-footer a{
+.tk-footer,.twikoo a{
     color: #2286D8;
 }
 @media screen and (max-width: 600px) /* 小屏幕的样式 */ {
@@ -179,6 +179,13 @@ img {
 		background-color: #2286D8;
 		color: #EFF5FB;
 	}
+    .twikoo{
+        margin:15px;
+    }
+    .tk-meta-input input,.el-input-group__prepend,.twikoo button,.tk-col textarea{
+        font-family:'Noto Serif SC', sans-serif;
+        font-size: 12.5px;
+    }
 }
 @media (prefers-color-scheme: dark) {
 	body{
@@ -195,4 +202,10 @@ img {
 	code,.long{
 		background-color: #252525;
 	}
+    .tk-col textarea{
+        border:2px solid #A3D1FF; 
+}
+    .tk-footer,.twikoo a{
+        color: #A3D1FF;
+    }
   }
