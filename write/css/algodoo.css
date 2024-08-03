@@ -105,13 +105,14 @@ img {
 }
 .tk-main p{
     margin: 20px 0;
+    font-size: 15px;
 }
 .tk-col textarea{
     height: 160px;
     resize: none;
     border:2px solid #2286D8; 
 }
-.tk-footer,.twikoo a{
+.tk-footer,.twikoo a,.tk-extras span{
     color: #2286D8;
 }
 @media screen and (max-width: 600px) /* 小屏幕的样式 */ {
@@ -187,7 +188,8 @@ img {
         margin:15px;
     }
     .tk-main p{
-        margin: 15px 0;
+        margin: 20px 0;
+        font-size: 15px;
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -208,7 +210,7 @@ img {
     .tk-col textarea{
         border:2px solid #A3D1FF; 
 }
-    .tk-footer,.twikoo a{
+    .tk-footer,.twikoo a,.tk-extras span{
         color: #A3D1FF;
     }
   }
