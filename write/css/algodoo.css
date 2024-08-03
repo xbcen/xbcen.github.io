@@ -101,6 +101,10 @@ img {
 .tk-meta-input input,.el-input-group__prepend,.twikoo button,.tk-col textarea{
     font-family:'Noto Serif SC', sans-serif;
     font-size: 15px;
+    margin: 0px;
+}
+.tk-main p{
+    margin: 20px 0;
 }
 .tk-col textarea{
     height: 160px;
@@ -182,9 +186,8 @@ img {
     .twikoo{
         margin:15px;
     }
-    .tk-meta-input input,.el-input-group__prepend,.twikoo button,.tk-col textarea{
-        font-family:'Noto Serif SC', sans-serif;
-        font-size: 12.5px;
+    .tk-main p{
+        margin: 15px 0;
     }
 }
 @media (prefers-color-scheme: dark) {
