@@ -49,3 +49,8 @@ header *{
         background-color: transparent;
     }
 }
+@media (prefers-color-scheme: dark){
+#cen {
+    color: #2286D8;
+}
+}
