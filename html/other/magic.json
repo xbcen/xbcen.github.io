@@ -900,7 +900,7 @@
       }
     ]
   },
-  "bilibiliHotKey":{
+  "B站热词":{
     "type":"image",
     "container":[
       {
@@ -1033,7 +1033,7 @@
       }
     ]
   },
-  "Tieba-New":{
+  "贴吧":{
     "type":"image",
     "container":[
       {
