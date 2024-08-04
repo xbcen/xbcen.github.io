@@ -3,9 +3,6 @@
 .twikoo {
   margin: 20px;
 }
-.OwO-body {
-  color: #eff5fb;
-}
 .twikoo *,
 .tk-meta-input input,
 .el-input-group__prepend,
@@ -125,9 +122,6 @@
     border-color: #131e29;
     background-color: #131e29;
     transition: all 0.3s ease-in-out;
-  }
-  .OwO-body {
-    color: #a3d1ff;
   }
   .el-button.tk-send.el-button--primary.el-button--small:hover {
     background: #a3d1ff;
