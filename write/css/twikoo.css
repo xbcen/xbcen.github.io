@@ -34,7 +34,9 @@
   background-color: #2286d8;
   color: #eff5fb;
 }
-.twikoo * {
+.tk-comments *,
+.tk-footer,
+.tk-footer a {
   color: #2286d8;
 }
 .el-textarea__inner {
