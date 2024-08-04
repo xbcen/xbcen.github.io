@@ -78,7 +78,7 @@ img {
 	border-radius: 7.5px;
 }
 
-.footer p {
+.footer {
 	text-align: center;
 	font-family: 'Noto Sans Mono', sans-serif;
 	font-weight: bold;
@@ -95,30 +95,7 @@ img {
 .s img {
 	width: 30%;
 }
-.twikoo{
-    margin:20px;
-}
-.tk-meta-input input,.el-input-group__prepend,.twikoo button,.tk-col textarea{
-    font-family:'Noto Serif SC', sans-serif;
-    font-size: 15px;
-    margin: 0px;
-}
-.tk-main p{
-    margin: 7.5px 0;
-    font-size: 15px;
-}
-.tk-col textarea{
-    resize: none;
-    border:2px solid #2286D8;
-    transition:all 0.3s ease-in-out;
-}
-.tk-col textarea:focus{
-    background-color:#2286D8; 
-    color:#EFF5FB; 
-}
-.tk-footer,.twikoo a,.tk-extras span{
-    color: #2286D8;
-}
+
 @media screen and (max-width: 600px) /* 小屏幕的样式 */ {
 	h1 {
 		background-color: #2286D8;
@@ -188,13 +165,6 @@ img {
 		background-color: #2286D8;
 		color: #EFF5FB;
 	}
-    .twikoo{
-        margin:15px;
-    }
-    .tk-main p{
-        margin: 5px 0;
-        font-size: 15px;
-    }
 }
 @media (prefers-color-scheme: dark) {
 	body{
@@ -209,12 +179,6 @@ img {
 		color: #155284;
 	}
 	code,.long{
-		background-color: #252525;
+		background-color: #1a1a1a;
 	}
-    .tk-col textarea{
-        border:2px solid #A3D1FF; 
-}
-    .tk-footer,.twikoo a,.tk-extras span{
-        color: #A3D1FF;
-    }
   }
