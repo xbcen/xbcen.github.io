@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@import "algodoo.css";
+@import "twikoo.css";
+
+#desmos * {
+    width: 75%;
+    height: 500px;
+}
+#desmos{
+    text-align: center;
+    margin: 20px;
+}
