@@ -6,16 +6,14 @@
 @import "home.css";
 @import "https://sstars.us.kg/write/css/twikoo.css";
 
-.img {
-    text-align: center;
-}
-
 img {
     width: 50%;
 }
 
-.footer {
+header *{
     text-align: center;
+}
+.footer {
     font-family: 'Noto Sans Mono', sans-serif;
     font-weight: bold;
 }
@@ -26,19 +24,20 @@ img {
     font-size: 15px;
     color: #2286D8;
     height: 15px;
+    text-align: center;
 }
 
 #cen::after {
     content: '';
     position: absolute;
-    top: 2px;
+    top: 5px;
     right: -5px;
     height: 15px;
     width: 2px;
     animation: san 0.5s steps(1) infinite;
 }
 .header {
-    height: 55px;
+    height: 75px;
 }
 @keyframes san {
     0%,
