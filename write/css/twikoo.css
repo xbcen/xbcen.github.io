@@ -3,6 +3,9 @@
 .twikoo {
   margin: 20px;
 }
+.OwO-body {
+  color: #eff5fb;
+}
 .twikoo *,
 .tk-meta-input input,
 .el-input-group__prepend,
@@ -32,7 +35,15 @@
 }
 .tk-col textarea:focus {
   background-color: #2286d8;
-  color: #eff5fb;
+}
+.tk-col textarea:focus,.tk-col textarea:focus::placeholder {
+    color:#EFF5FB;
+}
+.tk-col textarea,.tk-col textarea::placeholder {
+    color:#2286d8;
+}
+.tk-col textarea:hover{
+    border-color: #2286d8;
 }
 .tk-comments *,
 .tk-footer,
@@ -45,11 +56,11 @@
 }
 .tk-meta strong,
 .tk-comments-title *,
-.tk-comments-no span{
+.tk-comments-no span {
   font-size: 20px;
 }
 
-.el-button.tk-send.el-button--primary.el-button--small{
+.el-button.tk-send.el-button--primary.el-button--small {
   background: #eff5fb;
   border-color: #eff5fb;
   color: #2286d8;
@@ -73,6 +84,13 @@
     color: #eff5fb;
   }
 }
+.tk-input.el-textarea textarea{
+  color:#2286d8;
+  border: 2px solid #2286d8;
+}
+.tk-input.el-textarea textarea:focus{
+  color:#eff5fb;
+}
 @media screen and (max-width: 600px) /* 小屏幕的样式 */ {
   .twikoo {
     margin: 15px;
@@ -86,7 +104,7 @@
   }
   .tk-meta strong,
   .tk-comments-title *,
-  .tk-comments-no span{
+  .tk-comments-no span {
     font-size: 15px;
   }
   .el-input--small .el-input__inner {
@@ -103,12 +121,14 @@
   }
   .tk-row.actions button,
   .el-button.tk-send.el-button--primary.el-button--small {
-    background: #131E29;
-    border-color: #131E29;
-    background-color: #131E29;
+    background: #131e29;
+    border-color: #131e29;
+    background-color: #131e29;
     transition: all 0.3s ease-in-out;
   }
-
+  .OwO-body {
+    color: #a3d1ff;
+  }
   .el-button.tk-send.el-button--primary.el-button--small:hover {
     background: #a3d1ff;
     border-color: #a3d1ff;
