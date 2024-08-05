@@ -11,4 +11,5 @@ let udtime = () => {
     let time = two(now.getHours()) + ":" + two(now.getMinutes()) + ":" + two(now.getSeconds());
     clock.innerText = time;
 }
+udtime()
 setInterval(udtime, 500);
