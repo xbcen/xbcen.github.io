@@ -6,11 +6,12 @@
 @import "home.css";
 @import "https://sstars.us.kg/write/css/twikoo.css";
 
-img {
-    width: 50%;
+.img img {
+    width: 60%;
 }
 
-header *{
+header *,
+.footer{
     text-align: center;
 }
 .footer {
@@ -47,6 +48,11 @@ header *{
 
     50% {
         background-color: transparent;
+    }
+}
+@media screen and (max-width: 600px){
+    .img img{
+        width: 80%;
     }
 }
 @media (prefers-color-scheme: dark){
