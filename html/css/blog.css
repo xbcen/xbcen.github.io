@@ -82,8 +82,9 @@ header *,
     flex-direction: column;
 }
 #cen::after {
-    position: static;
+    position:relative;
     display: inline-block;
+    top:2px;
 }
 
 #cen,
