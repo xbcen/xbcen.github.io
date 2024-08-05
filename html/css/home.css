@@ -65,7 +65,6 @@ li a:hover {
     padding: 15px;
   }
   h2,.min,.more {
-    color: #126eba;
     font-weight: bold;
   }
   h2 {
@@ -87,7 +86,6 @@ li a:hover {
     padding: 12px;
   }
   p {
-    color: #2286d8;
     margin: 15px;
   }
   li {
@@ -97,7 +95,6 @@ li a:hover {
   }
   li a {
     display: inline-block;
-    color: #2286d8;
     text-align: center;
     padding: 12px 13.5px;
     text-decoration: none;
@@ -109,7 +106,6 @@ li a:hover {
     color: #eff5fb;
   }
   #cen {
-    color: #2286d8;
     margin: 15px;
   }
 }
