@@ -24,6 +24,51 @@
     </p>
     <p>生成圆形：<code>Scene.addCircle()</code></p>
     <p>生成方形：<code>Scene.addBox()</code></p>
+    <p>生成追踪器（追尾）：<code>scene.addPen()</code></p>
+    <p>0-1随机取值：<code>rand.uniform01</code></p>
+    <p>-1-+1随机取值：<code>rand.normal</code></p>
+    <p>
+      取整数（舍尾法，也有把文本转换为数字格式的作用）：<code
+        >math.toint(x)</code
+      >
+    </p>
+    <p>左右简单平移：<code>pos = [pos(0) + sin(sim.time) , pos(1)]</code></p>
+    <p>上下简单平移：<code> = [pos(0) , pos(1) + sin(sim.time)]</code></p>
+    <p>老生常谈for循环:<code>for(10, (x)=>{//代码//})</code></p>
+    <p>物体顺逆轮流转（1）（写轴承poststep）：</p>
+    <div class="long">
+      <code>
+        (e)=>{<br />
+        sim.tick % 数值 == 0 ? {<br />
+        ccw = ! ccw<br />
+        } : {}<br />
+        }<br />
+      </code>
+    </div>
+    <p>物体顺逆轮流转（2）（写轴承poststep）：</p>
+    <div class="long">
+      <code>
+        (e)=>{<br />
+        motorspeed = sin(sim.time) * math.pi<br />
+        }<br />
+      </code>
+    </div>
+    <p>注：math.pi相当于马达速度30rpm。</p>
+    <p>物体顺逆轮流转（3）（写物体poststep）</p>
+    <div class="long">
+      <code>
+        (e)=>{<br />
+        angle=sin(sim.time)<br />
+        }<br />
+      </code>
+    </div>
+    <p>被雷射笔照到过关（写在onlaserHit里面）：</p>
+    <div class="long">
+      (e)=>{<br />
+      e.geom._M ? {<br />
+      e.geom.vel = [math.cos(rotation), math.sin(rotation)]*12 } : {}<br />
+      }<br />
+    </div>
     <p>隐藏UI：</p>
     <div class="long">
       <code>
@@ -102,6 +147,7 @@
     </div>
     <footer>
       <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
+      <p class="footer">以及感谢清秋老师的代码提供　:)</p>
       <div id="pl"></div>
       <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
       <script>
