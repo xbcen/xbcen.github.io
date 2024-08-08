@@ -19,22 +19,17 @@
   <body>
     <h1>收录Algodoo代码ing……</h1>
     <p>调整ui不透明度：<code>gui.skin.opacity = 0.925</code></p>
-    <p>
-      更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code>
-    </p>
+    <p>更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code></p>
     <p>生成圆形：<code>Scene.addCircle()</code></p>
     <p>生成方形：<code>Scene.addBox()</code></p>
     <p>生成追踪器（追尾）：<code>scene.addPen()</code></p>
-    <p>0-1随机取值：<code>rand.uniform01</code></p>
-    <p>-1-+1随机取值：<code>rand.normal</code></p>
-    <p>
-      取整数（舍尾法，也有把文本转换为数字格式的作用）：<code
-        >math.toint(x)</code
-      >
-    </p>
+    <p>0～1随机取值：<code>rand.uniform01</code></p>
+    <p>-1～+1随机取值：<code>rand.normal</code></p>
+    <p>x～y随机取值（y>x）：<code>rand.uniform01*(y-x)+x</code></p>
+    <p>取整数（舍尾法，也有把文本转换为数字格式的作用）：<code>math.toint(x)</code></p>
     <p>左右简单平移：<code>pos = [pos(0) + sin(sim.time) , pos(1)]</code></p>
     <p>上下简单平移：<code> = [pos(0) , pos(1) + sin(sim.time)]</code></p>
-    <p>老生常谈for循环:<code>for(10, (x)=>{//代码//})</code></p>
+    <p>老生常谈for循环：<code>for(10, (x)=>{//代码//})</code></p>
     <p>物体顺逆轮流转（1）（写轴承poststep）：</p>
     <div class="long">
       <code>
@@ -64,10 +59,13 @@
     </div>
     <p>被雷射笔照到过关（写在onlaserHit里面）：</p>
     <div class="long">
-      (e)=>{<br />
-      e.geom._M ? {<br />
-      e.geom.vel = [math.cos(rotation), math.sin(rotation)]*12 } : {}<br />
-      }<br />
+        (e)=>{<br />
+            e.geom._M ? {<br />
+                e.other.pos = scene.my.s关卡号m;<br />
+                e.other.collideset = 16;<br />
+                scene.my.spots = scene.my.spots关卡号 - 1<br />
+            } : {}<br />
+        }<br />
     </div>
     <p>隐藏UI：</p>
     <div class="long">
@@ -121,6 +119,22 @@
         }
       </code>
     </div>
+    <p>回家静止：</p>
+    <div class="long">
+        <code>
+            (e)=>{<br />
+                e.other.timetolive=6;<br />
+                e.other.density=+inf;<br />
+                    e.other.poststep=(e)=>{<br />
+                    timetolive < 1?{<br />
+                        timetolive=+inf;<br />
+                        density=2.0;<br />
+                        poststep=(e)=>{}<br />
+                    }:{}<br />
+                }<br />
+            }
+        </code>
+    </div>
     <p>回家区免疫下层（写oncollide）：</p>
     <div class="long">
       <code>
@@ -137,9 +151,7 @@
         (e)=>{<br />
         e.other._M ? {<br />
         e.other.postStep = (e)=>{<br />
-        vel = vel + [ - math.sin(sim.gravityAngleOffset),
-        math.cos(sim.gravityAngleOffset)] * Sim.gravityStrength * 2 /
-        Sim.frequency<br />
+        vel = vel + [ - math.sin(sim.gravityAngleOffset), math.cos(sim.gravityAngleOffset)] * Sim.gravityStrength * 2 / Sim.frequency<br />
         }<br />
         } : {}<br />
         }
