@@ -36,7 +36,7 @@
         　　如：<code>math.sin(sim.time * 2) * 2x</code><br />
         　　3.需要将物体的密度设置为一个较大数，如：8888888,1919810<br />
         　　4.代码为自左向右，需要向物体放置于最左边。如果需要自左向右，请在<code>math.sin</code>前面加上<code>-</code>，并向物体放置于最左边。<br />
-        　　5.0.16333334来源<code>于Sim.gravityStrength / Sim.frequency</code>的计算结果。
+        　　5.0.16333334来源于<code>Sim.gravityStrength / Sim.frequency</code>的计算结果。
     </p>
     <p>老生常谈for循环（a为整数）：<code>for(a, (x)=>{//代码//})</code></p>
     <p>按回车键自动运行（写update）：</p>
@@ -44,7 +44,7 @@
         <code>
             (e)=>{<br />
                 Keys.isDown("return")?{<br />
-                    Sim.running=true<br />
+                    Sim.running = true<br />
                 }:{}<br />
             }<br />
         </code>
