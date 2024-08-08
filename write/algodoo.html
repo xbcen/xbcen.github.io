@@ -26,6 +26,8 @@
     <p>生成物件时生成变量需要这么写：<code>x := a</code></p>
     <p>注：0～1随机取值：<code>rand.uniform01</code></p>
     <p>-3～+3随机取值（标准正态分布）：<code>rand.normal</code></p>
+    <p>赛博风向：<code>sim.windangle</code></p>
+    <p>赛博风力（单位：平方米/秒）：<code>sim.windstrength</code></p>
     <p>注：取值在-3～+3以外的概率非常小，但不是0%。</p>
     <p>x～y随机取值（y>x）：<code>rand.uniform01*(y-x)+x</code></p>
     <p>取整数（舍尾法，也有把文本转换为数字格式的作用）：<code>math.toint(x)</code></p>
@@ -33,6 +35,7 @@
     <p>上下简单平移：<code>pos = [pos(0) , pos(1) + sin(sim.time)]</code></p>
     <p>左右平移（不容易穿模，写poststep）：<code>vel = [math.sin(sim.time) * x, 0.16333334];</code></p>
     <p>摄像机缩放：<code>scene.camera.zoom</code></p>
+    <p>注：scene.camera.zoom的值是缩放值的150倍。（如：<code>scene.camera.zoom=36，</code>缩放值为<code>36/150=0.24x</code>）</p>
     <p>摄像机位置：<code>scene.camera.pan</code></p>
     <p>注：1.x代表物体移动到最左边中心到移动到最右边中心的距离/2<br />
         　　2.提高/降低移动速度请同时扩大/缩小math.sin()与x的值。<br />
