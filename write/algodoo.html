@@ -23,13 +23,32 @@
     <p>生成圆形：<code>Scene.addCircle()</code></p>
     <p>生成方形：<code>Scene.addBox()</code></p>
     <p>生成追踪器（追尾）：<code>scene.addPen()</code></p>
-    <p>0～1随机取值：<code>rand.uniform01</code></p>
+    <p>生成物件时生成变量需要这么写：<code>x := a</code></p>
+    <p>注：0～1随机取值：<code>rand.uniform01</code></p>
     <p>-1～+1随机取值：<code>rand.normal</code></p>
     <p>x～y随机取值（y>x）：<code>rand.uniform01*(y-x)+x</code></p>
     <p>取整数（舍尾法，也有把文本转换为数字格式的作用）：<code>math.toint(x)</code></p>
     <p>左右简单平移：<code>pos = [pos(0) + sin(sim.time) , pos(1)]</code></p>
-    <p>上下简单平移：<code> = [pos(0) , pos(1) + sin(sim.time)]</code></p>
-    <p>老生常谈for循环：<code>for(10, (x)=>{//代码//})</code></p>
+    <p>上下简单平移：<code>pos = [pos(0) , pos(1) + sin(sim.time)]</code></p>
+    <p>左右平移（不容易穿模，写poststep）：<code>vel = [math.sin(sim.time) * x, 0.16333334];</code></p>
+    <p>注：1.x代表物体移动到最左边中心到移动到最右边中心的距离/2<br />
+        　　2.提高/降低移动速度请同时扩大/缩小math.sin()与x的值。<br />
+        　　如：<code>math.sin(sim.time * 2) * 2x</code><br />
+        　　3.需要将物体的密度设置为一个较大数，如：8888888,1919810<br />
+        　　4.代码为自左向右，需要向物体放置于最左边。如果需要自左向右，请在<code>math.sin</code>前面加上<code>-</code>，并向物体放置于最左边。<br />
+        　　5.0.16333334来源<code>于Sim.gravityStrength / Sim.frequency</code>的计算结果。
+    </p>
+    <p>老生常谈for循环（a为整数）：<code>for(a, (x)=>{//代码//})</code></p>
+    <p>按回车键自动换行（写update）：</p>
+    <div class="long">
+        <code>
+            (e)=>{<br />
+                Keys.isDown("return")?{<br />
+                    Sim.running=true<br />
+                }:{}<br />
+            }<br />
+        </code>
+    </div>
     <p>物体顺逆轮流转（1）（写轴承poststep）：</p>
     <div class="long">
       <code>
