@@ -1,0 +1,53 @@
+body{
+    transition: --position-d 0.15s linear;
+    --scroll-v:calc(var(--position) - var(--position-d));
+    --scroll-d:calc(var(--scroll-v) / var(--scroll-v));
+}
+@property --position {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --position-d {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --scroll-v {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@keyframes pos {
+    to {
+        --position: 100;
+        --position-d: 100;
+    }
+}
+
+:root {
+    animation: pos 3s linear;
+    animation-timeline: scroll();
+}
+.back{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #2286d8;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    transform: translateX(calc(var(--scroll-d) * 100%));
+    transition: .2s;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .back{
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -26,9 +26,9 @@
     <p>生成物件时生成变量需要这么写：<code>x := a</code></p>
     <p>注：0～1随机取值：<code>rand.uniform01</code></p>
     <p>-3～+3随机取值（标准正态分布）：<code>rand.normal</code></p>
+    <p>注：取值在-3～+3以外的概率非常小，但不是0%。</p>
     <p>赛博风向：<code>sim.windangle</code></p>
     <p>赛博风力（单位：平方米/秒）：<code>sim.windstrength</code></p>
-    <p>注：取值在-3～+3以外的概率非常小，但不是0%。</p>
     <p>x～y随机取值（y>x）：<code>rand.uniform01*(y-x)+x</code></p>
     <p>取整数（舍尾法，也有把文本转换为数字格式的作用）：<code>math.toint(x)</code></p>
     <p>左右简单平移：<code>pos = [pos(0) + sin(sim.time) , pos(1)]</code></p>
@@ -185,6 +185,7 @@
     <footer>
       <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
       <p class="footer">以及感谢清秋老师的代码提供　:)</p>
+      <a href="#" class="back"></a>
       <div id="pl"></div>
       <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
       <script>
