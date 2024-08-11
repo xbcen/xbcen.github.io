@@ -61,7 +61,7 @@ body{
     }
 }
 @media (prefers-color-scheme: dark) {
-    .back:hover {
+    .back {
         background-color: #a3d1ff;
         color: #155284;
     }
