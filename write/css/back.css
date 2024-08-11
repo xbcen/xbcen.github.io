@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     transition: --position-d 0.15s linear;
     --scroll-v:calc(var(--position) - var(--position-d));
@@ -43,11 +46,23 @@ body{
     transform: translateX(calc(var(--scroll-d) * 100%));
     transition: .2s;
     text-align: center;
+    text-decoration: none;
+    color: #eff5fb;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 600px){
     .back{
-        width: 40px;
-        height: 40px;
+        border-radius: 7.5px;
+        width: 45px;
+        height: 45px;
+        color: #eff5fb;
+        font-size: 15px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .back:hover {
+        background-color: #a3d1ff;
+        color: #155284;
     }
 }
