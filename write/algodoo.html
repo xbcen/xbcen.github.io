@@ -55,7 +55,7 @@
             }<br />
         </code>
     </div>
-    <p>隐藏UI（写update）：</p>
+    <p>隐藏左上角UI（写update）：</p>
     <div class="long">
       <code>
         (e)=>{<br />
@@ -100,7 +100,16 @@
         }<br />
       </code>
     </div>
-    <p>被雷射笔照到过关（写在onlaserHit里面）：</p>
+    <p>染色（写物体oncollide）：</p>
+    <div class="long">
+        <code>
+            (e)=>{<br />
+                color = e.other.color;<br />
+                update = e.other.update<br />
+            }<br />
+        </code>
+    </div>
+    <p>被雷射笔照到过关（写雷射笔onlaserHit）：</p>
     <div class="long">
         (e)=>{<br />
             e.geom._M ? {<br />
@@ -124,7 +133,7 @@
         }<br />
       </code>
     </div>
-    <p>随机概率过关（需要先定义<code>_rand</code>变量）（写oncollide）：</p>
+    <p>随机概率过关（需要先定义<code>_rand</code>变量）（写物体oncollide）：</p>
     <div class="long">
       <code>
         (e)=>{<br />
@@ -144,7 +153,7 @@
         }
       </code>
     </div>
-    <p>回家静止：</p>
+    <p>回家静止（写物体oncollide）：</p>
     <div class="long">
         <code>
             (e)=>{<br />
