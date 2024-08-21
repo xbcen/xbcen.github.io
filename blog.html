@@ -27,9 +27,23 @@
 
     <p>随缘看看吧。</p>
     <h2>文章：</h2>
-    <ul><li><a href="write/bugodoo">Algodoo之Bug——如何成为赛博华佗</a></li></ul>
-    <ul><li><a href="write/algodoo">Algodoo之代码</a></li></ul>
-    <ul><li><a href="write/desmos-shan">在desmos中展示部分闪队小球</a></li></ul>
+    <nav>
+        <div class="nav">
+            <div class="tab" id="tab-1" onclick="showTab(1)">Algodoo</div>
+            <div class="tab" id="tab-2" onclick="showTab(2)">Other</div>
+            <div class="hk"></div>
+        </div>
+    </nav>
+
+    <ul class="taba" id="taba-1">
+        <li><a href="write/bugodoo">Algodoo之Bug——如何成为赛博华佗</a></li>
+        <li><a href="write/algodoo">Algodoo之代码</a></li>
+    </ul>
+
+    <ul class="taba" id="taba-2">
+        <li><a href="write/desmos-shan">在desmos中展示部分闪队小球</a></li>
+    </ul>
+    <script src="html/js/nav.js"></script>
     <footer>
         <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
         <div id="pl"></div>

@@ -73,6 +73,62 @@ header *,
         background-color: transparent;
     }
 }
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.nav{
+    width:70%;
+    height: 50px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2),
+        -10px -10px 30px rgba(255, 255, 255, 1);
+    display: flex;
+    border-radius: 10px;
+    line-height: 50px;
+    position: relative;
+}
+.nav div {
+    width:100%;
+    text-align: center;
+}
+.tab.-n{
+    border-radius: 10px;
+}
+.taba{
+    overflow: hidden;
+    display: none !important;
+}
+.taba.-n{
+    display: flex !important;
+    flex-direction: column;
+}
+.taba.-n li {
+    margin: 20px;
+}
+.hk{
+    position: absolute;
+    height: 50px;
+    width: 50% !important;
+    background-color: #2286D8;
+    z-index: -1;
+    border-radius: 10px;
+    transition: opacity .2s ,left .5s;
+    left: 0;
+    opacity: 0;
+}
+.tab:nth-child(1):hover~.hk {
+    opacity: 1;
+    left: 0;
+}
+.tab:nth-child(2):hover~.hk{
+    opacity: 1;
+    left: 50%;
+}
+.tab:hover{
+    color: #EFF5FB;
+    transition: .2s;
+}
 @media screen and (max-width: 600px){
 .img img{
     width: 80%;
@@ -121,5 +177,15 @@ li a:hover {
         0 0 0 rgba(255, 255, 255, 0.2),
         inset 5px 5px 30px rgba(0, 0, 0, 1),
         inset -5px -5px 30px rgba(255, 255, 255, 0.1);
+}
+.nav{
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 1),
+        -10px -10px 30px rgba(255, 255, 255, 0.2);
+}
+.hk{
+    background-color: #a3d1ff;
+}
+.tab:hover {
+    color: #155284;
 }
 }
