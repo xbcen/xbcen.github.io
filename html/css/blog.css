@@ -144,15 +144,18 @@ nav{
     display: inline-block;
     top:2px;
 }
-
 #cen,
 #clock {
     position: static;
     margin: 0 0 10px 0;
+    text-align: center;
 }
 #cen{
     transform: none;
     display: inline-block;
+}
+.nav{
+    width: 80%;
 }
 }
 @media (prefers-color-scheme: dark) {
