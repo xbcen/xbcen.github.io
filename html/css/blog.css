@@ -127,9 +127,7 @@ nav{
 }
 .tab.-n,.tab:hover{
     color: #EFF5FB;
-}
-.tab:hover{
-    transition: .2s;
+    transition: .5s;
 }
 @media screen and (max-width: 600px){
 .img img{
