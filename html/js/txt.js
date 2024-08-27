@@ -6,7 +6,13 @@ function getData() {
       hitokotoElement.innerText = data;
       startTextAnimation(data);
     })
-    .catch(console.error);
+    .catch((error) => {
+      console.error(error);
+      const fallbackData = "落霞与孤鹜齐飞，秋水共长天一色。";
+      const hitokotoElement = document.querySelector("#cen");
+      hitokotoElement.innerText = fallbackData;
+      startTextAnimation(fallbackData);
+    });
 }
 
 function startTextAnimation(text) {
