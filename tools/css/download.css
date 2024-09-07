@@ -4,8 +4,11 @@ body {
     font-family: 'Noto Serif SC', serif;
     margin: 0;
     padding: 0;
-    color: #2286D8;
     background-color: #EFF5FB;
+}
+
+*{
+    color: #2286D8;
 }
 
 h1 {
@@ -42,15 +45,15 @@ textarea#userUrls {
     resize: vertical;
 }
 
-textarea#userUrls::placeholder {
-    color: #2286D8;
-}
-
 textarea#userUrls:focus {
     background-color: #2286D8; 
     outline: none;
     color: #EFF5FB;  
     border: 2px solid #2286D8; 
+}
+
+textarea#userUrls::placeholder {
+    color: #2286D8;
 }
 
 textarea#userUrls:focus::placeholder {
@@ -81,8 +84,6 @@ button:hover {
 
 @media screen and (max-width: 600px) {  /* 小屏幕的样式 */
 h1 {
-    background-color: #2286D8;
-    color: #EFF5FB;
     padding: 15px;
 }
 
@@ -95,47 +96,19 @@ h2,ul {
    padding-left: 15px;
 }
 
-ul {
-   list-style: none;
-}
-
 textarea#userUrls {
-    border: 2px solid #2286D8; 
-    background-color: #EFF5FB; 
     border-radius: 7.5px; 
     padding: 15px 22.5px; 
     margin: 15px;
     font-size: 20px;  
-    font-family: 'Noto Serif SC', serif;
-    transition: all 0.2s ease-in-ut;
     width: 67.5%;
     height: 300px;
 }
 
-textarea#userUrls::placeholder {
-    color: #2286D8;
-}
-
-textarea#userUrls:focus {
-    background-color: #2286D8; 
-    outline: none;
-    color: #EFF5FB;  
-    border: 2px solid #2286D8; 
-}
-
-textarea#userUrls:focus::placeholder {
-    color: #EFF5FB;
-}
-
 button {
-    background-color: #EFF5FB;
-    text-align: center;
     padding: 15px 22.5px;
     border-radius: 7.5px;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Noto Serif SC', serif;
     font-size: 12px;
-    border: none;
     margin: 15px;
 }
 
@@ -143,17 +116,14 @@ button:hover {
     color: #EFF5FB;
     background-color: #2286D8;
 }
-
-.centered {
-    display: flex; 
-    justify-content: center; 
-}
 }
 @media (prefers-color-scheme: dark) {
-	body{
+	* {
 		color: #A3D1FF;
-		background-color: #131E29;
 	}
+    body{
+        background-color: #131E29;
+    }
 	button {
         background-color: #131E29;
 		color:#A3D1FF;
@@ -163,12 +133,15 @@ button:hover {
 		color: #155284;
 	}
     textarea#userUrls {
-        border: 2px solid #2286D8; 
+        border: 2px solid #A3D1FF; 
         background-color:#131E29;
         color:#A3D1FF;
     }
     textarea#userUrls:focus {
         background-color:#2286D8; 
         color:#EFF5FB; 
+    }
+    textarea#userUrls::placeholder {
+        color: #A3D1FF;
     }
   }

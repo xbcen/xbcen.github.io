@@ -1,48 +1,40 @@
-var cursorPosition = 0;
-
-document
-  .getElementById("userUrls")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      if (event.shiftKey) {
-        event.preventDefault();
-        cursorPosition = event.target.selectionStart;
-        this.value =
-          this.value.substring(0, cursorPosition) +
-          "\n" +
-          this.value.substring(event.target.selectionEnd);
-        event.target.setSelectionRange(cursorPosition + 1, cursorPosition + 1); // 设置光标位置
-      } else {
-        event.preventDefault();
-        generateNewUrls();
-      }
+document.getElementById("userUrls").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    if (event.shiftKey) {
+      insertNewlineAtCursor(this);
+    } else {
+      generateNewUrls();
     }
-  });
-
-document.getElementById("userUrls").addEventListener("input", function (event) {
-  // 保存光标位置
-  cursorPosition = event.target.selectionStart;
+  }
 });
 
+function insertNewlineAtCursor(textarea) {
+  let cursorPosition = textarea.selectionStart;
+  textarea.value =
+    textarea.value.substring(0, cursorPosition) + "\n" + textarea.value.substring(textarea.selectionEnd);
+  textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
+}
+
 function generateNewUrls() {
-  var userUrls = document.getElementById("userUrls").value.split("\n");
-  var newUrlsList = document.getElementById("newUrlsList");
-  newUrlsList.innerHTML = ""; // 清除之前的结果
+  let userUrls = document.getElementById("userUrls").value.split("\n");
+  let newUrlsList = document.getElementById("newUrlsList");
+  newUrlsList.innerHTML = "";
 
-  userUrls.forEach(function (userUrl) {
-    var parsed_url = new URL(userUrl);
-    var content_id = parsed_url.searchParams.get("contentId") || "abc";
+  const baseUrls = [
+    "http://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets/",
+    "http://r2-ndr.ykt.cbern.com.cn/edu_product/esp/assets/",
+    "http://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets/"
+  ];
 
-    var old_url =
-      "https://r2-ndr.ykt.cbern.com.cn/edu_product/esp/assets/abc.pkg/pdf.pdf";
-    var new_url = old_url.replace("abc", content_id);
+  userUrls.forEach(userUrl => {
+    let content_id = new URL(userUrl).searchParams.get("contentId") || "abc";
 
-    var listItem = document.createElement("li");
-    var linkElement = document.createElement("a");
-    linkElement.href = new_url;
-    linkElement.textContent = "点击下载";
-    listItem.appendChild(linkElement);
-    newUrlsList.appendChild(listItem);
-    linkElement.target = "_blank";
+    baseUrls.forEach((baseUrl, index) => {
+      let new_url = `${baseUrl}${content_id}.pkg/pdf.pdf`;
+      let listItem = document.createElement("li");
+      listItem.innerHTML = `<a href="${new_url}" target="_blank">链接${index + 1}</a>`;
+      newUrlsList.appendChild(listItem);
+    });
   });
 }
