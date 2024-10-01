@@ -34,7 +34,7 @@
     <p>左右简单平移：<code>pos = [pos(0) + math.sin(sim.time) , pos(1)]</code></p>
     <p>上下简单平移：<code>pos = [pos(0) , pos(1) + math.sin(sim.time)]</code></p>
     <p>左右平移（不容易穿模，写poststep）：<code>vel = [math.sin(sim.time - scene.my.time关卡号) * x, 0.16333334];</code></p>
-    <p>上下平移（不容易穿模，写poststep）：<code>vel = [0, math.sin(sim.time) * x]</code></p>
+    <p>上下平移（不容易穿模，写poststep）：<code>vel = [0, math.sin(sim.time - scene.my.time关卡号) * x]</code></p>
     <p>注：1.x代表物体移动到最左边中心/最下面中心到移动到最右边中心/最上面中心的距离/2<br />
         　　2.提高/降低移动速度请同时扩大/缩小math.sin()与x的值。<br />
         　　如：<code>math.sin((sim.time - scene.my.time关卡号) * 2) * 2x</code><br />

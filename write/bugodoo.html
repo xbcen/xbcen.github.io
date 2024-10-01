@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Algodoo之Bug</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8" name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Algodoo之Bug" />
     <meta name="keywords" content="Algodoo" />
-    <link rel="shortcut icon" href="https://sstars.us.kg/html/icon/%E7%94%B5%E8%84%91_computer.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="https://sstars.us.kg/html/icon/%E7%94%B5%E8%84%91_computer.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/agd.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <h1>Algodoo之赛博华佗 or 华雄</h1>
-      <p>
-        叠甲：看完本章不能保证你成为Algodoo大牢，但可以帮助你应对Algodoo中的Bug。
-      </p>
+        <h1>Algodoo之赛博华佗 or 华雄</h1>
+        <p>叠甲：看完本章不能保证你成为Algodoo大牢，但可以帮助你应对Algodoo中的Bug。</p>
+        <p>无把握请勿修改代码，若因此造成bug建议重开Algodoo。</p>
     </header>
     <h2>门诊（不急的bug）</h2>
     <h3>1.UI没了。</h3>
     <div class="l">
-      <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.1.png" alt="1.1" />
+        <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.1.png" alt="1.1" />
     </div>
     <p>解决方法：按tab键。</p>
     <p>若第一步无作用，请执行以下操作：</p>
@@ -30,23 +29,23 @@
     <p>实在不行重置（还是速通大牢）</p>
     <h3>2.排名重复。</h3>
     <div class="s">
-      <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.2.png" alt="1.2"/>
+        <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.2.png" alt="1.2" />
     </div>
     <p>1.选中文本框。</p>
     <div class="s">
-      <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.2.1.png" alt="1.2.1"/>
+        <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.2.1.png" alt="1.2.1" />
     </div>
     <p>2.右键-碰撞作用层-勾上J。</p>
     <h3>3.烟花喷射战士。</h3>
     <div class="s">
-      <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.3.png" alt="1.3"/>
+        <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/1.3.png" alt="1.3" />
     </div>
     <p>1.选中球。</p>
     <p>2.右键-碰撞作用层-取消可与液体作用。</p>
     <h3>4.烟花错位，不显示。</h3>
     <p>1.选中球，右键，选取，选取，选取圆形物件。</p>
     <p>
-      脚本选单，在poststep中将<code>vecs:=[[56,-201],[56,-201];</code>中的<code>[56,-201]</code>更改为球现在所在的位置。
+        脚本选单，在poststep中将<code>vecs:=[[56,-201],[56,-201];</code>中的<code>[56,-201]</code>更改为球现在所在的位置。
     </p>
     <h3>5.按快捷键的时候Algodoo莫名其妙关闭了。</h3>
     <p>成因：按到ctrl+Q了。</p>
@@ -62,12 +61,12 @@
     <h2>急诊（急性bug，请做好图没了的准备）</h2>
     <h3>1.同时过关。</h3>
     <p>
-      按F10，输入以下代码：<code>scene.my.spots关卡号=scene.my.spots关卡号+1</code>，回车。
+        按F10，输入以下代码：<code>scene.my.spots关卡号=scene.my.spots关卡号+1</code>，回车。
     </p>
     <p>（例:<code>scene.my.spots2=scene.my.spots2+1</code>）。</p>
     <p>2. 选中过关区，右键，脚本选单，在oncollide中输入以下代码：</p>
     <div class="long">
-      <code>
+        <code>
         (e)=>{<br />
         e.other._M ? {<br />
         e.other.pos = scene.my.s关卡号m;<br />
@@ -86,29 +85,23 @@
         }<br />
         } : {}<br />
         }
-    </code >
+    </code>
     </div>
     <h3>2.开队（存在于跑毒，建议在19关开始时按下空格，方便回溯）。</h3>
     <p>1.ctrl+z。</p>
     <p>2.选中所有球，右键，脚本选单，在上面的输入框输入：<code>_B=10</code></p>
     <h3>3.球全叠50名。</h3>
     <div class="s">
-      <img
-        src="https://raw.githubusercontent.com/xbcen/pic/main/picture/2.3.png"
-        alt="2.3"
-      />
+        <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/2.3.png" alt="2.3" />
     </div>
     <p>1.ctrl+z/调整排行榜。</p>
     <p>2.选中所有球，右键，选取，选取，选取圆形物件。</p>
     <p>
-      3.脚本选单，在ondie中输入：<code>(e)=>{scene.my.num = scene.my.num - 1}</code>
+        3.脚本选单，在ondie中输入：<code>(e)=>{scene.my.num = scene.my.num - 1}</code>
     </p>
     <h3>4.球排名中间空一位。</h3>
     <div class="s">
-      <img
-        src="https://raw.githubusercontent.com/xbcen/pic/main/picture/2.4.png"
-        alt="2.4"
-      />
+        <img src="https://raw.githubusercontent.com/xbcen/pic/main/picture/2.4.png" alt="2.4" />
     </div>
     <p>1.ctrl+z/调整排行榜。</p>
     <p>2.选中所有球，右键，选取，选取，选取追踪绘图器。</p>
@@ -125,17 +118,18 @@
     <p>3.复制记事本里的内容，粘贴到Algodoo中。</p>
 
     <footer>
-      <p class="footer">神的钴（蓝）（大理）石，持续更新中……　:|</p>
-      <a href="#" class="back">回到<br />顶部</a>
-      <div id="pl"></div>
-      <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
+        <p class="footer">神的钴（蓝）（大理）石，持续更新中……　:|</p>
+        <a href="#" class="back">回到<br />顶部</a>
+        <div id="pl"></div>
+        <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
 
-      <script>
-        twikoo.init({
-          envId: "https://pl.xbcen.us.kg/",
-          el: "#pl",
-        });
-      </script>
+        <script>
+            twikoo.init({
+                envId: "https://pl.xbcen.us.kg/",
+                el: "#pl",
+            });
+        </script>
     </footer>
-  </body>
+</body>
+
 </html>
