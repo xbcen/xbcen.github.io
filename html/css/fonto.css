@@ -1,7 +1,8 @@
 /* 样式 */
-@import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
+@import url('https://fonts.font.im/css2?family=Noto+Sans+Mono&display=swap');
 
-body {
+* {
 	font-family: 'Noto Serif SC', serif;
 	margin: 0;
 	padding: 0;
@@ -13,6 +14,7 @@ h1 {
 	background-color: #2286D8;
 	color: #EFF5FB;
 	padding: 20px;
+	margin-top: 20px;
 }
 
 h2 {
@@ -20,7 +22,8 @@ h2 {
 	padding: 15px 20px 15px 20px;
 }
 
-h3, more {
+h3,
+more {
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -59,7 +62,6 @@ li a {
 	text-decoration: none;
 	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
-	color: #2286D8;
 	font-size: 20px;
 }
 
@@ -72,11 +74,12 @@ li a:hover {
 	margin: 20px;
 }
 
-@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+@media screen and (max-width: 600px)
+/* 小屏幕的样式 */
+	{
 	h1 {
-		background-color: #2286D8;
-		color: #EFF5FB;
 		padding: 15px;
+		margin-top: 15px;
 	}
 
 	h2 {
@@ -84,7 +87,8 @@ li a:hover {
 		padding: 11.25px 15px 11.25px 15px;
 	}
 
-	h3, more {
+	h3,
+	more {
 		font-size: 20px;
 		font-weight: bold;
 	}
@@ -126,25 +130,19 @@ li a:hover {
 		font-size: 15px;
 	}
 
-	li a:hover {
-		background-color: #2286D8;
-		color: #EFF5FB;
-	}
-
 	#cen {
 		margin: 15px;
 	}
-    }
+}
+
 @media (prefers-color-scheme: dark) {
-    body{
-        color: #A3D1FF;
-        background-color: #131E29;
-    }
-    li a {
-        color:#A3D1FF;
-    }
-    li a:hover {
-        background-color: #A3D1FF;
-        color: #155284;
-    }
+	* {
+		color: #A3D1FF;
+		background-color: #131E29;
+	}
+
+	li a:hover {
+		background-color: #A3D1FF;
+		color: #155284;
+	}
 }

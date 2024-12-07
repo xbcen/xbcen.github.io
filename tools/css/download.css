@@ -1,13 +1,11 @@
-@import url('https://sstars.us.kg/html/fonts/Noto-Serif-SC.css');
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
+
 /* 样式 */
-body {
+* {
     font-family: 'Noto Serif SC', serif;
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
     background-color: #EFF5FB;
-}
-
-*{
     color: #2286D8;
 }
 
@@ -15,29 +13,32 @@ h1 {
     background-color: #2286D8;
     color: #EFF5FB;
     padding: 20px;
+    margin-top: 20px;
 }
 
-h2,a {
+h2,
+a {
     font-weight: bold;
     font-size: 20px;
 }
 
-h2,ul {
-   padding-left: 20px;
+h2,
+ul {
+    padding-left: 20px;
 }
 
 ul {
-   list-style-type: none;
+    list-style-type: none;
 }
 
 textarea#userUrls {
-    border: 2px solid #2286D8; 
-    background-color: #EFF5FB; 
-    border-radius: 10px; 
-    padding: 20px 30px; 
+    border: 2px solid #2286D8;
+    background-color: #EFF5FB;
+    border-radius: 10px;
+    padding: 20px 30px;
     margin: 0 auto;
     display: block;
-    font-size: 20px;   
+    font-size: 20px;
     font-family: 'Noto Serif SC', serif;
     transition: all 0.2s ease-in-out;
     width: 90%;
@@ -46,10 +47,10 @@ textarea#userUrls {
 }
 
 textarea#userUrls:focus {
-    background-color: #2286D8; 
+    background-color: #2286D8;
     outline: none;
-    color: #EFF5FB;  
-    border: 2px solid #2286D8; 
+    color: #EFF5FB;
+    border: 2px solid #2286D8;
 }
 
 textarea#userUrls::placeholder {
@@ -61,13 +62,11 @@ textarea#userUrls:focus::placeholder {
 }
 
 button {
-    background-color: #EFF5FB;
     text-align: center;
     padding: 20px 30px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 16px; 
+    font-size: 16px;
     border: none;
     margin: 20px;
 }
@@ -78,70 +77,69 @@ button:hover {
 }
 
 .centered {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
 }
 
-@media screen and (max-width: 600px) {  /* 小屏幕的样式 */
-h1 {
-    padding: 15px;
-}
+@media screen and (max-width: 600px) {
 
-h2,a {
-    font-weight: bold;
-    font-size: 15px;
-}
-
-h2,ul {
-   padding-left: 15px;
-}
-
-textarea#userUrls {
-    border-radius: 7.5px; 
-    padding: 15px 22.5px; 
-    margin: 15px;
-    font-size: 20px;  
-    width: 67.5%;
-    height: 300px;
-}
-
-button {
-    padding: 15px 22.5px;
-    border-radius: 7.5px;
-    font-size: 12px;
-    margin: 15px;
-}
-
-button:hover {
-    color: #EFF5FB;
-    background-color: #2286D8;
-}
-}
-@media (prefers-color-scheme: dark) {
-	* {
-		color: #A3D1FF;
-	}
-    body{
-        background-color: #131E29;
+    /* 小屏幕的样式 */
+    h1 {
+        padding: 15px;
+        margin-top: 15px;
     }
-	button {
-        background-color: #131E29;
-		color:#A3D1FF;
-	}
-	button:hover {
-		background-color: #A3D1FF;
-		color: #155284;
-	}
+
+    h2,
+    a {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    h2,
+    ul {
+        padding-left: 15px;
+    }
+
     textarea#userUrls {
-        border: 2px solid #A3D1FF; 
-        background-color:#131E29;
-        color:#A3D1FF;
+        border-radius: 7.5px;
+        padding: 15px 22.5px;
+        margin: 15px;
+        font-size: 20px;
+        width: 67.5%;
+        height: 300px;
     }
+
+    button {
+        padding: 15px 22.5px;
+        border-radius: 7.5px;
+        font-size: 12px;
+        margin: 15px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: #A3D1FF;
+        background-color: #131E29;
+    }
+
+    button:hover {
+        background-color: #A3D1FF;
+        color: #155284;
+    }
+
+    textarea#userUrls {
+        border: 2px solid #A3D1FF;
+        background-color: #131E29;
+        color: #A3D1FF;
+    }
+
     textarea#userUrls:focus {
-        background-color:#2286D8; 
-        color:#EFF5FB; 
+        background-color: #2286D8;
+        color: #EFF5FB;
     }
+
     textarea#userUrls::placeholder {
         color: #A3D1FF;
     }
-  }
+}

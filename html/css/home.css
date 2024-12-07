@@ -1,47 +1,62 @@
 /* 样式 */
 /* 原https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap */
-@import url("https://sstars.us.kg/html/fonts/Noto-Serif-SC.css");
-body {
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
+
+* {
   font-family: "Noto Serif SC", serif;
   margin: 0;
   padding: 0;
   color: #2286d8;
   background-color: #eff5fb;
 }
+
 h1 {
   background-color: #2286d8;
   color: #eff5fb;
   padding: 20px;
+  margin-top: 20px;
 }
-h2,.min,.more {
+
+h2,
+.min,
+.more {
   font-weight: bold;
 }
+
 h2 {
   padding-left: 20px;
   font-size: 20px;
 }
+
 .more {
   font-size: 15px;
 }
+
 .min {
   font-size: 18px;
 }
-.min,.more {
+
+.min,
+.more {
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 20px;
 }
+
 p {
   margin: 20px;
 }
+
 li {
   display: inline-block;
   margin-right: 20px;
   margin-top: 8px;
 }
+
 li a {
   display: inline-block;
   text-align: center;
@@ -49,50 +64,67 @@ li a {
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
-  color: #2286d8;
 }
+
 li a:hover {
   background-color: #2286d8;
   color: #eff5fb;
 }
+
 #cen {
   margin: 20px;
 }
-@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+
+@media screen and (max-width: 600px)
+/* 小屏幕的样式 */
+  {
   h1 {
     background-color: #2286d8;
     color: #eff5fb;
     padding: 15px;
+    margin-top: 15px;
   }
-  h2,.min,.more {
+
+  h2,
+  .min,
+  .more {
     font-weight: bold;
   }
+
   h2 {
     padding: 15px;
     font-size: 15px;
   }
+
   .min {
     font-size: 13.5px;
   }
+
   .more {
     font-size: 15px;
   }
-  .min,.more {
+
+  .min,
+  .more {
     text-align: center;
   }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 12px;
   }
+
   p {
     margin: 15px;
   }
+
   li {
     display: inline-block;
     margin-right: 15px;
     margin-top: 6px;
   }
+
   li a {
     display: inline-block;
     text-align: center;
@@ -101,23 +133,23 @@ li a:hover {
     border-radius: 7.5px;
     transition: all 0.3s ease-in-out;
   }
+
   li a:hover {
     background-color: #2286d8;
     color: #eff5fb;
   }
+
   #cen {
     margin: 15px;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  * {
     color: #a3d1ff;
     background-color: #131e29;
   }
-  li a {
-    color: #a3d1ff;
-  }
+
   li a:hover {
     background-color: #a3d1ff;
     color: #155284;

@@ -1,27 +1,30 @@
 /* 样式 */
-@import url("https://sstars.us.kg/html/fonts/Noto-Serif-SC.css");
-body {
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
+
+* {
   font-family: "Noto Serif SC", serif;
   margin: 0;
   padding: 0;
   color: #2286d8;
   background-color: #eff5fb;
 }
+
 h1 {
   background-color: #2286d8;
   color: #eff5fb;
   padding: 20px;
+  margin-top: 20px;
 }
+
 p {
   margin: 20px;
 }
+
 button {
-  background-color: #eff5fb;
   text-align: center;
   padding: 12px 25px;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
-  font-family: "Noto Serif SC", serif;
   font-size: 16px;
   border: none;
   margin: 20px;
@@ -37,33 +40,34 @@ button:hover {
   transition: opacity 0.5s;
   margin: 20px;
 }
-@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+
+@media screen and (max-width: 600px)
+/* 小屏幕的样式 */
+  {
   h1 {
-    background-color: #2286d8;
-    color: #eff5fb;
     padding: 15px;
+    margin-top: 15px;
   }
+
   p {
-    color: #2286d8;
     margin: 15px;
   }
+
   button {
     margin: 15px;
   }
 }
-#copied{
-    margin: 15px;
+
+#copied {
+  margin: 15px;
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  * {
     color: #a3d1ff;
     background-color: #131e29;
   }
-  button {
-    background-color: #131e29;
-    color: #a3d1ff;
-  }
+
   button:hover {
     background-color: #a3d1ff;
     color: #155284;

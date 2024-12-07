@@ -3,6 +3,7 @@
 .twikoo {
   margin: 20px;
 }
+
 .twikoo *,
 .tk-meta-input input,
 .el-input-group__prepend,
@@ -10,6 +11,7 @@
 .tk-col textarea {
   font-size: 15px;
 }
+
 .tk-meta-input input,
 .el-input-group__prepend,
 .twikoo button,
@@ -17,40 +19,52 @@
   font-family: "Noto Serif SC", sans-serif;
   margin: 0px;
 }
+
 .el-input--small .el-input__inner {
   height: 30px;
   line-height: 30px;
 }
+
 .tk-main p,
 .tk-nick {
   margin: 5px 0;
 }
+
 .tk-col textarea {
   resize: none;
   border: 2px solid #2286d8;
   transition: all 0.3s ease-in-out;
 }
+
 .tk-col textarea:focus {
   background-color: #2286d8;
 }
-.tk-col textarea:focus,.tk-col textarea:focus::placeholder {
-    color:#EFF5FB;
+
+.tk-col textarea:focus,
+.tk-col textarea:focus::placeholder {
+  color: #EFF5FB;
 }
-.tk-col textarea,.tk-col textarea::placeholder {
-    color:#2286d8;
+
+.tk-col textarea,
+.tk-col textarea::placeholder {
+  color: #2286d8;
 }
-.tk-col textarea:hover{
-    border-color: #2286d8;
+
+.tk-col textarea:hover {
+  border-color: #2286d8;
 }
+
 .tk-comments *,
 .tk-footer,
 .tk-footer a {
   color: #2286d8;
 }
+
 .el-textarea__inner {
   min-height: 120px;
   height: 120px;
 }
+
 .tk-meta strong,
 .tk-comments-title *,
 .tk-comments-no span {
@@ -67,31 +81,39 @@
 .el-button.tk-send.el-button--primary.el-button--small:disabled {
   background: #a3d1ff;
   border-color: #a3d1ff;
+  background-color: #a3d1ff;
   & span {
     color: #2286d8;
   }
-  background-color: #a3d1ff;
 }
+
 .el-button.tk-send.el-button--primary.el-button--small:hover {
   background: #2286d8;
   border-color: #2286d8;
   background-color: #2286d8;
   transition: all 0.3s ease-in-out;
+
   & span {
     color: #eff5fb;
   }
 }
-.tk-input.el-textarea textarea{
-  color:#2286d8;
+
+.tk-input.el-textarea textarea {
+  color: #2286d8;
   border: 2px solid #2286d8;
 }
-.tk-input.el-textarea textarea:focus{
-  color:#eff5fb;
+
+.tk-input.el-textarea textarea:focus {
+  color: #eff5fb;
 }
-@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+
+@media screen and (max-width: 600px)
+/* 小屏幕的样式 */
+  {
   .twikoo {
     margin: 15px;
   }
+
   .twikoo *,
   .tk-meta-input input,
   .el-input-group__prepend,
@@ -99,23 +121,28 @@
   .tk-col textarea {
     font-size: 10px;
   }
+
   .tk-meta strong,
   .tk-comments-title *,
   .tk-comments-no span {
     font-size: 15px;
   }
+
   .el-input--small .el-input__inner {
     height: 20px;
     line-height: 20px;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .tk-col textarea {
     border: 2px solid #a3d1ff;
   }
+
   .twikoo * {
     color: #a3d1ff;
   }
+
   .tk-row.actions button,
   .el-button.tk-send.el-button--primary.el-button--small {
     background: #131e29;
@@ -123,10 +150,12 @@
     background-color: #131e29;
     transition: all 0.3s ease-in-out;
   }
+
   .el-button.tk-send.el-button--primary.el-button--small:hover {
     background: #a3d1ff;
     border-color: #a3d1ff;
     background-color: #a3d1ff;
+
     & span {
       color: #155284;
     }
