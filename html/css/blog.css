@@ -123,9 +123,10 @@ nav {
     width: 50% !important;
     border-radius: 10px;
     transition: .5s;
-    background-color: rgba(34, 134, 216, .5);
+    background-color: #2286d8;
     border-radius: 10px;
     left: 0;
+    opacity: 0;
 }
 
 .tab:nth-child(1):hover~.hk {
