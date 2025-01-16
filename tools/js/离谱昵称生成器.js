@@ -2,7 +2,7 @@ var adjectives = [],
   verbs = [],
   nouns = [];
 
-$.getJSON("other/words.json", function (data) {
+$.getJSON("other/words-agd.json", function (data) {
   adjectives = data.adjectives;
   verbs = data.verbs;
   nouns = data.nouns;
