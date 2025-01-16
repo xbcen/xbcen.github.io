@@ -6,49 +6,58 @@
 @import "home.css";
 @import "https://sstars.us.kg/write/css/twikoo.css";
 
-li a{
-    box-shadow: 10px 10px 30px rgba(0,0,0,0.2),
-    -10px -10px 30px rgba(255,255,255,1);
+/* 基础样式 */
+li a {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 1);
     transition: all .2s ease-out;
 }
-li a:hover{
+
+li a:hover {
     background-color: #EFF5FB;
     color: #2286D8;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2),
-        0 0 0 rgba(255, 255, 255, 0.8),
-        inset 5px 5px 30px rgba(0, 0, 0, 0.1),
-        inset -5px -5px 30px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8),
+        inset 5px 5px 30px rgba(0, 0, 0, 0.1), inset -5px -5px 30px rgba(255, 255, 255, 1);
 }
+
 .img img {
     width: 60%;
 }
+
 .img,
-.footer{
+.footer {
     text-align: center;
 }
-.footer,#clock {
+
+.footer,
+#clock {
     font-family: 'Noto Sans Mono', sans-serif;
     font-weight: bold;
 }
-.header{
+
+/* Header 部分 */
+.header {
     position: relative;
     display: flex;
     margin: 0 auto;
+    height: 75px;
+    align-items: center;
 }
-#cen{
+
+#cen {
     font-size: 15px;
     text-align: center;
     height: 15px;
-    margin: 0 auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-#clock{
+
+#clock {
     font-size: 20px;
+    margin-left: auto;
     margin-right: 20px;
-    margin-left:auto;
 }
+
 #cen::after {
     content: '';
     position: absolute;
@@ -57,138 +66,159 @@ li a:hover{
     height: 15px;
     width: 2px;
     animation: san 0.5s steps(1) infinite;
+    background-color: #2286D8;
 }
-.header {
-    height: 75px;
-}
-@keyframes san {
-    0%,
-    100% {
-        background-color: #2286D8;
-    }
 
+@keyframes san {
     50% {
         background-color: transparent;
     }
 }
-nav{
+
+
+/* 导航部分 */
+nav {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
-.nav{
-    width:50%;
+
+.nav {
+    width: 50%;
     height: 50px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2),
-        -10px -10px 30px rgba(255, 255, 255, 1);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 1);
     display: flex;
     border-radius: 10px;
     line-height: 50px;
     position: relative;
 }
+
 .nav div {
-    width:100%;
+    width: 100%;
     text-align: center;
 }
-.tab.-n{
+
+.tab.-n {
     border-radius: 10px;
+    background-color: #2286D8;
 }
-.taba{
+
+.taba {
     overflow: hidden;
     display: none !important;
 }
-.taba.-n{
+
+.taba.-n {
     display: flex !important;
     flex-direction: column;
 }
+
 .taba.-n li {
     margin: 20px;
 }
-.tab.-n,.hk{
-    background-color: #2286D8;
-}
-.hk{
+
+.hk {
     position: absolute;
     height: 50px;
     width: 50% !important;
-    z-index: -1;
     border-radius: 10px;
-    transition: opacity .2s ,left .5s;
+    transition: .5s;
+    background-color: rgba(34, 134, 216, .5);
+    border-radius: 10px;
     left: 0;
-    opacity: 0;
 }
+
 .tab:nth-child(1):hover~.hk {
     opacity: 0.75;
     left: 0;
 }
-.tab:nth-child(2):hover~.hk{
+
+.tab:nth-child(2):hover~.hk {
     opacity: 0.75;
     left: 50%;
 }
-.tab.-n,.tab:hover{
+
+.tab {
+    background-color: transparent;
+    z-index: 999;
+}
+
+.tab.-n,
+.tab:hover {
     color: #EFF5FB;
     transition: .5s;
 }
-@media screen and (max-width: 600px){
-.img img{
-    width: 80%;
-}
-.header {
-    display: flex;
-    flex-direction: column;
-}
-#cen::after {
-    position:relative;
-    display: inline-block;
-    top:2px;
-}
-#cen,
-#clock {
-    position: static;
-    margin: 0 0 10px 0;
-    text-align: center;
-}
-#cen{
-    transform: none;
-    display: inline-block;
-}
-.nav{
-    width: 80%;
-}
-}
-@media (prefers-color-scheme: dark) {
-    @keyframes san {
-        0%,
-        100% {
-            background-color: #a3d1ff;
-        }
 
-        50% {
-            background-color: transparent;
-        }
+/* 响应式布局 */
+@media screen and (max-width: 600px) {
+    .img img {
+        width: 80%;
     }
-li a {
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 1),
-        -10px -10px 30px rgba(255, 255, 255, 0.2);
-    transition: all .2s ease-out;
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        /*  让header高度自适应内容 */
+    }
+
+    #cen::after {
+        position: relative;
+        display: inline-block;
+        top: 2px;
+    }
+
+    #cen,
+    #clock {
+        position: static;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    #clock {
+        margin-right: 0;
+        /*  去除clock右侧边距 */
+    }
+
+    #cen {
+        transform: none;
+        display: inline-block;
+    }
+
+    .nav {
+        width: 80%;
+    }
 }
 
-li a:hover {
-    background-color: #131e29;
-    color: #a3d1ff;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.8),
-        0 0 0 rgba(255, 255, 255, 0.2),
-        inset 5px 5px 30px rgba(0, 0, 0, 1),
-        inset -5px -5px 30px rgba(255, 255, 255, 0.1);
-}
-.nav{
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 1),
-        -10px -10px 30px rgba(255, 255, 255, 0.2);
-}
-.tab.-n,.hk{
-    background-color: #a3d1ff;
-}
-.tab.-n,.tab:hover {
-    color: #155284;
-}
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+    #cen::after {
+        background-color: #a3d1ff;
+        /* 深色模式下调整颜色 */
+    }
+
+    li a {
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 1), -10px -10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    li a:hover {
+        background-color: #131e29;
+        color: #a3d1ff;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.8), 0 0 0 rgba(255, 255, 255, 0.2),
+            inset 5px 5px 30px rgba(0, 0, 0, 1), inset -5px -5px 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .nav {
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 1), -10px -10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .tab.-n,
+    .hk {
+        background-color: #a3d1ff;
+    }
+
+    .tab.-n,
+    .tab:hover {
+        color: #155284;
+    }
 }

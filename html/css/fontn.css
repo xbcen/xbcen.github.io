@@ -84,6 +84,7 @@ a:hover {
     line-height: 40px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    background-color: #2286D8;
     span{
         color:#eff5fb;
         background-color: transparent;
@@ -99,7 +100,8 @@ a:hover {
 }
 
 .url-top li:hover,
-.url-top a:hover {
+.url-top a:hover
+.url-top {
     background-color: #2286D8;
     color: #EFF5FB;
 }
