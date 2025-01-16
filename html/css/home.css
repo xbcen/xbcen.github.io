@@ -75,20 +75,11 @@ li a:hover {
   margin: 20px;
 }
 
-@media screen and (max-width: 600px)
-/* 小屏幕的样式 */
-  {
+
+@media screen and (max-width: 600px) {
   h1 {
-    background-color: #2286d8;
-    color: #eff5fb;
     padding: 15px;
     margin-top: 15px;
-  }
-
-  h2,
-  .min,
-  .more {
-    font-weight: bold;
   }
 
   h2 {
@@ -100,18 +91,7 @@ li a:hover {
     font-size: 13.5px;
   }
 
-  .more {
-    font-size: 15px;
-  }
-
-  .min,
-  .more {
-    text-align: center;
-  }
-
   ul {
-    list-style-type: none;
-    margin: 0;
     padding: 12px;
   }
 
@@ -120,23 +100,13 @@ li a:hover {
   }
 
   li {
-    display: inline-block;
     margin-right: 15px;
     margin-top: 6px;
   }
 
   li a {
-    display: inline-block;
-    text-align: center;
     padding: 12px 13.5px;
-    text-decoration: none;
     border-radius: 7.5px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  li a:hover {
-    background-color: #2286d8;
-    color: #eff5fb;
   }
 
   #cen {

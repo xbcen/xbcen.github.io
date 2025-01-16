@@ -1,15 +1,12 @@
 /* 样式 */
 @import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
 
-body {
-    font-family: 'Noto Serif SC', serif;
-    color: #2286D8;
-    background-color: #EFF5FB;
-}
-
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Serif SC', serif;
+    color: #2286D8;
+    background-color: #EFF5FB;
 }
 
 h1 {
@@ -60,7 +57,6 @@ main li {
 
 main a {
     display: inline-block;
-    color: #2286D8;
     padding: 20px 30px;
     text-decoration: none;
     border-radius: 10px;
@@ -88,10 +84,18 @@ a:hover {
     line-height: 40px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    span{
+        color:#eff5fb;
+        background-color: transparent;
+    }
 }
 
 .url-top:hover {
     background-color: #1f55b5;
+}
+
+.url-top a,.url-top ul li{
+    background-color: #dfebf7;
 }
 
 .url-top li:hover,
@@ -102,7 +106,6 @@ a:hover {
 
 .url-top a {
     text-decoration: none;
-    color: #2286d8;
     transition: all 0.3s ease-in-out;
     display: inline-block;
     height: 40px;
@@ -115,8 +118,6 @@ a:hover {
     transition: all 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(-40px);
-    color: #2286D8;
-    background-color: #dfebf7;
 }
 
 .url-top:hover li {
@@ -173,8 +174,6 @@ input[type="text"]:focus::placeholder {
 /* 小屏幕的样式 */
     {
     h1 {
-        background-color: #2286D8;
-        color: #EFF5FB;
         padding: 15px;
         margin-top: 15px;
     }
@@ -228,19 +227,12 @@ input[type="text"]:focus::placeholder {
         font-size: 15px;
     }
 
-    a:hover {
-        background-color: #2286D8;
-        color: #EFF5FB;
-    }
-
     #cen {
         margin: 15px;
     }
 
     input[type="text"]#mySearch {
         width: 200px;
-        border: 2px solid #2286D8;
-        background-color: #EFF5FB;
         border-radius: 7.5px;
         padding: 15px 22.5px;
         transition: all 0.3s ease-in-out;
@@ -261,8 +253,6 @@ input[type="text"]:focus::placeholder {
     }
 
     .small-nav select {
-        background-color: #2286D8;
-        color: #EFF5FB;
         cursor: pointer;
         border: none;
         appearance: none;
