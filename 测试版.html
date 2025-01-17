@@ -14,6 +14,7 @@
             <div id="cen"></div>
             <script src="html/js/txt.js"></script>
         </div>
+        <button id="myButton">Click Me</button>
     </header>
     <section class="nav">
         <h2 id="导航">导航：</h2>
@@ -102,5 +103,27 @@
     <footer>
         <p class="cen">本站测试中......</p>
     </footer>
+    <script>
+    const cenElements = document.querySelectorAll('.cen');
+
+    // 定义一个变量来跟踪时间
+    let x = 0;
+
+    // 定义一个函数来改变颜色
+    function updateColor() {
+        x += 0.02;
+        const sinValue = Math.sin(5*x);
+        const r = Math.round((sinValue / 2 + 0.5) * 255);
+        const g = Math.round((sinValue / 2 + 0.5) * 255);
+        const b = Math.round((sinValue / 2 + 0.5) * 255);
+        const rgbColor = `rgb(${r}, ${g}, ${b})`;
+
+        cenElements.forEach(element => {
+            element.style.color = rgbColor;
+        });
+    }
+    // 每隔一段时间调用 updateColor 函数，实现颜色渐变
+    setInterval(updateColor, 30); // 每 30 毫秒更新一次
+    </script>
 </body>
 </html>
