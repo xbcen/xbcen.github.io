@@ -22,6 +22,7 @@ h2 {
 	font-size: 20px;
 	font-weight: bold;
 	padding-left: 20px;
+	margin: 20px 0;
 }
 
 h3 {
@@ -109,6 +110,7 @@ img {
 		font-size: 15px;
 		font-weight: bold;
 		padding-left: 15px;
+		margin: 15px 0;
 	}
 
 	h3 {
