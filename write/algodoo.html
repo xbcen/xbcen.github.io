@@ -48,7 +48,7 @@
     <p>摄像机位置：<code>scene.camera.pan</code></p>
     <p>老生常谈for循环（a为整数）：<code>for(a, (x)=>{//代码//})</code></p>
     <p>按回车键自动运行（写update）（小键盘回车请将"return"改为"enter"，其他键位请自己查询）：</p>
-    <div class="long">
+    <pre>
         <code>
             (e)=>{<br />
                 Keys.isDown("return")?{<br />
@@ -56,9 +56,9 @@
                 }:{}<br />
             }<br />
         </code>
-    </div>
+    </pre>
     <p>隐藏左上角UI（写update）：</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         sim.running ? {<br />
@@ -74,9 +74,9 @@
         }<br />
         }<br />
       </code>
-    </div>
+    </pre>
     <p>物体顺逆轮流转（1）（写轴承poststep）：</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         sim.tick % 数值 == 0 ? {<br />
@@ -84,35 +84,36 @@
         } : {}<br />
         }<br />
       </code>
-    </div>
+    </pre>
     <p>物体顺逆轮流转（2）（写轴承poststep）：</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         motorspeed = math.sin(sim.time) * math.pi<br />
         }<br />
       </code>
-    </div>
+    </pre>
     <p>注：math.pi相当于马达速度30rpm。</p>
     <p>物体顺逆轮流转（3）（写物体poststep）</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         angle=math.sin(sim.time)<br />
         }<br />
       </code>
-    </div>
+    </pre>
     <p>染色（写物体oncollide）：</p>
-    <div class="long">
+    <pre>
         <code>
             (e)=>{<br />
                 color = e.other.color;<br />
                 update = e.other.update<br />
             }<br />
         </code>
-    </div>
+    </pre>
     <p>被雷射笔照到过关（写雷射笔onlaserHit）：</p>
-    <div class="long">
+    <pre>
+      <code>
         (e)=>{<br />
             e.geom._M ? {<br />
                 e.other.pos = scene.my.s关卡号m;<br />
@@ -120,9 +121,10 @@
                 scene.my.spots = scene.my.spots关卡号 - 1<br />
             } : {}<br />
         }<br />
-    </div>
+      </code>
+    </pre>
     <p>排行榜文字背景（增加可读性）(写oncollide，使用时请去掉注释):</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         e.other._pp ? {<br />
@@ -134,9 +136,9 @@
         } : {}<br />
         }<br />
       </code>
-    </div>
+    </pre>
     <p>随机概率过关（需要先定义<code>_rand</code>变量）（写物体oncollide）：</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         e.other._M ? {<br />
@@ -154,9 +156,9 @@
         } : {}<br />
         }
       </code>
-    </div>
+    </pre>
     <p>回家静止（写物体oncollide）：</p>
-    <div class="long">
+    <pre>
         <code>
             (e)=>{<br />
                 e.other.timetolive=6;<br />
@@ -170,9 +172,9 @@
                 }<br />
             }
         </code>
-    </div>
+    </pre>
     <p>回家区免疫下层（写oncollide）：</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         e.pos(1) >= e.this.pos(1) ? {<br />
@@ -180,9 +182,9 @@
         } : {}<br />
         }
       </code>
-    </div>
+    </pre>
     <p>反重力（写oncollide）：</p>
-    <div class="long">
+    <pre>
       <code>
         (e)=>{<br />
         e.other._M ? {<br />
@@ -192,12 +194,12 @@
         } : {}<br />
         }
       </code>
-    </div>
+    </pre>
     <footer>
       <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
       <p class="footer">以及感谢清秋老师的代码提供　:)</p>
       <a href="#" class="back">回到<br />顶部</a>
-      <div id="pl"></div>
+      <pre id="pl"></pre>
       <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
       <script>
         twikoo.init({

@@ -19,10 +19,12 @@ h1 {
 }
 
 h2 {
+	border-left: 5px solid #2286D8;
+	border-radius: 5px;
 	font-size: 20px;
 	font-weight: bold;
-	padding-left: 20px;
-	margin: 20px 0;
+	padding-left: 10px;
+	margin: 20px;
 }
 
 h3 {
@@ -37,30 +39,39 @@ ul {
 	padding: 20px;
 }
 
-code,.long {
+code,pre {
 	font-family: 'Noto Sans Mono', sans-serif;
 	background-color: #e1e1e1;
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
 
-.long,p,code {
+pre,p,code,blockquote {
 	font-size: 15px;
 }
 
-.long,p {
+pre,p,blockquote {
 	margin: 22.5px;
 }
-.long{
+pre{
 	width: fit-content;
+	white-space: normal;
 }
-.long code {
+pre code {
 	padding: 0;
 }
 li {
 	display: inline-block;
 	margin-right: 20px;
 	margin-top: 8px;
+}
+
+blockquote {
+	background-color: #A3D1FF;
+	border-left: 5px solid #2286D8;
+	padding: 10px;
+	width: fit-content;
+	white-space: pre-line;
 }
 
 li a {
@@ -109,8 +120,8 @@ img {
 	h2 {
 		font-size: 15px;
 		font-weight: bold;
-		padding-left: 15px;
-		margin: 15px 0;
+		padding-left: 10px;
+		margin: 15px ;
 	}
 
 	h3 {
@@ -125,19 +136,24 @@ img {
 		padding: 12px;
 	}
 
-	.long,p,code {
+	blockquote {
+		margin: 20px;
+		padding: 10px;
+	}
+
+	pre,p,code,blockquote {
 		font-size: 10px;
 	}
 
-	.long,p {
+	pre,p,blockquote {
 		margin: 12.5px;
 	}
 
-	.long code {
+	pre code {
 		padding: 0;
 	}
 
-	code,.long {
+	code,pre {
 		font-family: 'Noto Sans Mono', sans-serif;
 		background-color: #e1e1e1;
 		padding: 0 3px;
@@ -178,7 +194,11 @@ img {
 		background-color: #A3D1FF;
 		color: #155284;
 	}
-	code,.long{
+	code,pre{
 		background-color: #1a1a1a;
+	}
+	blockquote {
+		background-color: #155284;
+		border-left: 5px solid #A3D1FF;
 	}
   }
