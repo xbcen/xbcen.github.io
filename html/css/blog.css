@@ -120,7 +120,7 @@ nav {
 .hk {
     position: absolute;
     height: 50px;
-    width: 50% !important;
+    width: calc(100%/3) !important;
     border-radius: 10px;
     transition: .5s;
     background-color: #2286d8;
@@ -136,7 +136,12 @@ nav {
 
 .tab:nth-child(2):hover~.hk {
     opacity: 0.75;
-    left: 50%;
+    left: calc(100%/3);
+}
+
+.tab:nth-child(3):hover~.hk {
+    opacity: 0.75;
+    left: calc(100%/3*2);
 }
 
 .tab {
