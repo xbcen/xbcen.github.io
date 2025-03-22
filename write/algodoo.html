@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Algodoo之代码</title>
-    <meta
-      charset="utf-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
-    />
-    <meta name="description" content="Algodoo之Bug" />
-    <meta name="keywords" content="Algodoo" />
-    <link
-      rel="shortcut icon"
-      href="https://sstars.us.kg/html/icon/%E7%94%B5%E8%84%91_computer.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="css/agd.css" />
-  </head>
-  <body>
-    <h1>收录Algodoo代码ing……</h1>
-    <p>调整ui不透明度：<code>gui.skin.opacity = 0.925</code></p>
-    <p>更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code></p>
-    <p>生成圆形：<code>Scene.addCircle()</code></p>
-    <p>生成方形：<code>Scene.addBox()</code></p>
-    <p>生成追踪器（追尾）：<code>scene.addPen()</code></p>
-    <p>生成物件时生成变量需要这么写：<code>x := a</code></p>
-    <p>注：0～1随机取值：<code>rand.uniform01</code></p>
-    <p>-3～+3随机取值（标准正态分布）：<code>rand.normal</code></p>
-    <p>注：取值在-3～+3以外的概率非常小，但不是0%。</p>
-    <p>赛博风向（弧度制）：<code>sim.windangle</code></p>
-    <p>赛博风力（单位：平方米/秒）：<code>sim.windstrength</code></p>
-    <p>x～y随机取值（y>x）：<code>rand.uniform01*(y-x)+x</code></p>
-    <p>取整数（舍尾法，也有把文本转换为数字格式的作用）：<code>math.toint(x)</code></p>
-    <p>左右简单平移：<code>pos = [pos(0) + math.sin(sim.time) , pos(1)]</code></p>
-    <p>上下简单平移：<code>pos = [pos(0) , pos(1) + math.sin(sim.time)]</code></p>
-    <p>左右平移（不容易穿模，写poststep）：<code>vel = [math.sin(sim.time - scene.my.time关卡号) * x, 0.16333334];</code></p>
-    <p>上下平移（不容易穿模，写poststep）：<code>vel = [0, math.sin(sim.time - scene.my.time关卡号) * x]</code></p>
-    <p>注：1.x代表物体移动到最左边中心/最下面中心到移动到最右边中心/最上面中心的距离/2<br />
-        　　2.提高/降低移动速度请同时扩大/缩小math.sin()与x的值。<br />
-        　　如：<code>math.sin((sim.time - scene.my.time关卡号) * 2) * 2x</code><br />
-        　　3.需要将物体的密度设置为一个较大数，如：8888888,1919810<br />
-        　　4.代码为自左向右/自下往上，需要向物体放置于最左边。如果需要右自向左/自上往下，请在<code>math.sin</code>前面加上<code>-</code>（即<code>- math.sin</code>），并向物体放置于最右边/最上边。<br />
-        　　5.需要在物件的<code>onspawn</code>中定义：<code>scene.my.time关卡号 = sim.time</code><br />
-        　　6.0.16333334来源于<code>Sim.gravityStrength / Sim.frequency</code>的计算结果。
-    </p>
-    <p>摄像机缩放：<code>scene.camera.zoom</code></p>
-    <p>注：scene.camera.zoom的值是缩放值的150倍。（如：<code>scene.camera.zoom=36</code>，缩放值为<code>36/150=0.24x</code>）</p>
-    <p>摄像机位置：<code>scene.camera.pan</code></p>
-    <p>老生常谈for循环（a为整数）：<code>for(a, (x)=>{//代码//})</code></p>
-    <p>按回车键自动运行（写update）（小键盘回车请将"return"改为"enter"，其他键位请自己查询）：</p>
-    <pre>
+
+<head>
+  <title>Algodoo之代码</title>
+  <meta charset="utf-8" name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Algodoo之Bug" />
+  <meta name="keywords" content="Algodoo" />
+  <link rel="shortcut icon" href="https://sstars.cloudns.ch/html/icon/%E7%94%B5%E8%84%91_computer.ico"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="css/agd.css" />
+</head>
+
+<body>
+  <h1>收录Algodoo代码ing……</h1>
+  <p>调整ui不透明度：<code>gui.skin.opacity = 0.925</code></p>
+  <p>更改背景（天空颜色）：<code>app.background.skycolor=颜色（rgba）</code></p>
+  <p>生成圆形：<code>Scene.addCircle()</code></p>
+  <p>生成方形：<code>Scene.addBox()</code></p>
+  <p>生成追踪器（追尾）：<code>scene.addPen()</code></p>
+  <p>生成物件时生成变量需要这么写：<code>x := a</code></p>
+  <p>注：0～1随机取值：<code>rand.uniform01</code></p>
+  <p>-3～+3随机取值（标准正态分布）：<code>rand.normal</code></p>
+  <p>注：取值在-3～+3以外的概率非常小，但不是0%。</p>
+  <p>赛博风向（弧度制）：<code>sim.windangle</code></p>
+  <p>赛博风力（单位：平方米/秒）：<code>sim.windstrength</code></p>
+  <p>x～y随机取值（y>x）：<code>rand.uniform01*(y-x)+x</code></p>
+  <p>取整数（舍尾法，也有把文本转换为数字格式的作用）：<code>math.toint(x)</code></p>
+  <p>左右简单平移：<code>pos = [pos(0) + math.sin(sim.time) , pos(1)]</code></p>
+  <p>上下简单平移：<code>pos = [pos(0) , pos(1) + math.sin(sim.time)]</code></p>
+  <p>左右平移（不容易穿模，写poststep）：<code>vel = [math.sin(sim.time - scene.my.time关卡号) * x, 0.16333334];</code></p>
+  <p>上下平移（不容易穿模，写poststep）：<code>vel = [0, math.sin(sim.time - scene.my.time关卡号) * x]</code></p>
+  <p>注：1.x代表物体移动到最左边中心/最下面中心到移动到最右边中心/最上面中心的距离/2<br />
+    　　2.提高/降低移动速度请同时扩大/缩小math.sin()与x的值。<br />
+    　　如：<code>math.sin((sim.time - scene.my.time关卡号) * 2) * 2x</code><br />
+    　　3.需要将物体的密度设置为一个较大数，如：8888888,1919810<br />
+    　　4.代码为自左向右/自下往上，需要向物体放置于最左边。如果需要右自向左/自上往下，请在<code>math.sin</code>前面加上<code>-</code>（即<code>- math.sin</code>），并向物体放置于最右边/最上边。<br />
+    　　5.需要在物件的<code>onspawn</code>中定义：<code>scene.my.time关卡号 = sim.time</code><br />
+    　　6.0.16333334来源于<code>Sim.gravityStrength / Sim.frequency</code>的计算结果。
+  </p>
+  <p>摄像机缩放：<code>scene.camera.zoom</code></p>
+  <p>注：scene.camera.zoom的值是缩放值的150倍。（如：<code>scene.camera.zoom=36</code>，缩放值为<code>36/150=0.24x</code>）</p>
+  <p>摄像机位置：<code>scene.camera.pan</code></p>
+  <p>老生常谈for循环（a为整数）：<code>for(a, (x)=>{//代码//})</code></p>
+  <p>按回车键自动运行（写update）（小键盘回车请将"return"改为"enter"，其他键位请自己查询）：</p>
+  <pre>
         <code>
             (e)=>{<br />
                 Keys.isDown("return")?{<br />
@@ -57,8 +53,8 @@
             }<br />
         </code>
     </pre>
-    <p>隐藏左上角UI（写update）：</p>
-    <pre>
+  <p>隐藏左上角UI（写update）：</p>
+  <pre>
       <code>
         (e)=>{<br />
         sim.running ? {<br />
@@ -75,8 +71,8 @@
         }<br />
       </code>
     </pre>
-    <p>物体顺逆轮流转（1）（写轴承poststep）：</p>
-    <pre>
+  <p>物体顺逆轮流转（1）（写轴承poststep）：</p>
+  <pre>
       <code>
         (e)=>{<br />
         sim.tick % 数值 == 0 ? {<br />
@@ -85,25 +81,25 @@
         }<br />
       </code>
     </pre>
-    <p>物体顺逆轮流转（2）（写轴承poststep）：</p>
-    <pre>
+  <p>物体顺逆轮流转（2）（写轴承poststep）：</p>
+  <pre>
       <code>
         (e)=>{<br />
         motorspeed = math.sin(sim.time) * math.pi<br />
         }<br />
       </code>
     </pre>
-    <p>注：math.pi相当于马达速度30rpm。</p>
-    <p>物体顺逆轮流转（3）（写物体poststep）</p>
-    <pre>
+  <p>注：math.pi相当于马达速度30rpm。</p>
+  <p>物体顺逆轮流转（3）（写物体poststep）</p>
+  <pre>
       <code>
         (e)=>{<br />
         angle=math.sin(sim.time)<br />
         }<br />
       </code>
     </pre>
-    <p>染色（写物体oncollide）：</p>
-    <pre>
+  <p>染色（写物体oncollide）：</p>
+  <pre>
         <code>
             (e)=>{<br />
                 color = e.other.color;<br />
@@ -111,8 +107,8 @@
             }<br />
         </code>
     </pre>
-    <p>被雷射笔照到过关（写雷射笔onlaserHit）：</p>
-    <pre>
+  <p>被雷射笔照到过关（写雷射笔onlaserHit）：</p>
+  <pre>
       <code>
         (e)=>{<br />
             e.geom._M ? {<br />
@@ -123,8 +119,8 @@
         }<br />
       </code>
     </pre>
-    <p>排行榜文字背景（增加可读性）(写oncollide，使用时请去掉注释):</p>
-    <pre>
+  <p>排行榜文字背景（增加可读性）(写oncollide，使用时请去掉注释):</p>
+  <pre>
       <code>
         (e)=>{<br />
         e.other._pp ? {<br />
@@ -137,8 +133,8 @@
         }<br />
       </code>
     </pre>
-    <p>随机概率过关（需要先定义<code>_rand</code>变量）（写物体oncollide）：</p>
-    <pre>
+  <p>随机概率过关（需要先定义<code>_rand</code>变量）（写物体oncollide）：</p>
+  <pre>
       <code>
         (e)=>{<br />
         e.other._M ? {<br />
@@ -157,8 +153,8 @@
         }
       </code>
     </pre>
-    <p>回家静止（写物体oncollide）：</p>
-    <pre>
+  <p>回家静止（写物体oncollide）：</p>
+  <pre>
         <code>
             (e)=>{<br />
                 e.other.timetolive=6;<br />
@@ -173,8 +169,8 @@
             }
         </code>
     </pre>
-    <p>回家区免疫下层（写oncollide）：</p>
-    <pre>
+  <p>回家区免疫下层（写oncollide）：</p>
+  <pre>
       <code>
         (e)=>{<br />
         e.pos(1) >= e.this.pos(1) ? {<br />
@@ -183,8 +179,8 @@
         }
       </code>
     </pre>
-    <p>反重力（写oncollide）：</p>
-    <pre>
+  <p>反重力（写oncollide）：</p>
+  <pre>
       <code>
         (e)=>{<br />
         e.other._M ? {<br />
@@ -195,18 +191,19 @@
         }
       </code>
     </pre>
-    <footer>
-      <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
-      <p class="footer">以及感谢清秋老师的代码提供　:)</p>
-      <a href="#" class="back">回到<br />顶部</a>
-      <pre id="pl"></pre>
-      <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
-      <script>
-        twikoo.init({
-          envId: "https://pl.xbcen.us.kg/",
-          el: "#pl",
-        });
-      </script>
-    </footer>
-  </body>
+  <footer>
+    <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
+    <p class="footer">以及感谢清秋老师的代码提供　:)</p>
+    <a href="#" class="back">回到<br />顶部</a>
+    <pre id="pl"></pre>
+    <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.38/twikoo.min.js"></script>
+    <script>
+      twikoo.init({
+        envId: "https://pl.xbcen.us.kg/",
+        el: "#pl",
+      });
+    </script>
+  </footer>
+</body>
+
 </html>

@@ -1,8 +1,8 @@
-# [xbcen.github.io](https://sstars.us.kg)
+# [xbcen.github.io](https://sstars.cloudns.ch)
 
 随便写的简单网站。
 
-![home](https://pic.sstars.us.kg/file/351d1d90f865e461d8530.jpg "home")
+![home](https://pic.sstars.cloudns.ch/file/351d1d90f865e461d8530.jpg "home")
 
 欢迎来玩 :-)
 

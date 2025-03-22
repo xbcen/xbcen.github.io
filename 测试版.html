@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>测试网站</title>
-    <name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
-    <link rel="shortcut icon" href="html/icon/%E5%B7%A5%E5%85%B7_tool.ico" type="image/x-icon">
-    <link rel="stylesheet" href="html/css/test.css">
+    <name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="html/icon/%E5%B7%A5%E5%85%B7_tool.ico" type="image/x-icon">
+        <link rel="stylesheet" href="html/css/test.css">
 </head>
+
 <body>
     <header>
         <h1>一个博客</h1>
@@ -41,7 +44,7 @@
                 <li><a href="write/algodoo.html">Algodoo之代码</a></li>
                 <li><a href="write/bugodoo.html">Algodoo之Bug</a></li>
                 <li><a href="write/algodoo-die">Algodoo警示录</a></li>
-                <li><a href="https://bing.sstars.us.kg/web/#/" target="_blank">New Bing</a></li>
+                <li><a href="https://bing.sstars.cloudns.ch/web/#/" target="_blank">New Bing</a></li>
                 <li><a href="home.html">文章更新中……</a></li>
             </ul>
         </section>
@@ -49,7 +52,7 @@
             <h2 id="精选网站">精选网站：</h2>
             <ul>
                 <h3 id="主页">主页：</h3>
-              <li><a href="home.html">正式版主页</a></li>
+                <li><a href="home.html">正式版主页</a></li>
                 <h3 id="搜索">搜索引擎：</h3>
                 <li><a href="https://www.google.com" target="_blank">谷歌</a></li>
                 <li><a href="https://www.bing.com" target="_blank">必应</a></li>
@@ -87,9 +90,9 @@
                 <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
                 <li><a href="https://www.gitlab.com/" target="_blank">Gitlab</a></li>
                 <li><a href="https://www.gitee.com/" target="_blank">Gitee</a></li>
-	            <li><a href="https://singlelogin.re/" target="_blank">Z-Library</a></li>
+                <li><a href="https://singlelogin.re/" target="_blank">Z-Library</a></li>
                 <li><a href="http://info.cern.ch" target="_blank">最早的网站</a></li>
-                </ul>
+            </ul>
         </section>
         <section class="tools">
             <h2 id="自制工具">自制工具：</h2>
@@ -98,33 +101,34 @@
                 <li><a href="tools/离谱昵称生成器" target="_blank">离谱昵称生成器</a></li>
                 <li><a href="tools/music" target="_blank">网易云音乐下载</a></li>
                 <li><a href="textbooks" target="_blank">教材下载</a></li>
-        </ul>
+            </ul>
         </section>
     </main>
     <footer>
         <p class="cen">本站测试中......</p>
     </footer>
     <script>
-    const cenElements = document.querySelectorAll('.cen');
+        const cenElements = document.querySelectorAll('.cen');
 
-    // 定义一个变量来跟踪时间
-    let x = 0;
+        // 定义一个变量来跟踪时间
+        let x = 0;
 
-    // 定义一个函数来改变颜色
-    function updateColor() {
-        x += 0.02;
-        const sinValue = Math.sin(5*x);
-        const r = Math.round((sinValue / 2 + 0.5) * 255);
-        const g = Math.round((sinValue / 2 + 0.5) * 255);
-        const b = Math.round((sinValue / 2 + 0.5) * 255);
-        const rgbColor = `rgb(${r}, ${g}, ${b})`;
+        // 定义一个函数来改变颜色
+        function updateColor() {
+            x += 0.02;
+            const sinValue = Math.sin(5 * x);
+            const r = Math.round((sinValue / 2 + 0.5) * 255);
+            const g = Math.round((sinValue / 2 + 0.5) * 255);
+            const b = Math.round((sinValue / 2 + 0.5) * 255);
+            const rgbColor = `rgb(${r}, ${g}, ${b})`;
 
-        cenElements.forEach(element => {
-            element.style.color = rgbColor;
-        });
-    }
-    // 每隔一段时间调用 updateColor 函数，实现颜色渐变
-    setInterval(updateColor, 30); // 每 30 毫秒更新一次
+            cenElements.forEach(element => {
+                element.style.color = rgbColor;
+            });
+        }
+        // 每隔一段时间调用 updateColor 函数，实现颜色渐变
+        setInterval(updateColor, 30); // 每 30 毫秒更新一次
     </script>
 </body>
+
 </html>
