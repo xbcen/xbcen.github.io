@@ -2,7 +2,7 @@
 
 随便写的简单网站。
 
-![home](https://pic.sstars.cloudns.ch/file/351d1d90f865e461d8530.jpg "home")
+![home](https://pic.xbcen.dpdns.org/file/351d1d90f865e461d8530.jpg "home")
 
 欢迎来玩 :-)
 
