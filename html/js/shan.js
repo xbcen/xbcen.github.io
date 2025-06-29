@@ -28,9 +28,9 @@ const monos = (from, to, id, time) => {
     const mono = document.getElementById(id);
     mono.style.color = hsvtorgb(0, 0, Math.sin(time * 6) * Math.abs(to - from) / 2 + from + (to - from) / 2);
 }
-const rainbows = (s, v, id, time) => {
+const rainbows = (from, to, s, v, id, time) => {
     const rainbow = document.getElementById(id);
-    rainbow.style.color = hsvtorgb(270 * time % 360, s, v);
+    rainbow.style.color = hsvtorgb(270 * time % (to - from) + from, s, v);
 }
 const mrainbows = (id, time) => {
     const mrainbow = document.getElementById(id);
@@ -49,9 +49,10 @@ const white_color = (h, id, time) => {
 function animate() {
     const time = (Date.now() - startTime) / 1000;
     monos(0, 1, 'mono', time);
-    rainbows(1, 1, 'rainbow', time);
-    rainbows(0.5, 1, 'lrainbow', time);
-    rainbows(1, 0.5, 'drainbow', time);
+    monos(0.25, 0.5, 'g&d', time);
+    rainbows(0, 360, 1, 1, 'rainbow', time);
+    rainbows(0, 360, 0.5, 1, 'lrainbow', time);
+    rainbows(0, 360, 1, 0.5, 'drainbow', time);
     mrainbows('mrainbow', time);
     black_color(0, 'r&b', time);
     white_color(180, 'q&w', time);
