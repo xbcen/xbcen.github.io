@@ -1,0 +1,13 @@
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
+@import url('https://fonts.font.im/css2?family=Noto+Sans+Mono&display=swap');
+
+* {
+    font-family: 'Noto Serif SC', serif;
+    margin: 10px;
+    padding: 0;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
