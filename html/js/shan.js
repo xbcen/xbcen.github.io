@@ -32,10 +32,6 @@ const rainbows = (from, to, s, v, id, time) => {
     const rainbow = document.getElementById(id);
     rainbow.style.color = hsvtorgb(270 * time % (to - from) + from, s, v);
 }
-const mrainbows = (id, time) => {
-    const mrainbow = document.getElementById(id);
-    mrainbow.style.color = hsvtorgb(270 * time % 360, Math.sin(time * 6) * 0.5 + 0.5, Math.cos(time * 6) * 0.5 + 0.5);
-}
 const black_color = (h, id, time) => {
     const black = document.getElementById(id);
     black.style.color = hsvtorgb(h, 1, Math.sin(time * 6) * 0.5 + 0.5);
@@ -53,7 +49,7 @@ function animate() {
     rainbows(0, 360, 1, 1, 'rainbow', time);
     rainbows(0, 360, 0.5, 1, 'lrainbow', time);
     rainbows(0, 360, 1, 0.5, 'drainbow', time);
-    mrainbows('mrainbow', time);
+    rainbows(0, 360, Math.sin(time * 6) * 0.5 + 0.5, Math.cos(time * 6) * 0.5 + 0.5, 'mrainbow', time);
     black_color(0, 'r&b', time);
     white_color(180, 'q&w', time);
     requestAnimationFrame(animate);
