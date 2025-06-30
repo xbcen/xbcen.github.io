@@ -188,6 +188,8 @@ img {
 @media (prefers-color-scheme: dark) {
 	*{
 		color: #A3D1FF;
+	}
+	body {
 		background-color: #131E29;
 	}
 	li a:hover {
