@@ -4,7 +4,7 @@
   <title>Algodoo之Bug</title>
   <meta charset="utf-8" name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="Algodoo之Bug" />
+  <meta name="description" content="Algodoo之物体的移动" />
   <meta name="keywords" content="Algodoo" />
   <link rel="shortcut icon" href="/html/icon/文件添加_file-addition.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/agd.css" />
@@ -67,8 +67,8 @@
   <p>物件运动范围为函数的一、三象限部分。
   <p>如果这样的话，你的物件可能就一去不复返了，我们可以使其看起来折返，将参数<code>sim.time</code>变成<code>math.sin(sim.time)* n</code>。</p>
   <p>注意事项：</p>
-  <p>1.截取的是以原点为中心，<code>2 x 2n</code>的长方形内的部分。
-    2.若将<code>x<sub>1</sub>, y<sub>1</sub></code>分别扩大<code>a, b</code>倍，则会在以物件为中心，<code>2a x 2bn</code>的长方形内运动。</p>
+  <p>1.截取的是以原点为中心，<code>2 x 2n</code>的长方形内的部分。</p>
+  <p>2.若将<code>x<sub>1</sub>, y<sub>1</sub></code>分别扩大<code>a, b</code>倍，则会在以物件为中心，<code>2a x 2bn</code>的长方形内运动。</p>
   <p>题外话：</p>
   <p>不知道求导？不知道参数方程？没事，你把下面的这一段话发送给AI：</p>
   <blockquote>接下来我会给你一个函数
