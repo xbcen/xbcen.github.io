@@ -104,11 +104,11 @@ img {
 }
 
 .l img {
-	width: 75%;
+	width: 50%;
 }
 
 .s img {
-	width: 30%;
+	width: 20%;
 }
 
 @media screen and (max-width: 600px) /* 小屏幕的样式 */ {
