@@ -187,12 +187,14 @@ nav {
     }
 
     #cen {
+        margin: 20px;
+        font-size: 15px;
         transform: none;
         display: inline-block;
     }
 
     .nav {
-        width: 80%;
+        width: 90%;
     }
 }
 
