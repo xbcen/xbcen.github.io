@@ -9,17 +9,30 @@
     <link rel="shortcut icon" href="/html/icon/魔比斯环_cross-ring-two.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/agd.css" />
 </head>
+
 <body>
-    <h1>Algodoo plus 2.函数</h1>
+    <h1>Algodoo plus 3.代码优化</h1>
     <h2>函数的写法</h2>
     <p>基本的格式：</p>
     <pre><code>(传参)=>{代码}</code></pre>
     <p>如果不需要传参，则：</p>
     <pre><code>{代码}</code></pre>
-    <p>举个实际例子：</p>
+    <h2>函数的使用</h2>
+    <p>函数可以返回内容，例如：</p>
     <pre><code>f=(a,b)=>{a+2b}</code></pre>
     <p>这个函数的意思就是返回a+2b的结果。</p>
     <p>当输入<code>f(1,2)</code>时就会返回5（1+2*2）。</p>
+    <p>也可以执行操作，例如：</p>
+    <pre><code>f=(a,b)=>{e.this.pos=[a,b]}</code></pre>
+    <p>这个函数的意思就是将物体的位置设置为（a,b）。</p>
+    <p>当输入<code>f(1,2)</code>时就会将自己的位置设置为（1,2）。</p>
+    <p>Algodoo中的函数可以传入任意Algodoo支持的数据类型。 </p>
+    <p>注意：使用函数时，传入的参数内容、参数数量与对应函数传参的类型、数量应该对应。</p>
+    <p>请不要出现以下的代码：</p>
+    <pre><code>scene.my.f=(a,b)=>{a+2b};</br />
+    scene.my.f(1); //错误，参数数量不对应</code><br />
+    scene.my.f(1,"laocha"); //错误，参数类型不对应<br />
+    </code></pre>
     <h2>用函数的原因</h2>
     <p>你现在写了个hsv转rgb的代码，非常长，但是你又要给一堆物件用上。</p>
     <p>这个时候你就可以这样写：</p>
@@ -28,6 +41,7 @@
     <p>好的，任务完成了。</p>
     <p>至于函数这东西，你们大概都见过，例如<code>(e)=>{}</code></p>
     <p>所以也会有<code>ondie(0)</code>这种写法。</p>
+    <blockquote class="tip">孩子们，VS Code的AI自动补全太好用了</blockquote>
     <footer>
         <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
         <a href="#" class="back">回到<br />顶部</a>
@@ -40,6 +54,6 @@
             });
         </script>
     </footer>
-    </body>
+</body>
 
-    </html>
+</html>

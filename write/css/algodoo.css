@@ -7,6 +7,7 @@
 	padding: 0;
 	color: #2286D8;
 }
+
 body {
 	background-color: #EFF5FB;
 }
@@ -39,27 +40,36 @@ ul {
 	padding: 20px;
 }
 
-code,pre {
+code,
+pre {
 	font-family: 'Noto Sans Mono', sans-serif;
 	background-color: #e1e1e1;
 	padding: 0 3px;
 	border-radius: 2.5px;
 }
 
-pre,p,code,blockquote {
+pre,
+p,
+code,
+blockquote {
 	font-size: 15px;
 }
 
-pre,p,blockquote {
+pre,
+p,
+blockquote {
 	margin: 22.5px;
 }
-pre{
+
+pre {
 	width: fit-content;
 	white-space: normal;
 }
+
 pre code {
 	padding: 0;
 }
+
 li {
 	display: inline-block;
 	margin-right: 20px;
@@ -73,6 +83,17 @@ blockquote {
 	width: fit-content;
 	white-space: pre-line;
 	border-radius: 5px;
+}
+blockquote.warning {
+	background-color: #FFA3A3;
+	border-color: #d82222;
+	color: #d82222;
+}
+
+blockquote.tip {
+	background-color: #FFF0A3;
+	border-color: #d8c122;
+	color: #d8c122;
 }
 
 li a {
@@ -100,7 +121,8 @@ img {
 	font-weight: bold;
 }
 
-.l,.s {
+.l,
+.s {
 	text-align: center;
 }
 
@@ -112,7 +134,9 @@ img {
 	width: 20%;
 }
 
-@media screen and (max-width: 600px) /* 小屏幕的样式 */ {
+@media screen and (max-width: 600px)
+/* 小屏幕的样式 */
+	{
 	h1 {
 		padding: 15px;
 	}
@@ -122,7 +146,7 @@ img {
 		font-size: 15px;
 		font-weight: bold;
 		padding-left: 10px;
-		margin: 15px ;
+		margin: 15px;
 	}
 
 	h3 {
@@ -142,11 +166,16 @@ img {
 		padding: 10px;
 	}
 
-	pre,p,code,blockquote {
+	pre,
+	p,
+	code,
+	blockquote {
 		font-size: 10px;
 	}
 
-	pre,p,blockquote {
+	pre,
+	p,
+	blockquote {
 		margin: 12.5px;
 	}
 
@@ -154,7 +183,8 @@ img {
 		padding: 0;
 	}
 
-	code,pre {
+	code,
+	pre {
 		font-family: 'Noto Sans Mono', sans-serif;
 		background-color: #e1e1e1;
 		padding: 0 3px;
@@ -186,22 +216,40 @@ img {
 		color: #EFF5FB;
 	}
 }
+
 @media (prefers-color-scheme: dark) {
-	*{
+	* {
 		color: #A3D1FF;
 	}
+
 	body {
 		background-color: #131E29;
 	}
+
 	li a:hover {
 		background-color: #A3D1FF;
 		color: #155284;
 	}
-	code,pre{
+
+	code,
+	pre {
 		background-color: #1a1a1a;
 	}
+
 	blockquote {
 		background-color: #155284;
 		border-left: 5px solid #A3D1FF;
 	}
-  }
+
+	blockquote.warning {
+		background-color: #841515;
+		border-color: #ffa3a3;
+		color: #841515;
+	}
+
+	blockquote.tip {
+		background-color: #847215;
+		border-color: #fff0a3;
+		color: #847215;
+	}
+}
