@@ -84,6 +84,7 @@ blockquote {
 	white-space: pre-line;
 	border-radius: 5px;
 }
+
 blockquote.warning {
 	background-color: #FFA3A3;
 	border-color: #d82222;
