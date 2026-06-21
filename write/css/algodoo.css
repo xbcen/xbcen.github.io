@@ -245,12 +245,12 @@ img {
 	blockquote.warning {
 		background-color: #841515;
 		border-color: #ffa3a3;
-		color: #841515;
+		color: #ffa3a3;
 	}
 
 	blockquote.tip {
 		background-color: #847215;
-		border-color: #fff0a3;
-		color: #847215;
+		border-color: #fff0a3;;
+		color: #FFF0A3;
 	}
 }
