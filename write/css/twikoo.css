@@ -139,7 +139,7 @@
     border: 2px solid #a3d1ff;
   }
 
-  .twikoo * {
+  .twikoo *, .tk-sort-item.__active {
     color: #a3d1ff;
   }
 
