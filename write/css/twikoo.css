@@ -1,5 +1,20 @@
-@import url('https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap');
+@import url("https://fonts.font.im/css2?family=Noto+Serif+SC&display=swap");
 
+:root {
+  --twikoo-primary: #2286d8;
+  --twikoo-light: #eff5fb;
+  --twikoo-light-variant: #a3d1ff;
+  --twikoo-dark-bg: #131e29;
+  --twikoo-dark-text: #155284;
+  --cm-radius: 12px;
+  --cm-border-width: 1px;
+  --cm-border-color: var(--twikoo-primary);
+  --cm-card-border: var(--twikoo-primary);
+  --cm-text-dark: var(--twikoo-light-variant);
+  --cm-text-light: var(--twikoo-primary);
+}
+
+/* 基础样式 */
 .twikoo {
   margin: 20px;
 }
@@ -10,54 +25,83 @@
 .twikoo button,
 .tk-col textarea {
   font-size: 15px;
-}
-
-.tk-meta-input input,
-.el-input-group__prepend,
-.twikoo button,
-.tk-col textarea {
   font-family: "Noto Serif SC", sans-serif;
-  margin: 0px;
 }
 
-.el-input--small .el-input__inner {
-  height: 30px;
-  line-height: 30px;
-}
-
-.tk-main p,
-.tk-nick {
-  margin: 5px 0;
-}
-
+/* 输入框样式 */
 .tk-col textarea {
   resize: none;
-  border: 2px solid #2286d8;
+  border: none;
+  color: var(--twikoo-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.tk-col textarea:hover {
   transition: all 0.3s ease-in-out;
 }
 
 .tk-col textarea:focus {
-  background-color: #2286d8;
+  border: var(--cm-border-width) solid var(--twikoo-primary);
+  color: var(--twikoo-light);
+  transition: all 0.3s ease-in-out;
 }
 
-.tk-col textarea:focus,
 .tk-col textarea:focus::placeholder {
-  color: #EFF5FB;
+  color: var(--twikoo-light);
+  transition: all 0.3s ease-in-out;
 }
 
-.tk-col textarea,
-.tk-col textarea::placeholder {
-  color: #2286d8;
-}
-
-.tk-col textarea:hover {
-  border-color: #2286d8;
-}
-
+/* 评论相关颜色 */
 .tk-comments *,
 .tk-footer,
 .tk-footer a {
-  color: #2286d8;
+  color: var(--twikoo-primary);
+}
+
+.tk-action-icon,
+.tk-icon.__comments {
+  color: var(--twikoo-primary) !important;
+}
+
+/* 加载环样式 */
+#twikoo {
+  .el-loading-spinner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .circular circle {
+    stroke: var(--twikoo-primary);
+    stroke-width: 5;
+  }
+}
+
+/* 按钮样式 */
+.el-button.tk-send.el-button--primary.el-button--small {
+  background: var(--twikoo-light);
+  border-color: var(--twikoo-light);
+  color: var(--twikoo-primary);
+}
+
+.el-button.tk-send.el-button--primary.el-button--small:disabled {
+  background: var(--twikoo-light-variant);
+  border-color: var(--twikoo-light-variant);
+}
+
+.el-button.tk-send.el-button--primary.el-button--small:hover {
+  background: var(--twikoo-primary);
+  border-color: var(--twikoo-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.el-button.tk-send.el-button--primary.el-button--small:hover span {
+  color: var(--twikoo-light);
+}
+
+/* 输入框高度 */
+.el-input--small .el-input__inner {
+  height: 30px;
+  line-height: 30px;
 }
 
 .el-textarea__inner {
@@ -65,51 +109,139 @@
   height: 120px;
 }
 
+/* 标题样式 */
 .tk-meta strong,
 .tk-comments-title *,
 .tk-comments-no span {
   font-size: 20px;
 }
 
-.el-button.tk-send.el-button--primary.el-button--small {
-  background: #eff5fb;
-  border-color: #eff5fb;
-  color: #2286d8;
-  background-color: #eff5fb;
+.tk-main p,
+.tk-nick {
+  margin: 5px 0;
 }
 
-.el-button.tk-send.el-button--primary.el-button--small:disabled {
-  background: #a3d1ff;
-  border-color: #a3d1ff;
-  background-color: #a3d1ff;
-  & span {
-    color: #2286d8;
+/* tag样式 */
+#twikoo {
+  .tk-tag-red {
+    color: #f56c6c;
+  }
+
+  .tk-tag-green {
+    color: #67c23a;
   }
 }
 
-.el-button.tk-send.el-button--primary.el-button--small:hover {
-  background: #2286d8;
-  border-color: #2286d8;
-  background-color: #2286d8;
-  transition: all 0.3s ease-in-out;
+/* 展开收起样式 */
+.tk-expand,
+.tk-expand:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    var(--twikoo-dark-bg) 50%,
+    var(--twikoo-dark-bg) 100%
+  );
+}
 
-  & span {
-    color: #eff5fb;
-  }
+.tk-expand {
+  margin-top: -80px;
+  padding-top: 80px !important;
+  position: relative;
+  font-size: 0.85em !important;
+}
+
+.tk-expand._collapse {
+  background: none;
+  margin-top: 0;
+  padding-top: 0 !important;
+}
+
+/* 评论提交区域 */
+.twikoo .tk-comments .tk-submit .tk-row.actions {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.tk-main .tk-submit .tk-col .tk-meta-input,
+.twikoo .tk-comments .tk-submit .tk-col .tk-meta-input {
+  margin-bottom: 16px;
+}
+
+.tk-row.actions button.el-button {
+  height: 32px;
+}
+
+/* 图片自适应 */
+.tk-main .tk-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 圆角设置 */
+.tk-meta-input input {
+  border-top-right-radius: var(--cm-radius);
+  border-bottom-right-radius: var(--cm-radius);
+}
+
+.tk-meta-input div {
+  border-top-left-radius: var(--cm-radius);
+  border-bottom-left-radius: var(--cm-radius);
 }
 
 .tk-input.el-textarea textarea {
-  color: #2286d8;
-  border: 2px solid #2286d8;
+  border-radius: var(--cm-radius);
+  min-height: 150px !important;
+  height: auto;
 }
 
-.tk-input.el-textarea textarea:focus {
-  color: #eff5fb;
+/* 评论大框 */
+/* .twikoo .tk-comments-container > .tk-comment, */
+.twikoo .tk-comments .tk-submit {
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-radius: var(--cm-radius);
+  border-style: solid;
+  border-width: var(--cm-border-width);
+  border-color: var(--cm-card-border);
+  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 600px)
-/* 小屏幕的样式 */
-  {
+/* 设备信息 */
+.twikoo .tk-extra {
+  border-radius: var(--cm-radius);
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 加载更多按钮 */
+.twikoo .tk-expand {
+  border-radius: var(--cm-radius);
+}
+
+/* 按钮圆角 */
+.tk-row.actions button.el-button {
+  border-radius: var(--cm-radius) !important;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 420px) {
+  .tk-main
+    .tk-submit
+    .tk-row.actions
+    button.el-button.tk-preview.el-button--cm-default.el-button--cm-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .tk-main .tk-extras {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .twikoo {
     margin: 15px;
   }
@@ -134,30 +266,68 @@
   }
 }
 
+/* 深色模式 */
 @media (prefers-color-scheme: dark) {
-  .tk-col textarea {
-    border: 2px solid #a3d1ff;
+  :root {
+    --twikoo-primary: #a3d1ff;
   }
 
-  .twikoo *, .tk-sort-item.__active {
-    color: #a3d1ff;
+  .twikoo {
+    p,
+    span,
+    strong,
+    input,
+    textarea,
+    small,
+    .tk-comments-count,
+    .el-input-group__prepend,
+    .tk-expand {
+      color: var(--cm-text-dark);
+    }
+  }
+
+  .tk-expand {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      var(--twikoo-dark-bg) 50%,
+      var(--twikoo-dark-bg) 100%
+    );
+  }
+
+  .tk-sort-item.__active {
+    color: var(--twikoo-primary);
+  }
+
+  .tk-col textarea {
+    border: var(--cm-border-width) solid var(--twikoo-primary);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .twikoo .el-input__inner:hover,
+  .twikoo .el-textarea__inner:hover {
+    border-color: var(--twikoo-primary);
+  }
+
+  .twikoo .el-input__inner:focus,
+  .twikoo .el-textarea__inner:focus {
+    border: 2px solid var(--twikoo-primary);
   }
 
   .tk-row.actions button,
   .el-button.tk-send.el-button--primary.el-button--small {
-    background: #131e29;
-    border-color: #131e29;
-    background-color: #131e29;
+    background: var(--twikoo-dark-bg);
+    border-color: var(--twikoo-dark-bg);
     transition: all 0.3s ease-in-out;
   }
 
   .el-button.tk-send.el-button--primary.el-button--small:hover {
-    background: #a3d1ff;
-    border-color: #a3d1ff;
-    background-color: #a3d1ff;
+    background: var(--twikoo-primary);
+    border-color: var(--twikoo-primary);
+    transition: all 0.3s ease-in-out;
+  }
 
-    & span {
-      color: #155284;
-    }
+  .el-button.tk-send.el-button--primary.el-button--small:hover span {
+    color: var(--twikoo-light);
   }
 }
