@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Algodoo之数组</title>
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Algodoo之数组" />
+    <meta name="keywords" content="Algodoo" />
+    <link rel="shortcut icon" href="/html/icon/大括号_code-brackets.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/agd.css" />
+</head>
+
+<body>
+    <h1>Algodoo plus 3.数组</h1>
+    <h2>数组的概念</h2>
+    <blockquote>数组是一种基本的数据结构，其中每个<strong>元素</strong>可以通过<strong>下标（索引）</strong>来访问。</blockquote>
+    <p><strong>元素</strong>为数组的基本组成部分。<br />
+    <strong>下标（索引）</strong>是用于标识数组中元素位置的数字。一般地，数组下标从0开始。</p>
+    <p>设数组<code>a</code>为<code>[1,2,3]</code>。<br />
+    其中<code>1</code>、<code>2</code>、<code>3</code>就是数组<code>a</code>中的元素。<br />
+    <code>1</code>为数组<code>a</code>的第0项。</p>
+    <h2>Algodoo中的数组</h2>
+    <p>Algodoo中，同一数组的元素可以为不同的数据类型。</p>
+    <p>读取数组的下标采用<code>数组(下标)</code>。</p>
+    <p>例如：<code>a=[111,"laocha"]</code>。<br />
+    则<code>a(0)</code>返回<code>111</code>。</p>
+    <h2>数组的用法（实战环节）</h2>
+    <blockquote>在灰安教主的模板中，排行会根据该排行小球的<code>_teamcolor</code>而变化。
+    那如何在只有<code>_team</code>（1-10之间的正整数），通过修改排行的oncollide来改变排行的颜色呢？</blockquote>
+    <details>
+        <summary>有一种实现方法如下所示（点击右边小三角展开）</summary>
+        <pre><code>
+        (e)=>{<br />
+        e.other._team == 1 ? {<br />
+        textcolor = [1, 0, 0, 1]<br />
+        } : {<br />
+        e.other._team == 2 ? {<br />
+        textcolor = [1, 0.5, 0, 1]<br />
+        } : {<br />
+        e.other._team == 3 ? {<br />
+        textcolor = [1, 1, 0, 1]<br />
+        } : {<br />
+        e.other._team == 4 ? {<br />
+        textcolor = [0, 0.5, 0, 1]<br />
+        } : {<br />
+        e.other._team == 5 ? {<br />
+        textcolor = [0, 1, 1, 1]<br />
+        } : {<br />
+        e.other._team == 6 ? {<br />
+        textcolor = [0, 0, 1, 1]<br />
+        } : {<br />
+        e.other._team == 7 ? {<br />
+        textcolor = [0.5, 0, 1, 1]<br />
+        } : {<br />
+        e.other._team == 8 ? {<br />
+        textcolor = [1, 0.5, 1, 1]<br />
+        } : {<br />
+        e.other._team == 9 ? {<br />
+        textcolor = [1, 1, 1, 1]<br />
+        } : {<br />
+        poststep = (e)=>{<br />
+        textcolor = scene.my.rainbow<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        }<br />
+        </code></pre>
+    </details>
+    <p>但这种方法显然不够优雅，也不太适合人阅读（？），那如何用数组的方式处理呢？<br />
+    <h3>首先处理非闪队（<code>_team</code>为1-9）部分</h3>
+    <p>设变量</p>
+    <pre><code>_color = [[1, 0, 0, 1], [1, 0.5, 0, 1], [1, 1, 0, 1], [0, 0.5, 0, 1], [0, 1, 1, 1], [0, 0, 1, 1], [0.5, 0, 1, 1], [1,
+    0.5, 1, 1], [1, 1, 1, 1]]</code></pre>
+    <p>也就是9个队按顺序的<code>_teamcolor</code>。</p>
+    <p>因为<code>_team</code>从1开始，而数组下标从0开始。 所以读取_color的元素时，下标为e.other.<code>_team</code> - 1。</p>
+    <p>故有以下代码：</p>
+    <pre><code>textcolor = _color(e.other._team - 1);</code></pre>
+    <h3>处理闪队（<code>_team==10</code>）部分</h3>
+    <p>当队伍为闪队时，我们采用彩虹的代码，即</p>
+    <pre><code>poststep = (e)=>{<br />
+    textcolor = scene.my.rainbow<br />
+    }</code></pre>
+    <h3>整合代码</h3>
+    <p>判断小球是否为闪队，然后分别走对应的逻辑。</p>
+    <pre>(e)=>{<br />
+    e.other._team != 10 ? {<br />
+        textcolor = _color(e.other._team - 1)<br />
+    } : {<br />
+        poststep = (e)=>{<br />
+            textcolor = scene.my.rainbow<br />
+        }<br />
+    }<br />
+    }
+    </pre>
+    <p>最后，这个问题就被数组愉快地解决了。</p>
+    <footer>
+        <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
+        <a href="#" class="back">回到<br />顶部</a>
+        <pre id="pl"></pre>
+        <script>window.TWIKOO_MAGIC_PATH = "algodoo-plus3"</script>
+        <script src="https://s4.zstatic.net/npm/twikoo@1.7.13/dist/twikoo.min.js"></script>
+        <script>
+            twikoo.init({
+                envId: "https://pl.xbcen.dpdns.org/",
+                el: "#pl",
+                path: window.TWIKOO_MAGIC_PATH || window.location.pathname,
+            });
+        </script>
+    </footer>
+</body>
+
+</html>

@@ -50,15 +50,10 @@ pre {
 
 pre,
 p,
-code,
-blockquote {
-	font-size: 15px;
-}
-
-pre,
-p,
-blockquote {
+blockquote,
+summary {
 	margin: 22.5px;
+	font-size: 15px;
 }
 
 pre {
@@ -169,15 +164,10 @@ img {
 
 	pre,
 	p,
-	code,
-	blockquote {
-		font-size: 10px;
-	}
-
-	pre,
-	p,
-	blockquote {
+	blockquote,
+	summary {
 		margin: 12.5px;
+		font-size: 10px;
 	}
 
 	pre code {
