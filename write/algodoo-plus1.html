@@ -57,7 +57,7 @@
   <p>2. 函数平移提高 / 降低移动速度请同时扩大 / 缩小 <code>x<sub>1</sub>,y<sub>1</sub>,sim.time</code> 的值。<br />
     如：<code>vel = [1 * a, 3 * a * (sim.time * a) ^ 2 + 0.1633334]</code></p>
   <p>3. 若绘制圆锥曲线时，请直接使用 $\left\{\begin{aligned}x&=sin x \\y&=cos x \end{aligned}\right.$ 形式的参数方程。</p>
-  <p>首先需要有一个函数<code>f (x)</code>。</p>
+  <p>首先需要有一个函数<code>f(x)</code>。</p>
   <p>将其转为参数方程（其中参数为<code>sim.time</code>），得到 x 和 y</p>
   <p>$\left\{\begin{aligned}x&=t_1\\y&=t_2\end{aligned}\right.$</p>
   <p>则<code>pos=[pos(0) + t<sub>1</sub>, pos(1) + t<sub>2</sub>]</code></p>
@@ -74,10 +74,10 @@
   <p>不知道求导？不知道参数方程？没事，你把下面的这一段话发送给AI：</p>
   <blockquote>接下来我会给你一个函数
     你需要将其转为参数函数，得到x与y（其中参数为a）
-    然后分别求导，得到x1与y1
+    然后分别求导，得到x₁与y₁
     最后你只需要直接给我以下内容，不要夹带其他内容：
     pos=[x,y]
-    vel=[x1,y1+0.1633334]
+    vel=[x₁,y₁+0.1633334]
 
     （参数a按照上面文章的内容填入）
   </blockquote>
