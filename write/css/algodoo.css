@@ -93,6 +93,12 @@ blockquote.tip {
 	color: #d8c122;
 }
 
+blockquote.question {
+	background-color: #a3ffd1;
+	border-color: #15844d;
+	color: #15844d;
+}
+
 li a {
 	display: inline-block;
 	text-align: center;
@@ -241,7 +247,13 @@ img {
 
 	blockquote.tip {
 		background-color: #847215;
-		border-color: #fff0a3;;
+		border-color: #FFF0a3;
 		color: #FFF0A3;
 	}
-}
+
+	blockquote.question {
+		background-color: #15844d;
+		border-color: #a3ffd1;
+		color: #a3ffd1;
+	}
+	}
