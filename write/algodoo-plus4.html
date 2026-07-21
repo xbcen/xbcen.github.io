@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Algodoo之数据类型</title>
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Algodoo之数据类型" />
+    <meta name="keywords" content="Algodoo" />
+    <link rel="shortcut icon" href="/html/icon/大括号_code-brackets.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/agd.css" />
+</head>
+
+<body>
+    <h1>Algodoo plus 4.数据类型</h1>
+    <h2>数据类型</h2>
+    <p>Algodoo中定义变量并不需要声明变量的数据类型。 <br />
+        直接<code>变量=值</code>即可。</p>
+    <blockquote class="warning">但为了减少Bug、提高可读性，请不要混淆变量的数据类型。</blockquote>
+    <h3>整数（Int）</h3>
+    <p>在$-2^{31}$到$2^{31}-1$范围内的整数。</p>
+    <p>例如<code>-1</code>、<code>20260720</code>、<code>1e10</code>。</p>
+    <h3>浮点数（Float）</h3>
+    <p>有小数部分的实数，提供6到9位有效数字的精度。</p>
+    <p>例如<code>1.1</code>、<code>5.0</code>、<code>3.1415927</code>、<code>+inf</code>。</p>
+    <blockquote><code>+inf</code>、<code>-inf</code>为的数据类型为<code>Float</code>。 <br />
+            <code>正数 / 0.0 = +inf</code> <br />
+            <code>负数 / 0.0 = -inf</code> <br />
+            <code>0.0 / 0.0 = NaN</code> <br />
+            <code>整数 / 0</code>会报错。</blockquote>
+    <blockquote>请区分好<code>Float</code>与<code>Int</code>。
+        <code>Int / Int</code>时，结果仍为<code>Int</code>。
+    </blockquote>
+    <pre><code>&gt; 5 / 3<br />
+    1<br />
+    &gt; 5.0 / 3<br />
+    1.6666666<br />
+    &gt; 5 / 3.0<br />
+    1.6666666<br />
+    &gt; 5.0 / 3.0<br />
+    1.6666666<br />
+    </code></pre>
+    <h3>字符串（String）</h3>
+    <p>表示文本信息。</p>
+    <p>例如<code>"Hello, World!"</code>、<code>"111"</code>。</p>
+    <p>字符串可以被视为一种特殊的数组，其与数组的部分特性相通。 <br />
+        例如<code>string.length()</code>。</p>
+    <h3>布尔值（Bool）</h3>
+    <p>只有<code>true</code>（真）与<code>false</code>（假）。</p>
+    <p>如<code>list(1) == 12</code>、<code>14 &gt; -1</code>、<code
+           >true &amp;&amp; false</code>的结果。</p>
+    <p>主要用于判断。</p>
+    <h3>数组（Array）</h3>
+    <p>参见<a href="/write/algodoo-plus3/">数组</a></p>
+    <h3>其他数据类型</h3><br />
+    <h3>undefined</h3>
+    <p>未定义的变量。</p>
+    <h3>null</h3>
+    <p>空值。</p>
+    <p>如在物件脚本选单的输入框或控制台的<code>entity</code>。</p>
+    <h3>NaN（Not a Number）</h3>
+    <p>表示未定义或不可表示的数值。</p>
+    <p>如<code>+inf - +inf</code>、<code>0.0 / 0.0</code>、<code
+           >math.sqrt(-1)</code>、<code>NaN - NaN</code>的结果。</p>
+    <h2>数据类型转换</h2>
+    <p><code>Int</code>、<code>Bool</code>、<code>String（数字字符串）</code>转<code>Int</code>：<code>math.toint()</code>。</p>
+    <p><code>Int</code>、<code>Bool</code>、<code>String（数字字符串）</code>转<code>Float</code>：<code>math.tofloat()</code>。</p>
+    <p><code>Int</code>、<code>Float</code>转<code>Bool</code>：<code>math.tobool()</code>。 <br />
+        （0返回<code>true</code>，除0以外返回<code>true</code>）</p>
+    <p>任意数据类型直接转<code>String</code>：<code>任意数据类型 + ""</code>或<code>math.toString()</code>。</p>
+    <p><code>Array</code>转<code>String</code>：<code>string.list2str()</code></p>
+    <pre><code>&gt; string.list2str([1, 1, 1, 2])<br />
+1112
+    </code></pre>
+    <p><code>String</code>转<code>Array</code>：<code>string.str2list()</code></p>
+    <pre><code><span>&gt; string.str2list("1112")<br />
+[1, 1, 1, 2]
+    </code></pre>
+    <h2>实战环节</h2>
+    <blockquote>不用if判断、三目运算符（?{}:{}），实现以下代码：</blockquote>
+    <pre><code>e.other._toubi ? {<br />
+    _aa = "已投币；"<br />
+} : {<br />
+    _aa = "未投币；"<br />
+};
+e.other._dianzan ? {<br />
+    _cc = "已点赞；"<br />
+} : {<br />
+    _cc = "未点赞；"<br />
+};
+e.other._shoucang ? {<br />
+    _bb = "已收藏；"<br />
+} : {<br />
+    _bb = "未收藏；"<br />
+};</code></pre>
+    <p>1.回顾<a href="/posts/algodoo-plus3/">上次学的</a>，分别创建数组。</p>
+    <pre><code>["未投币；", "已投币；"]
+["未收藏；", "已收藏；"]
+["未点赞；", "已点赞；"]
+    </code></pre>
+    <p>2.理解一下代码：我们要在<code>e.other._shoucang == true</code>时返回已收藏； <br />
+        <code>e.other._shoucang == false</code>时返回未收藏。
+    </p>
+    <p>3.注意到，<code>math.toint(true) == 1</code>； <br />
+        <code>math.toint(false) == 0</code> <br />
+        对应第1步中数组的两个下标。
+    </p>
+    <p>4.所以有：</p>
+    <pre><code>_aa = ["未投币；", "已投币；"](math.toint(e.other._toubi));<br />
+_bb = ["未收藏；", "已收藏；"](math.toint(e.other._shoucang));<br />
+_cc = ["未点赞；", "已点赞；"](math.toint(e.other._dianzan));
+    </code></pre>
+    <p>5.完毕。</p>
+    <footer>
+        <p class="footer">神的钴（蓝）（青金）石，持续更新中……　:|</p>
+        <a href="#" class="back">回到<br />顶部</a>
+        <pre id="pl"></pre>
+        <script>window.TWIKOO_MAGIC_PATH = "algodoo-plus4"</script>
+        <script src="https://s4.zstatic.net/npm/twikoo@1.7.14/dist/twikoo.min.js"></script>
+        <script>
+            twikoo.init({
+                envId: "https://pl.xbcen.dpdns.org/",
+                el: "#pl",
+                path: window.TWIKOO_MAGIC_PATH || window.location.pathname,
+            });
+        </script>
+    </footer>
+</body>
+
+</html>

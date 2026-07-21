@@ -16,14 +16,54 @@
     <blockquote>数组是一种基本的数据结构，其中每个<strong>元素</strong>可以通过<strong>下标（索引）</strong>来访问。</blockquote>
     <p><strong>元素</strong>为数组的基本组成部分。<br />
     <strong>下标（索引）</strong>是用于标识数组中元素位置的数字。一般地，数组下标从0开始。</p>
-    <p>设数组<code>a</code>为<code>[1,2,3]</code>。<br />
+    <p>设数组<code>a</code>为<code>[1,  2,3]</code>。<br />
     其中<code>1</code>、<code>2</code>、<code>3</code>就是数组<code>a</code>中的元素。<br />
     <code>1</code>为数组<code>a</code>的第0项。</p>
     <h2>Algodoo中的数组</h2>
+    <h3>数组元素的读取</h3>
     <p>Algodoo中，同一数组的元素可以为不同的数据类型。</p>
     <p>读取数组的下标采用<code>数组(下标)</code>。</p>
-    <p>例如：<code>a=[111,"laocha"]</code>。<br />
+    <p>例如：<code>a=[111, "laocha"]</code>。<br />
     则<code>a(0)</code>返回<code>111</code>。</p>
+    <h3>数组的修改</h3>
+    <p>数组的元素不可以直接单独被修改。</p>
+    <p>例如：<code>a=[111, "laocha"]</code>。<br />
+    不能直接<code>a(0) = 222</code>，应这么写：</p>
+    <pre><code>a = [222, a(0)]
+    </code></pre>
+    <blockquote>神人Thyme，这功能也不给。
+    只能自己动手，丰衣足食了。</blockquote>
+    <pre><code>scene.my.changearray = (array, count, value)=&gt;{<br />
+        arrayre = [];<br />
+        for(string.length(array), (i)=&gt;{<br />
+            count == i ? {<br />
+                arrayre = arrayre ++ [value]<br />
+            } : {<br />
+                arrayre = arrayre ++ [array(i)]<br />
+            }<br />
+        });<br />
+        arrayre<br />
+    };<br />
+    </code></pre>
+    <ul>
+    <li><code>array</code>：需要更改的数组</li>
+    <li><code>count</code>：更改元素的下标</li>
+    <li><code>value</code>：更改后该元素的值</li>
+    </ul>
+    <p>最终该函数返回更改后的数组。</p>
+    <hr />
+    <p>若需加减乘除数组的元素，需要一一对应。</p>
+    <p>例如：<code>a = [111, "laocha"]</code>。<br>
+    若需修改<code>111</code>为<code>222</code>，则应这么写：</p>
+    <pre><code>a = a + [111, ""]    </code></pre>
+    <hr />
+    <p>可以通过<code>++</code>向数组添加元素。</p>
+    <p>例如</p>
+    <pre><code>&gt; a = ["array", "1"]<br />
+    ["array", "1"]<br />
+    &gt; a = a ++ [4]<br />
+    [array, 1, 4]<br />
+    </code></pre>
     <h2>数组的用法（实战环节）</h2>
     <blockquote class="question">在灰安教主的模板中，排行会根据该排行小球的<code>_teamcolor</code>而变化。
     那如何在只有<code>_team</code>（1-10之间的正整数），通过修改排行的oncollide来改变排行的颜色呢？</blockquote>

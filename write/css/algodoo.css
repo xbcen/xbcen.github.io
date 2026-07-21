@@ -52,6 +52,7 @@ pre {
 pre,
 p,
 blockquote,
+hr,
 summary {
 	margin: 22.5px;
 	font-size: 15px;
@@ -137,6 +138,11 @@ img {
 	width: 20%;
 }
 
+hr {
+	border: 1px solid #2286D8;
+	border-radius: 5px;
+}
+
 @media screen and (max-width: 600px)
 /* 小屏幕的样式 */
 	{
@@ -172,6 +178,7 @@ img {
 	pre,
 	p,
 	blockquote,
+	hr,
 	summary {
 		margin: 12.5px;
 		font-size: 10px;
@@ -232,6 +239,10 @@ img {
 	code,
 	pre {
 		background-color: #1a1a1a;
+	}
+
+	hr {
+		border-color: #A3D1FF;
 	}
 
 	blockquote {
